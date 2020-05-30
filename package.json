@@ -14,6 +14,7 @@
     "gatsby-plugin-sharp": "^2.6.4",
     "gatsby-source-filesystem": "^2.3.4",
     "gatsby-transformer-sharp": "^2.5.2",
+    "gh-pages": "^3.0.0",
     "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
@@ -33,13 +34,14 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rohitbind/thevaccinetracker"
+    "url": "https://github.com/ujjwal8880/thevaccinetracker"
   },
   "bugs": {
-    "url": "https://github.com/rohitbind/thevaccinetracker/issues"
+    "url": "https://github.com/ujjwal8880/thevaccinetracker/issues"
   }
 }
