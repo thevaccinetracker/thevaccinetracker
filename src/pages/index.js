@@ -1,5 +1,6 @@
 import React, {Component} from "react"
 import "../assets/styles/style.scss"
+import logo from '../images/logo.svg';
 
 class IndexPage extends Component {
 
@@ -10,10 +11,12 @@ class IndexPage extends Component {
   render() {
     const {name} = this.state;
     return (
-      <div className="container-fluid">
-        <h1>
-          Hello From {name} <span className="glyphicon glyphicon-heart"></span>
-        </h1>
+      <div className="container homePage">
+        <div className="row">
+          <div className="col-md-12">
+            <img src={logo} alt="The Vaccine Tracker Logo"></img>
+          </div>
+        </div>
       </div>
     );
   }
