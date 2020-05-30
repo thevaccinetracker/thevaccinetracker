@@ -27,11 +27,17 @@ $sInfo : #ffd84d;
 // Greyscales
 $gs0 : #FFFFFF;
 
+// Breakpoints
+$small-device : 768px;
+
 // Text Styles
 .largeHeading{
   font-size: 60px;
   font-weight: 800;
   color: $gs0;
+  @media only screen and (max-width: $small-device) {
+    font-size: 34px;
+  } 
 }
 
 .paragraph{
@@ -75,6 +81,8 @@ body{
 
 // Components Starts here
 
+
+//Main header component starts here
 .mainHeader{
   margin-top: 20px;
   .virusMainStatus{
@@ -111,7 +119,18 @@ body{
       background: $sWarning;
     }
   }
+  @media only screen and (max-width: $small-device) {
+    .virusMainStatus{
+      ul{
+        li{
+          white-space: nowrap;
+          margin-left: 8px;
+        }
+      }
+    }
+  } 
 }
+//main header component
 
 .homePage{
   .firstFold{
@@ -123,11 +142,6 @@ body{
     .mainSimpleTracker{
       margin-top: 60px;
       margin-bottom: 120px;
-      .simpleVaccineTreatmentTracker{
-        background-color: $gs0;
-        padding: 20px;
-        border-radius: 10px;
-      }
     }
     .upcoming{
       text-align: center;
@@ -136,7 +150,11 @@ body{
 }
 
 .simpleVaccineTreatmentTracker{
+  background-color: $gs0;
+  padding: 20px;
+  border-radius: 10px;
   display: flex;
+  margin-bottom: 20px;
   .icon{
     width: 80px;
     background-color: $c5;
@@ -173,6 +191,21 @@ body{
         .countlabel{
           color: $c4;
           font-size: 10px;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $small-device) {
+    .infoSection {
+      margin-left: 15px;
+      .infoNumber {
+        .count:not(:first-child){
+          margin-left: 20px;
+        }
+        .count {
+          .countlabel{
+            font-size: 8px;
+          }
         }
       }
     }
