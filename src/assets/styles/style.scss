@@ -1,4 +1,5 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 // *************************************************
 // ************Common Properties Starts*************
@@ -72,6 +73,7 @@ body{
   background-image: url(../images/worldmap.svg);
   background-position: center 80%;
   background-repeat: no-repeat;
+  font-family: 'Roboto', sans-serif;
 }
 
 // *************************************************

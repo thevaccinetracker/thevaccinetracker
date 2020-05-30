@@ -7,15 +7,29 @@ class HomePage extends Component {
   constructor() {
     super()
     this.state = {
-      data: []
+      vaccineData: [],
+      treatmentData : []
     }
   }
 
   componentDidMount() {
     Tabletop.init({
       key: '1ImpYv9-_qKmF8JkdV8YW1tN8IAycPszPpG6VCn-rH4Q',
-      callback: googleData => {
-        console.log('Data', googleData)
+      callback: virusInfo => {
+        this.setState({
+          vaccineData: {
+            totalProducers : virusInfo.vaccineData.elements.length,
+            success : 0,
+            humanTrail : 15
+          },
+          treatmentData: {
+            totalProducers : virusInfo.treatmentData.elements.length,
+            success : 0,
+            humanTrail : 15
+          }
+        });
+        // console.log('Vaccine Data ------>', this.state.vaccineData);
+        // console.log('Treatment Data ---->', this.state.treatmentData);
       }
     })
   }
@@ -37,10 +51,10 @@ class HomePage extends Component {
             <div className="col-md-10 col-md-offset-1">
               <div className="row">
                 <div className="col-md-6">
-                  <SimpleTracker />
+                  <SimpleTracker vaccineTreatmentInfo = {this.state.vaccineData}/>
                 </div>
                 <div className="col-md-6">
-                  <SimpleTracker />
+                  <SimpleTracker vaccineTreatmentInfo = {this.state.treatmentData}/>
                 </div>
               </div>
             </div>

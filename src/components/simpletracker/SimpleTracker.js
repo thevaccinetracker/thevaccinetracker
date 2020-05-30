@@ -15,7 +15,7 @@ class SimpleTracker extends Component {
                 <div className="infoNumber">
                     <div className="count producers">
                         <div className="number">
-                            130
+                            {this.props.vaccineTreatmentInfo.totalProducers}
                         </div>
                         <div className="countlabel">
                             UNDER DEVELOPMENT
@@ -23,7 +23,7 @@ class SimpleTracker extends Component {
                     </div>
                     <div className="count success">
                         <div className="number">
-                            0
+                        {this.props.vaccineTreatmentInfo.success}
                         </div>
                         <div className="countlabel">
                             DEVELOPED
@@ -31,7 +31,7 @@ class SimpleTracker extends Component {
                     </div>
                     <div className="count trials">
                         <div className="number">
-                            12
+                        {this.props.vaccineTreatmentInfo.humanTrail}
                         </div>
                         <div className="countlabel">
                             HUMAN TRIAL
