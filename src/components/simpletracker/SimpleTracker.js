@@ -1,11 +1,12 @@
 import React, { Component } from "../../../node_modules/react";
+import injectionIcon from "../../assets/images/injection.svg";
 
 class SimpleTracker extends Component {
   render() {
     return (
         <div className="simpleVaccineTreatmentTracker">
             <div className="icon">
-
+                <img src={injectionIcon} alt="Injection Icon"/>
             </div>
             <div className="infoSection">
                 <div className="type">
