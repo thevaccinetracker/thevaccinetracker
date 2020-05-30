@@ -1,11 +1,14 @@
 import React, {Component} from "react"
 import "../assets/styles/style.scss"
-import HomepageComponent from "../components/homepageComponent";
+import MainHeader from "../components/MainHeader";
 
 class IndexPage extends Component {
   render() {
     return (
-      <HomepageComponent/>
+      <div className="homePage">
+        <MainHeader/>
+      </div>
+      
     );
   }
 }

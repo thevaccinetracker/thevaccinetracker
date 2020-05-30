@@ -14,12 +14,58 @@ $c9 : #783BFD;
 $c10 : #5E36F7;
 $c11 : #3830EF;
 
+// Status Colors
+$sWarning : #FFD84D;
+$sDanger : #ffd84d;
+$sSuccess : #ffd84d;
+$sInfo : #ffd84d;
+
+// Greyscales
+$gs0 : #333333;
+
 body{
   padding: 0;
   margin: 0;
   background-color: $c0;
 }
 
+.mainHeader{
+  margin-top: 20px;
+  .virusMainStatus{
+    ul{
+      display: flex;
+      margin-bottom: 0px;
+      align-items: center;
+      justify-content: flex-end;
+      margin-top: 10px;
+      li{
+        list-style-type: none;
+        margin-left: 15px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+    .virusType{
+      border-radius: 20px;
+      color: #040932;
+      background-color: #FEB9D3;
+      padding: 4px 15px;
+      font-weight: 800;
+    }
+    .overallStatus{
+      width: 20px;
+      height: 20px;
+      border-radius: 50px;
+    }
+    .vaccineStatus{
+      background: $sWarning;
+    }
+    .treatmentStatus{
+      background: $sWarning;
+    }
+  }
+}
+
 .homePage{
-  background-color: $c0;
 }
