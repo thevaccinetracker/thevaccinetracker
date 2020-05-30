@@ -1,5 +1,9 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
+// *************************************************
+// ************Common Properties Starts*************
+// *************************************************
+
 // Color Variables
 $c0 : #040932;
 $c1 : #040A3D;
@@ -21,13 +25,32 @@ $sSuccess : #ffd84d;
 $sInfo : #ffd84d;
 
 // Greyscales
-$gs0 : #333333;
+$gs0 : #FFFFFF;
+
+// Text Styles
+.largeHeading{
+  font-size: 60px;
+  font-weight: 800;
+  color: $gs0;
+}
+
+.paragraph{
+  font-size: 12px;
+  color: $gs0;
+}
+
+// Body reset
 
 body{
   padding: 0;
   margin: 0;
   background-color: $c0;
 }
+
+// *************************************************
+// ************Common Properties Ends***************
+// *************************************************
+
 
 .mainHeader{
   margin-top: 20px;
@@ -68,4 +91,31 @@ body{
 }
 
 .homePage{
+  .firstFold{
+    margin-top: 30px;
+    h1{
+      text-align: center;
+      margin-top: 100px;
+    }
+    .mainSimpleTracker{
+      margin-top: 60px;
+      .simpleVaccineTracker{
+        background-color: $gs0;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      .simpleTreatmentTracker{
+        background-color: $gs0;
+        padding: 20px;
+        border-radius: 10px;
+      }
+    }
+    .upcoming{
+      text-align: center;
+      position: fixed;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+    }
+  }
 }
