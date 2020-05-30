@@ -1,4 +1,5 @@
 import React, { Component } from "../../../node_modules/react";
+import SimpleTracker from "../simpletracker/SimpleTracker";
 
 class HomePage extends Component {
   render() {
@@ -18,15 +19,11 @@ class HomePage extends Component {
             <div className="col-md-10 col-md-offset-1">
               <div className="row">
                 <div className="col-md-6">
-                <div className="simpleVaccineTracker">
-                  Vaccine
+                  <SimpleTracker />
                 </div>
-              </div>
-              <div className="col-md-6">
-                <div className="simpleTreatmentTracker">
-                  Treatment
+                <div className="col-md-6">
+                  <SimpleTracker />
                 </div>
-              </div>
               </div>
             </div>
           </div>
