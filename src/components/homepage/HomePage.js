@@ -1,7 +1,25 @@
 import React, { Component } from "../../../node_modules/react";
 import SimpleTracker from "../simpletracker/SimpleTracker";
+import Tabletop from '../../../node_modules/tabletop';
+
 
 class HomePage extends Component {
+  constructor() {
+    super()
+    this.state = {
+      data: []
+    }
+  }
+
+  componentDidMount() {
+    Tabletop.init({
+      key: '1ImpYv9-_qKmF8JkdV8YW1tN8IAycPszPpG6VCn-rH4Q',
+      callback: googleData => {
+        console.log('Data', googleData)
+      }
+    })
+  }
+
   render() {
     return (
       <div className="firstFold">
