@@ -11,7 +11,7 @@ class PageNotFoundComponent extends Component {
           <div className="row">
             <div className="col-md-12 text-center">
               <h1 className="largeHeading">404 Page not found</h1>
-              <img src={pageNotFoundImage} alt="404 Page not found" className="pagenotfoundImage" />
+              <img src={pageNotFoundImage} alt="404 Page not found" className="pagenotfoundImage img img-responsive" />
               <div className="pagenotfoundButton">
                 <button className="btn primaryCTA">Go to home</button>
               </div>
