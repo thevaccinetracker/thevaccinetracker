@@ -1,14 +1,14 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
+// Color Variables
+$c0 : #040932;
 
-.container-fluid {
+body{
   padding: 0;
+  margin: 0;
+  background-color: $c0;
 }
 
-$color : teal;
-
-h1 {
-  text-align: center;
-  background: $color;
-  margin: 0;
+.homePage{
+  background-color: $c0;
 }
