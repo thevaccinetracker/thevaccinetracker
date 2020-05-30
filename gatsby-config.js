@@ -1,5 +1,4 @@
 module.exports = {
-  pathPrefix: "/thevaccinetracker",
   siteMetadata: {
     title: `thevaccinetracker`,
     description: `Open Source Project for the Vaccine Tracker`,
