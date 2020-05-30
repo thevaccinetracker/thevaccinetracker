@@ -1,5 +1,14 @@
-$color : red;
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+
+.container-fluid {
+  padding: 0;
+}
+
+$color : teal;
 
 h1 {
+  text-align: center;
   background: $color;
+  margin: 0;
 }
