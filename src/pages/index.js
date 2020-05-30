@@ -1,5 +1,5 @@
-import React, {Component} from "react"
-import "../assets/styles/style.scss"
+import React, {Component} from "react";
+import "../assets/styles/style.scss";
 import MainHeader from "../components/MainHeader";
 import HomePage from "../components/homepage/HomePage";
 
@@ -10,7 +10,7 @@ class IndexPage extends Component {
         <MainHeader/>
         <HomePage />
       </div>
-      
+
     );
   }
 }

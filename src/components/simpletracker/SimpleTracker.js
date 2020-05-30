@@ -1,8 +1,19 @@
 import React, { Component } from "../../../node_modules/react";
 import injectionIcon from "../../assets/images/injection.svg";
+import Loader from "react-loader-spinner";
 
 class SimpleTracker extends Component {
   render() {
+    const {vaccineTreatmentInfo} = this.props;
+
+    const Loading = () => {
+      return (
+        <Loader type="TailSpin" color="#19265f" height={26} width={50} style={{
+          textAlign: 'center'
+        }}/>
+      )
+    }
+
     return (
         <div className="simpleVaccineTreatmentTracker">
             <div className="icon">
@@ -15,7 +26,7 @@ class SimpleTracker extends Component {
                 <div className="infoNumber">
                     <div className="count producers">
                         <div className="number">
-                            {this.props.vaccineTreatmentInfo.totalProducers}
+                            {vaccineTreatmentInfo.totalProducers>=0 ? vaccineTreatmentInfo.totalProducers : <Loading/>}
                         </div>
                         <div className="countlabel">
                             UNDER DEVELOPMENT
@@ -23,7 +34,7 @@ class SimpleTracker extends Component {
                     </div>
                     <div className="count success">
                         <div className="number">
-                        {this.props.vaccineTreatmentInfo.success}
+                        {vaccineTreatmentInfo.success>=0 ? vaccineTreatmentInfo.success : <Loading/>}
                         </div>
                         <div className="countlabel">
                             DEVELOPED
@@ -31,7 +42,7 @@ class SimpleTracker extends Component {
                     </div>
                     <div className="count trials">
                         <div className="number">
-                        {this.props.vaccineTreatmentInfo.humanTrail}
+                        {vaccineTreatmentInfo.humanTrail>=0 ? vaccineTreatmentInfo.humanTrail : <Loading/>}
                         </div>
                         <div className="countlabel">
                             HUMAN TRIAL
