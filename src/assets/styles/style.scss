@@ -39,6 +39,13 @@ $gs0 : #FFFFFF;
   color: $gs0;
 }
 
+// Button Styles
+.primaryCTA{
+  background-color: $c11;
+  color: $gs0;
+  padding: 10px 30px;
+}
+
 // Body reset
 
 body{
@@ -158,6 +165,18 @@ body{
         }
       }
     }
+  }
+}
+
+.pagenotfound{
+  h1{
+    margin-top: 40px;
+  }
+  .pagenotfoundImage{
+    margin-top:50px;
+  }
+  .pagenotfoundButton{
+    margin: 50px 0;
   }
 }
 
