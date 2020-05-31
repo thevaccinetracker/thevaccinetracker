@@ -38,7 +38,7 @@ $small-device : 768px;
   color: $gs0;
   @media only screen and (max-width: $small-device) {
     font-size: 34px;
-  } 
+  }
 }
 
 .paragraph{
@@ -130,7 +130,7 @@ body{
         }
       }
     }
-  } 
+  }
 }
 //main header component
 
@@ -171,14 +171,16 @@ body{
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    margin-left: 20px;
+    width: 85%;
     .type{
       color: #7C77BA;
       font-weight: 800;
       font-size: 14px;
-      margin-bottom: 10px; 
+      margin-bottom: 10px;
     }
     .infoNumber{
+      width: 100%;
+      justify-content: space-between;
       display: flex;
       .count:not(:first-child){
         margin-left: 30px;
