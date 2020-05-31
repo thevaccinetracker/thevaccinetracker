@@ -21,7 +21,7 @@ class SimpleTracker extends Component {
             </div>
             <div className="infoSection">
                 <div className="type">
-                    Vaccine
+                    {vaccineTreatmentInfo.vaccineTreatmentType}
                 </div>
                 <div className="infoNumber">
                     <div className="count producers">

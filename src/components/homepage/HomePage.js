@@ -20,12 +20,14 @@ class HomePage extends Component {
           vaccineData: {
             totalProducers : virusInfo.vaccineData.elements.length,
             success : 0,
-            humanTrail : 15
+            humanTrail : 15,
+            vaccineTreatmentType : "Vaccine"
           },
           treatmentData: {
             totalProducers : virusInfo.treatmentData.elements.length,
             success : 0,
-            humanTrail : 0
+            humanTrail : 0,
+            vaccineTreatmentType : "Treatment"
           }
         });
         // console.log('Vaccine Data ------>', this.state.vaccineData);
