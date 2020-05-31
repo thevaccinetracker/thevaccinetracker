@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `thevaccinetracker`,
-    description: `Open Source Project for the Vaccine Tracker`,
-    author: `@gatsbyjs`,
+    title: `The COVID - 19 Vaccine Tracker`,
+    description: `An open Source Project for the COVID - 19 Vaccine Tracker`,
+    author: `Rohit Bind, Ujjwal, Mitxiyswang, Faisal, Shreyash Barot, Vipin, Ishan`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -22,8 +22,8 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#3830EF`,
+        theme_color: `#3830EF`,
         display: `minimal-ui`,
         icon: `src/assets/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
