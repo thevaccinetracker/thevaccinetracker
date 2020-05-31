@@ -25,7 +25,7 @@ class HomePage extends Component {
           treatmentData: {
             totalProducers : virusInfo.treatmentData.elements.length,
             success : 0,
-            humanTrail : 15
+            humanTrail : 0
           }
         });
         // console.log('Vaccine Data ------>', this.state.vaccineData);
@@ -39,7 +39,7 @@ class HomePage extends Component {
       <div className="firstFold">
         <div className="container">
           <div className="row">
-            <div className="col-md-12">
+            <div className="col-md-10 col-md-offset-1">
               <div className="firstFold">
                 <h1 className="largeHeading">
                   COVID - 19 Vaccine &amp; Treatment Tracker
