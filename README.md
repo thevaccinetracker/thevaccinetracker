@@ -1,7 +1,7 @@
 # The Vaccine Tracker
 Open Source Project for the Vaccine Tracker
 
-Clone Repository : [https://github.com/ujjwal8880/thevaccinetracker](https://github.com/ujjwal8880/thevaccinetracker)
+Clone Repository : [https://github.com/thevaccinetracker/thevaccinetracker](https://github.com/thevaccinetracker/thevaccinetracker)
 
 > Using Node Version : 10.19.0
 

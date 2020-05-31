@@ -2,7 +2,7 @@
   "name": "thevaccinetracker",
   "description": "Open Source Project for the Vaccine Tracker",
   "version": "1.0.0",
-  "author": "Ujjwal",
+  "author": "Ujjwal Singhal",
   "dependencies": {
     "bootstrap": "^3.4.1",
     "gatsby": "^2.21.37",
@@ -41,9 +41,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ujjwal8880/thevaccinetracker"
+    "url": "https://github.com/thevaccinetracker/thevaccinetracker"
   },
   "bugs": {
-    "url": "https://github.com/ujjwal8880/thevaccinetracker/issues"
+    "url": "https://github.com/thevaccinetracker/thevaccinetracker/issues"
   }
 }
