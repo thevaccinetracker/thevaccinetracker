@@ -14,6 +14,28 @@ class SimpleTracker extends Component {
       )
     }
 
+    const treatment = vaccineTreatmentInfo.vaccineTreatmentType;
+    let successCount = <div className="count success">
+            <div className="number">
+                {vaccineTreatmentInfo.success>=0 ? vaccineTreatmentInfo.success : <Loading/>}
+            </div>
+            <div className="countlabel">
+                Developed
+            </div>
+        </div>;
+    if (treatment == "Vaccine") {
+        successCount = <div className="count success">
+            <div className="number">
+                {vaccineTreatmentInfo.success>=0 ? vaccineTreatmentInfo.success : <Loading/>}
+            </div>
+            <div className="countlabel">
+                Developed
+            </div>
+        </div>;
+    } else {
+        successCount = <div className="count success"></div>;
+    }
+
 
     return (
         <div className="simpleVaccineTreatmentTracker">
@@ -30,23 +52,16 @@ class SimpleTracker extends Component {
                             {vaccineTreatmentInfo.totalProducers>=0 ? vaccineTreatmentInfo.totalProducers : <Loading/>}
                         </div>
                         <div className="countlabel">
-                            UNDER DEVELOPMENT
+                            Developer / Researcher
                         </div>
                     </div>
-                    <div className="count success">
-                        <div className="number">
-                            {vaccineTreatmentInfo.success>=0 ? vaccineTreatmentInfo.success : <Loading/>}
-                        </div>
-                        <div className="countlabel">
-                            DEVELOPED
-                        </div>
-                    </div>
+                    {successCount}
                     <div className="count trials">
                         <div className="number">
                             {vaccineTreatmentInfo.humanTrail>=0 ? vaccineTreatmentInfo.humanTrail : <Loading/>}
                         </div>
                         <div className="countlabel">
-                            HUMAN TRIAL
+                            Human Trial
                         </div>
                     </div>
                 </div>
