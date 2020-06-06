@@ -14,6 +14,7 @@ class SimpleTracker extends Component {
       )
     }
 
+    
     return (
         <div className="simpleVaccineTreatmentTracker">
             <div className="icon">
