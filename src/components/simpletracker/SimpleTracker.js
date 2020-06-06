@@ -8,13 +8,13 @@ class SimpleTracker extends Component {
 
     const Loading = () => {
       return (
-        <Loader type="TailSpin" color="#19265f" height={26} width={50} style={{
-          textAlign: 'center'
+        <Loader type="ThreeDots" color="#FEB9D3" height={26} width={26} style={{
+          textAlign: 'left'
         }}/>
       )
     }
 
-    
+
     return (
         <div className="simpleVaccineTreatmentTracker">
             <div className="icon">
@@ -35,7 +35,7 @@ class SimpleTracker extends Component {
                     </div>
                     <div className="count success">
                         <div className="number">
-                        {vaccineTreatmentInfo.success>=0 ? vaccineTreatmentInfo.success : <Loading/>}
+                            {vaccineTreatmentInfo.success>=0 ? vaccineTreatmentInfo.success : <Loading/>}
                         </div>
                         <div className="countlabel">
                             DEVELOPED
@@ -43,7 +43,7 @@ class SimpleTracker extends Component {
                     </div>
                     <div className="count trials">
                         <div className="number">
-                        {vaccineTreatmentInfo.humanTrail>=0 ? vaccineTreatmentInfo.humanTrail : <Loading/>}
+                            {vaccineTreatmentInfo.humanTrail>=0 ? vaccineTreatmentInfo.humanTrail : <Loading/>}
                         </div>
                         <div className="countlabel">
                             HUMAN TRIAL
