@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `The COVID - 19 Vaccine Tracker`,
+    title: `The Vaccine Tracker for COVID - 19`,
     description: `An open Source Project for the COVID - 19 Vaccine Tracker`,
-    author: `Rohit Bind, Ujjwal Singhal, Mitxiyswang, Faisal, Rishu, Shreyash Barot, Vipin`,
+    author: `Rohit Bind, Ujjwal Singhal, Mitxiyswang, Faisal, Rishu, Shreyash Barot, Vipin, Mohit Gupta`,
+    keywords: ["Vaccine","COVID - 19","Corona"],
+    url: ""
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
