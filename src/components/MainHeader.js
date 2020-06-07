@@ -7,7 +7,9 @@ class MainHeader extends Component {
       <div className="container mainHeader">
         <div className="row">
           <div className="col-md-6 col-xs-5">
-            <img src={logo} alt="The Vaccine Tracker Logo" className="img img-responsive" />
+            <a href="/">
+              <img src={logo} alt="The Vaccine Tracker Logo" className="img img-responsive"  />
+            </a>
           </div>
           <div className="col-md-6 col-xs-7">
             <div className="virusMainStatus">
