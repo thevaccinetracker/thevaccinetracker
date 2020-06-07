@@ -12,7 +12,6 @@ class IndexPage extends Component {
         <MainHeader/>
         <HomePage />
       </div>
-
     );
   }
 }

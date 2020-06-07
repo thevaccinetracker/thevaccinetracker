@@ -8,7 +8,10 @@ class PageNotFoundComponent extends Component {
   render() {
     return (
       <div className="pagenotfound">
-        <SEO />
+        <SEO
+          title="404 Page | COVID - 19 Vaccine Tracker | The Vaccine Tracker"
+          description="COVID - 19 Vaccine Tracker | The Vaccine Tracker"
+        />
         <MainHeader/>
         <div className="container">
           <div className="row">

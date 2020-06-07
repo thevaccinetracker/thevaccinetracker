@@ -51,6 +51,7 @@ SEO.propTypes = {
   article: PropTypes.bool,
 }
 SEO.defaultProps = {
+  lang: `en`,
   title: null,
   description: null,
   image: null,
