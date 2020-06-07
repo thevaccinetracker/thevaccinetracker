@@ -2,11 +2,13 @@ import React, { Component } from "react";
 import MainHeader from "../components/MainHeader";
 import pageNotFoundImage from "../assets/images/404.svg";
 import "../assets/styles/style.scss";
+import SEO from "../components/seo";
 
 class PageNotFoundComponent extends Component {
   render() {
     return (
       <div className="pagenotfound">
+        <SEO />
         <MainHeader/>
         <div className="container">
           <div className="row">

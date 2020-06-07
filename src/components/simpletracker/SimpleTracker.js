@@ -23,7 +23,7 @@ class SimpleTracker extends Component {
                 Developed
             </div>
         </div>;
-    if (treatment == "Vaccine") {
+    if (treatment === "Vaccine") {
         successCount = <div className="count success">
             <div className="number">
                 {vaccineTreatmentInfo.success>=0 ? vaccineTreatmentInfo.success : <Loading/>}

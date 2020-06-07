@@ -4,16 +4,26 @@ module.exports = {
     description: `An open Source Project for the COVID - 19 Vaccine Tracker`,
     author: `Rohit Bind, Ujjwal Singhal, Mitxiyswang, Faisal, Rishu, Shreyash Barot, Vipin, Mohit Gupta`,
     keywords: ["Vaccine","COVID - 19","Corona"],
-    url: ""
+    url: "",
+    siteUrl: `https://thevaccinetracker.com/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/assets/images`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://thevaccinetracker.com/',
+        sitemap: 'https://thevaccinetracker.com/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
       },
     },
     `gatsby-transformer-sharp`,

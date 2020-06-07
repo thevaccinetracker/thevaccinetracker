@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import Helmet from "react-helmet";
 import "../assets/styles/style.scss";
 import MainHeader from "../components/MainHeader";
 import HomePage from "../components/homepage/HomePage";
