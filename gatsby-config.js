@@ -31,6 +31,7 @@ module.exports = {
       options: {
         // replace "UA-XXXXXXXXX-X" with your own Tracking ID
         trackingId: "UA-168784956-1",
+        head: true
       },
     },
     `gatsby-transformer-sharp`,
