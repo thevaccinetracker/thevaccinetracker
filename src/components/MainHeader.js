@@ -6,17 +6,19 @@ class MainHeader extends Component {
     return (
       <div className="container mainHeader">
         <div className="row">
-          <div className="col-md-6 col-xs-5">
+          <div className="col-md-6 col-xs-12">
             <a href="/">
               <img src={logo} alt="The Vaccine Tracker Logo" className="img img-responsive"  />
             </a>
           </div>
-          <div className="col-md-6 col-xs-7">
+          <div className="col-md-6 col-xs-12">
             <div className="virusMainStatus">
               <ul>
-                <li className="virusType">COVID - 19</li>
-                <li className="overallStatus vaccineStatus"></li>
-                <li className="overallStatus treatmentStatus"></li>
+                <li className="virusType">
+                  <div className="blinking liveUpdates"></div>
+                  COVID-19
+                </li>
+                <li className="overallStatus vaccineStatus">VACCINE TRACKER</li>
               </ul>
             </div>
           </div>

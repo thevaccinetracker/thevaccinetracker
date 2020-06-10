@@ -1,5 +1,5 @@
 import React, { Component } from "../../../node_modules/react";
-import SimpleTracker from "../simpletracker/SimpleTracker";
+import TrackerMain from "../trackerMain/TrackerMain";
 import Tabletop from '../../../node_modules/tabletop';
 
 
@@ -44,29 +44,22 @@ class HomePage extends Component {
             <div className="col-md-10 col-md-offset-1">
               <div className="firstFold">
                 <h1 className="largeHeading">
-                  COVID - 19 Vaccine &amp; Treatment Tracker
+                  COVID-19 Vaccine Tracker
                 </h1>
-              </div>
-            </div>
-          </div>
-          <div className="row mainSimpleTracker">
-            <div className="col-md-10 col-md-offset-1">
-              <div className="row">
-                <div className="col-md-6">
-                  <SimpleTracker vaccineTreatmentInfo = {this.state.vaccineData}/>
-                </div>
-                <div className="col-md-6">
-                  <SimpleTracker vaccineTreatmentInfo = {this.state.treatmentData}/>
-                </div>
               </div>
             </div>
           </div>
           <div className="row">
             <div className="col-md-12">
+              <TrackerMain/>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-12">
               <div className="upcoming">
-                <p className="paragraph">
+                <h6 className="">
                   We will be launching the detailed version soon
-                </p>
+                </h6>
               </div>
             </div>
           </div>

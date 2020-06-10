@@ -18,6 +18,17 @@ $c8 : #5E8CE9;
 $c9 : #783BFD;
 $c10 : #5E36F7;
 $c11 : #3830EF;
+$c12 : #0F1243;
+$c13 : #FFD84D;
+
+//Resets
+p{
+  margin: 0px;
+}
+
+.rc-progress-line-trail{
+  stroke: rgba(217, 217, 217, 0.1);
+}
 
 // Status Colors
 $sWarning : #FFD84D;
@@ -46,6 +57,36 @@ $small-device : 768px;
   color: $gs0;
 }
 
+.gs0Para{
+  font-size: 12px;
+  color: $gs0;
+  font-weight: 100;
+}
+
+.c5Para{
+  font-size: 12px;
+  color: $c5;
+  font-weight: 200;
+}
+
+h2{
+  font-size: 30px;
+  color: $gs0;
+  font-weight: 700;
+}
+
+h3{
+  font-size: 20px;
+  color: $gs0;
+  font-weight: 200;
+}
+
+h6{
+  font-size: 16px;
+  color: $gs0;
+  font-weight: 300;
+}
+
 // Button Styles
 .primaryCTA{
   background-color: $c11;
@@ -70,24 +111,52 @@ body{
   padding: 0;
   margin: 0;
   background-color: $c0;
-  background-image: url(../images/worldmap.svg);
+  // background-image: url(../images/worldmap.svg);
   background-position: center 80%;
   background-repeat: no-repeat;
   font-family: 'Roboto', sans-serif;
 }
 
 // *************************************************
-// ************Common Properties Ends***************
+// ****************** Animation*********************
+// *************************************************
+
+.blinking{
+  transform: scale(1);
+  animation : blinkingText 2s infinite;
+  transition-timing-function: ease;
+}
+@keyframes blinkingText{
+	0%{		transform: scale(1);	}
+  70%{	transform: scale(1);	}
+  90%{	transform: scale(0.75);	}
+  100%{	transform: scale(1);	}
+}
+
+// *************************************************
+// ****************** Animation*********************
 // *************************************************
 
 
-// Components Starts here
+// *************************************************
+// ************Common Properties Ends***************
+// *************************************************
 
+//**********************************
+// Components Starts here
+//**********************************
 
 //Main header component starts here
 .mainHeader{
   margin-top: 20px;
   .virusMainStatus{
+    .liveUpdates{
+      width:10px;
+      height:10px;
+      background:$c0;
+      border-radius:40px;
+      margin-right: 5px;
+    }
     ul{
       display: flex;
       margin-bottom: 0px;
@@ -96,26 +165,27 @@ body{
       margin-top: 10px;
       li{
         list-style-type: none;
-        margin-left: 15px;
+        margin-left: -25px;
         display: flex;
         flex-direction: row;
         align-items: center;
       }
     }
     .virusType{
-      border-radius: 20px;
-      color: #040932;
-      background-color: #FEB9D3;
-      padding: 4px 15px;
+      border-radius: 6px;
+      color: $c0;
+      background-color: $c5;
+      padding: 4px 14px 4px 13px;
       font-weight: 800;
-    }
-    .overallStatus{
-      width: 20px;
-      height: 20px;
-      border-radius: 50px;
+      z-index: 1;
     }
     .vaccineStatus{
-      background: $sWarning;
+      background: $c4;
+      padding: 4px 20px 4px 40px;
+      border-radius: 6px;
+      font-weight: 800;
+      color: $gs0;
+      z-index: 0;
     }
     .treatmentStatus{
       background: $sWarning;
@@ -123,23 +193,32 @@ body{
   }
   @media only screen and (max-width: $small-device) {
     .virusMainStatus{
+      float: left;
+      margin-top: 20px;
       ul{
+        padding: 0;
         li{
+          margin-left: 0;
+        }
+        li:not(:first-child){
           white-space: nowrap;
-          margin-left: 8px;
+          margin-left: -25px;
         }
       }
     }
+    &{
+      margin-top: 40px;
+    }
   }
 }
-//main header component
+//main header component Ends here
 
 .homePage{
   .firstFold{
     margin-top: 30px;
     h1{
       text-align: center;
-      margin-top: 80px;
+      margin-top: 50px;
     }
     .mainSimpleTracker{
       margin-top: 60px;
@@ -147,6 +226,14 @@ body{
     }
     .upcoming{
       text-align: center;
+    }
+    @media only screen and (max-width: $small-device) {
+      h1{
+        text-align: left;
+      }
+      .upcoming{
+        text-align: left;
+      }
     }
   }
 }
@@ -158,9 +245,10 @@ body{
   display: flex;
   margin-bottom: 20px;
   min-height: 120px;
+  max-width: 420px;
   .icon{
     width: 80px;
-    background-color: $c5;
+    background-color: $c4;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -174,7 +262,7 @@ body{
     flex-direction: column;
     width: 85%;
     .type{
-      color: #7C77BA;
+      color: $c4;
       font-weight: 800;
       font-size: 14px;
       margin-bottom: 10px;
@@ -193,6 +281,9 @@ body{
           line-height: 1;
           color: $c0;
           min-height: 36px;
+        }
+        span{
+          color: $c8;
         }
         .countlabel{
           color: $c4;
@@ -242,5 +333,119 @@ body{
   }
 }
 
+.covidVaccineStagesAndPhases{
+  display: flex;
+  margin: 20px 0 40px 0;
+  .stages{
+    padding: 30px 20px;
+    background-color: $c12;
+    border-radius: 10px;
+    transition: all 0.8s ease;
+    &:hover{
+      background: #11165d;
+    }
+  }
+  .stages:not(:first-child){
+    margin-left: 10px;
+  }
+  .stage1, .stage2, .stage4, .stage5{
+    flex: 1;
+    .icon{
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img{
+        width: 20px;
+      }
+    }
+    .totalStageCount{
+      h2{
+        margin-top: 30px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .stage3{
+    flex: 2;
+    .icon{
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img{
+        width: 20px;
+      }
+    }
+    .totalStageCount{
+      display: flex;
+      h2{
+        margin-top: 30px;
+        margin-bottom: 10px;
+      }
+      .phases{
+        margin-right: 25px;
+      }
+    }
+  }
+
+  .stage1{
+    .icon{
+      background-color: $c5;
+    }
+  }
+  .stage2{
+    .icon{
+      background-color: $c4;
+    }
+  }
+  .stage3{
+    .icon{
+      background-color: $c13;
+    }
+    .progressBar{
+      margin-top: 19px;
+    }
+  }
+  .stage4{
+    .icon{
+      background-color: $c7;
+    }
+  }
+  .stage5{
+    .icon{
+      background-color: $c7;
+    }
+  }
+
+  .progressCount{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .progressBar{
+    margin-top: 45px;
+  }
+  @media only screen and (max-width: $small-device) {
+    .stages{
+      min-width: 200px;
+    }
+    .stage3{
+      min-width: 310px !important;
+    }
+    &.covidVaccineStagesAndPhases{
+      overflow-x: auto;
+    }
+  }
+}
+
+//*******************************
 // Components Ends Here
+//*******************************
 
