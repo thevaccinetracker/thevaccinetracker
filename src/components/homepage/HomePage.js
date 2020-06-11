@@ -1,41 +1,7 @@
 import React, { Component } from "../../../node_modules/react";
 import TrackerMain from "../trackerMain/TrackerMain";
-import Tabletop from '../../../node_modules/tabletop';
-
 
 class HomePage extends Component {
-  constructor() {
-    super()
-    this.state = {
-      vaccineData: [],
-      treatmentData : []
-    }
-  }
-
-  componentDidMount() {
-    Tabletop.init({
-      key: '1ImpYv9-_qKmF8JkdV8YW1tN8IAycPszPpG6VCn-rH4Q',
-      callback: virusInfo => {
-        this.setState({
-          vaccineData: {
-            totalProducers : virusInfo.vaccineData.elements.length,
-            success : 0,
-            humanTrail : 15,
-            vaccineTreatmentType : "Vaccine"
-          },
-          treatmentData: {
-            totalProducers : virusInfo.treatmentData.elements.length,
-            success : 0,
-            humanTrail : 0,
-            vaccineTreatmentType : "Treatment"
-          }
-        });
-        // console.log('Vaccine Data ------>', this.state.vaccineData);
-        // console.log('Treatment Data ---->', this.state.treatmentData);
-      }
-    })
-  }
-
   render() {
     return (
       <div className="firstFold">

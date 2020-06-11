@@ -5,10 +5,42 @@ import stage3Icon from "../../assets/images/humanTrials.svg";
 import stage4Icon from "../../assets/images/approval.svg";
 import stage5Icon from "../../assets/images/production.svg";
 import {Line} from 'rc-progress';
+import Tabletop from '../../../node_modules/tabletop';
 // import Loader from "react-loader-spinner";
 
 class TrackerMain extends Component {
-  render() {
+    constructor() {
+        super()
+        this.state = {
+            vaccineData: [],
+            treatmentData : []
+        }
+    }
+
+    componentDidMount() {
+        Tabletop.init({
+            key: '1ImpYv9-_qKmF8JkdV8YW1tN8IAycPszPpG6VCn-rH4Q',
+            callback: virusInfo => {
+                // this.setState({
+                //     vaccineData: {
+                //         totalProducers : virusInfo.vaccineData.elements.length,
+                //         success : 0,
+                //         humanTrail : 15,
+                //         vaccineTreatmentType : "Vaccine"
+                //     },
+                //     treatmentData: {
+                //         totalProducers : virusInfo.treatmentData.elements.length,
+                //         success : 0,
+                //         humanTrail : 0,
+                //         vaccineTreatmentType : "Treatment"
+                //     }
+                // });
+                console.log('Vaccine Data ------>', virusInfo.vaccineData.elements);
+            }
+        })
+    }
+
+    render() {
     // const {vaccineTreatmentInfo} = this.props;
 
     // const Loading = () => {
