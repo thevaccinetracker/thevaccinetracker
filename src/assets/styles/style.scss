@@ -32,9 +32,10 @@ p{
 
 // Status Colors
 $sWarning : #FFD84D;
-$sDanger : #ffd84d;
-$sSuccess : #ffd84d;
-$sInfo : #ffd84d;
+$sWarm : #ffa502;
+$sDanger : #ef321f;
+$sSuccess : #16a716;
+$sInfo : #0a2edc;
 
 // Greyscales
 $gs0 : #FFFFFF;
@@ -428,9 +429,29 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .indicatorPara{
+      flex: 1;
+      margin-left: 5px;
+    }
   }
   .progressBar{
     margin-top: 45px;
+  }
+  .successIndicator{
+    max-width: 5px;
+    height: 5px;
+    width: 5px;
+    border-radius: 10px;
+    background-color: $sSuccess;
+    flex: 1;
+  }
+  .ongoingIndicator{
+    max-width: 5px;
+    height: 5px;
+    width: 5px;
+    border-radius: 10px;
+    background-color: $sWarm;
+    flex: 1;
   }
   @media only screen and (max-width: $small-device) {
     .stages{
