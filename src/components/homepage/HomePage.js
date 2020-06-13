@@ -7,9 +7,9 @@ class HomePage extends Component {
       <div className="firstFold">
         <div className="container">
           <div className="row">
-            <div className="col-md-10 col-md-offset-1">
+            <div className="col-md-12">
               <div className="firstFold">
-                <h1 className="largeHeading">
+                <h1 className="largeHeading text-left">
                   COVID-19 Vaccine Tracker
                 </h1>
               </div>
@@ -18,15 +18,6 @@ class HomePage extends Component {
           <div className="row">
             <div className="col-md-12">
               <TrackerMain/>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-md-12">
-              <div className="upcoming">
-                <h6 className="">
-                  We will be launching the detailed version soon
-                </h6>
-              </div>
             </div>
           </div>
         </div>

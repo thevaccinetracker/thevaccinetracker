@@ -218,7 +218,6 @@ body{
   .firstFold{
     margin-top: 30px;
     h1{
-      text-align: center;
       margin-top: 50px;
     }
     .mainSimpleTracker{
@@ -462,6 +461,32 @@ body{
     }
     &.covidVaccineStagesAndPhases{
       overflow-x: auto;
+    }
+  }
+}
+
+.mainFooter {
+  margin-bottom: 40px;
+  ul{
+    padding: 0;
+    li{
+      display: inline;
+      a{
+        color: $c7;
+        font-size: 12px;
+      }
+    }
+    li:not(:first-child){
+      margin-left: 20px;
+    }
+  }
+  .paragraph{
+    color: $c4;
+  }
+  @media only screen and (max-width: $small-device) {
+    ul{
+      text-align: left;
+      margin-top: 10px;
     }
   }
 }
