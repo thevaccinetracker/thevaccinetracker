@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import logo from "../assets/images/logo.svg";
+// import logo from "../assets/images/logo.svg";
 
 class MainHeader extends Component {
   render() {
@@ -8,7 +8,7 @@ class MainHeader extends Component {
         <div className="row">
           <div className="col-md-8">
             <p className="paragraph">
-              It took us 4 weekend to bulid this. But for you it will take only 5 sec to share. We have interesting features in the pipeline. 
+              It took us 4 weekend to bulid this. But for you it will take only 5 sec to share. We have interesting features in the pipeline. Please do SHARE.
             </p>
           </div>
           <div className="col-md-4 text-right">
