@@ -10,7 +10,7 @@ class HomePage extends Component {
             <div className="col-md-12">
               <div className="firstFold">
                 <h1 className="largeHeading text-left">
-                  COVID-19 Vaccine Tracker
+                  COVID-19 Vaccine Status
                 </h1>
               </div>
             </div>

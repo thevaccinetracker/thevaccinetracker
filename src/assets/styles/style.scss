@@ -151,6 +151,9 @@ body{
 .mainHeader{
   margin-top: 20px;
   .virusMainStatus{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     .liveUpdates{
       width:10px;
       height:10px;
