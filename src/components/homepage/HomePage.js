@@ -9,8 +9,8 @@ class HomePage extends Component {
           <div className="row">
             <div className="col-md-12">
               <div className="firstFold">
-                <h1 className="largeHeading text-left">
-                  COVID-19 Vaccine Status
+                <h1 className="text-left">
+                  COVID-19 / Coronavirus vaccine development status (Detailed Tracker)
                 </h1>
               </div>
             </div>

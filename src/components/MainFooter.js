@@ -8,7 +8,7 @@ class MainHeader extends Component {
         <div className="row">
           <div className="col-md-7">
             <p className="paragraph">
-              It took us 4 weekend to bulid this. But for you it will take only 5 sec to share. We have interesting features in the pipeline. Please do SHARE.
+              It took us 4 weekend to bulid this. But for you it will take only 5 sec to share. We have interesting features in the pipeline.
             </p>
           </div>
           <div className="col-md-5 text-right">
