@@ -91,6 +91,7 @@ class TrackerMain extends Component {
                         percent={[((this.state.stageSuccess.stage1*100)/this.state.totalVaccines), ((this.state.stageOngoing.stage1*100)/this.state.totalVaccines)]}
                         strokeWidth="3" 
                         strokeColor={['#16a716','#ffa502']}
+                        strokeLinecap="butt"
                     />
                 </div>
                 <div className="progressCount">
@@ -134,6 +135,7 @@ class TrackerMain extends Component {
                         percent={[((this.state.stageOngoing.stage2*100)/this.state.totalVaccines), ((this.state.stageSuccess.stage2*100)/this.state.totalVaccines)]}
                         strokeWidth="3" 
                         strokeColor={['#ffa502','#16a716']}
+                        strokeLinecap="butt"
                     />
                 </div>
                 <div className="progressCount">
@@ -199,6 +201,7 @@ class TrackerMain extends Component {
                         strokeWidth="1.8"
                         trailWidth="0.6"
                         strokeColor={['#ffa502','#16a716']}
+                        strokeLinecap="butt"
                     />
                 </div>
                 
@@ -243,6 +246,7 @@ class TrackerMain extends Component {
                         percent={[((this.state.stageOngoing.stage4*100)/this.state.totalVaccines), ((this.state.stageSuccess.stage4*100)/this.state.totalVaccines)]}
                         strokeWidth="3" 
                         strokeColor={['#ffa502','#16a716']}
+                        strokeLinecap="butt"
                     />
                 </div>
                 
@@ -287,6 +291,7 @@ class TrackerMain extends Component {
                         percent={[((this.state.stageOngoing.stage5*100)/this.state.totalVaccines), ((this.state.stageSuccess.stage5*100)/this.state.totalVaccines)]}
                         strokeWidth="3" 
                         strokeColor={['#ffa502','#16a716']}
+                        strokeLinecap="butt"
                     />
                 </div>
                 
