@@ -20,6 +20,7 @@ $c10 : #5E36F7;
 $c11 : #3830EF;
 $c12 : #0F1243;
 $c13 : #FFD84D;
+$c14 : #05DAA3;
 
 //Resets
 p{
@@ -28,14 +29,16 @@ p{
 .rc-progress-line{
   border-radius: 10px;
 }
+.no-padding{
+  padding: 0px !important;
+}
 
 .rc-progress-line-trail{
   stroke: rgba(217, 217, 217, 0.1);
 }
 
 // Status Colors
-$sWarning : #FFD84D;
-$sWarm : #ffa502;
+$sWarning : #ffa502;
 $sDanger : #ef321f;
 $sSuccess : #16a716;
 $sInfo : #0a2edc;
@@ -84,9 +87,18 @@ h3{
   color: $gs0;
   font-weight: 200;
 }
-
-h6{
+h4{
+  font-size: 18px;
+  color: $gs0;
+  font-weight: 200;
+}
+h5{
   font-size: 16px;
+  color: $gs0;
+  font-weight: 200;
+}
+h6{
+  font-size: 14px;
   color: $gs0;
   font-weight: 300;
 }
@@ -100,7 +112,7 @@ h6{
   transition: all .2s ease-in-out;
 }
 .primaryCTA:focus{
-  color: #fff;
+  color: $gs0;
   border: 0px solid;
   outline: none;
 }
@@ -227,7 +239,7 @@ body{
       margin-top: 20px;
       font-size: 20px;
       font-weight: 500;
-      color: $gs0;
+      color: $c5;
       margin-bottom: 0px;
     }
     .mainSimpleTracker{
@@ -240,7 +252,7 @@ body{
     @media only screen and (max-width: $small-device) {
       h1{
         text-align: left;
-        color: $c4!important;
+        color: $c5!important;
       }
       .upcoming{
         text-align: left;
@@ -351,9 +363,9 @@ body{
     padding: 30px 20px;
     background-color: $c12;
     border-radius: 10px;
-    transition: all 0.8s ease;
+    transition: all 0.5s ease;
     &:hover{
-      background: #11165d;
+      background: $c2;
     }
   }
   .stages:not(:first-child){
@@ -431,7 +443,7 @@ body{
   }
   .stage5{
     .icon{
-      background-color: $c7;
+      background-color: $c14;
     }
   }
 
@@ -460,7 +472,7 @@ body{
     height: 5px;
     width: 5px;
     border-radius: 10px;
-    background-color: $sWarm;
+    background-color: $sWarning;
     flex: 1;
   }
   @media only screen and (max-width: $small-device) {
@@ -498,6 +510,105 @@ body{
     ul{
       text-align: left;
       margin-top: 10px;
+    }
+  }
+}
+
+.developersDetailedStages{
+  margin-bottom: 40px;
+  .mainOrganisationBox{
+    min-height: 60px;
+    padding: 40px;
+    border-radius: 10px;
+    background: $c12;
+    transition: all 0.5s ease;
+    margin-bottom: 10px;
+    &:hover{
+      background-color: $c2;
+    }
+    h4{
+      font-weight: 500;
+    }
+    .currentStageGraph{
+      display: flex;
+      margin-top: 10px;
+      .stage{
+        flex: 1;
+        height: 5px;
+        border-radius: 10px;
+        &:not(:first-child){
+          margin-left: 5px;
+        }
+        &.s1{
+          background-color: $c5;
+          height: 12px;
+        }
+        &.s2{
+          background-color: $c4;
+          height: 12px;
+        }
+        &.s3{
+          background-color: $c13;
+          height: 12px;
+        }
+        &.s4{
+          background-color: $c7;
+        }
+        &.s5{
+          background-color: $c14;
+        }
+      }
+    }
+    .currentStageText{
+      display: flex;
+      p{
+        flex: 1;
+        font-weight: 400;
+        margin-top: 10px;
+      }
+      .stageNumber{
+        text-align: right;
+      }
+    }
+    .companyName{
+      margin: 4px 0 0 0;
+    }
+    .companyLabel{
+      margin-top: 5px;
+    }
+    .icon{
+      height: 50px;
+      border-radius: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &.s1{
+        background-color: $c5;
+      }
+      &.s2{
+        background-color: $c4;
+      }
+      &.s3{
+        background-color: $c13;
+      }
+      &.s4{
+        background-color: $c7;
+      }
+      &.s5{
+        background-color: $c13;
+      }
+    }
+  }
+  @media only screen and (max-width: $small-device) {
+    .mainOrganisationBox{
+      padding: 20px;
+      .currentStageGraph{
+        margin-top: 20px;
+      }
+      h4{
+        font-size: 14px;
+        font-weight: 300;
+      }
     }
   }
 }

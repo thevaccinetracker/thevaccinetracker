@@ -1,5 +1,6 @@
 import React, { Component } from "../../../node_modules/react";
 import TrackerMain from "../trackerMain/TrackerMain";
+import DevelopersDetail from "../developersDetail/DevelopersDetail";
 
 class HomePage extends Component {
   render() {
@@ -18,6 +19,11 @@ class HomePage extends Component {
           <div className="row">
             <div className="col-md-12">
               <TrackerMain/>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-12">
+              <DevelopersDetail/>
             </div>
           </div>
         </div>
