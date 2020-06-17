@@ -121,6 +121,13 @@ h6{
   transform: scale(1.1);
 }
 
+//Tags
+.tag{
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: $c1;
+}
+
 // Body reset
 
 body{
@@ -252,7 +259,7 @@ body{
     @media only screen and (max-width: $small-device) {
       h1{
         text-align: left;
-        color: $c5!important;
+        color: $c4 !important;
       }
       .upcoming{
         text-align: left;
@@ -519,6 +526,12 @@ body{
   margin-top: 40px;
   h1{
     margin-bottom: 20px!important;
+  }
+  .stage3Bifercation{
+    display: flex;
+    .stage3{
+      background-color: $c13;
+    }
   }
   .mainOrganisationBox{
     min-height: 60px;
