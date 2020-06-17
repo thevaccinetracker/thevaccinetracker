@@ -516,6 +516,10 @@ body{
 
 .developersDetailedStages{
   margin-bottom: 40px;
+  margin-top: 40px;
+  h1{
+    margin-bottom: 20px!important;
+  }
   .mainOrganisationBox{
     min-height: 60px;
     padding: 40px;
@@ -576,6 +580,9 @@ body{
     .companyLabel{
       margin-top: 5px;
     }
+    .companyInfoLabel{
+      padding: 0px;
+    }
     .icon{
       height: 50px;
       border-radius: 6px;
@@ -608,6 +615,9 @@ body{
       h4{
         font-size: 14px;
         font-weight: 300;
+      }
+      .companyInfoLabel{
+        padding: 0 15px;
       }
     }
   }

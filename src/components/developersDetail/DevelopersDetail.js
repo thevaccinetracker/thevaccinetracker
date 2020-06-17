@@ -39,18 +39,19 @@ class DevelopersDetail extends Component {
         }
     return (
         <div className="developersDetailedStages">
+            <h1>Top 10 Vaccine producers</h1>
             {
             this.state.vaccineList.length === 0
             ? <h2><Loading/></h2>
                 : this.state.vaccineList.map(vaccine => (
                     <div className="mainOrganisationBox" key={vaccine.ResearcherID}>
                         <div className="row">
-                            <div className="col-md-1 col-xs-3">
+                            <div className="col-md-1 col-xs-3 hidden-xs">
                                 <div className="icon s5">
                                     <img src={stage3Icon} alt="Human Trials"/>
                                 </div>
                             </div>
-                            <div className="col-md-7 col-xs-9 no-padding">
+                            <div className="col-md-7 col-xs-12 companyInfoLabel">
                                 <div className="companyLabel c5Para">
                                     Company Name
                                 </div>
