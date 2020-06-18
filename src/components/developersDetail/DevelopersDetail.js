@@ -7,7 +7,8 @@ import stage5Icon from "../../assets/images/production.svg"
 import Tabletop from "../../../node_modules/tabletop"
 import Loader from "react-loader-spinner"
 import { Link } from "gatsby"
-import Zoom from 'react-reveal/Zoom'
+import Fade from 'react-reveal/Fade'
+// import Slide from 'react-reveal/Slide';
 
 class DevelopersDetail extends Component {
   constructor() {
@@ -99,7 +100,7 @@ class DevelopersDetail extends Component {
             vaccine.currentStageText = "Stage 5"
           }
           return (
-            <Zoom key={vaccine.ResearcherID}>
+            <Fade bottom key={vaccine.ResearcherID}>
               <Link to={`/developer/${vaccine.DevelopersName}`}>
                 <div className="mainOrganisationBox">
                   <div className="row">
@@ -128,7 +129,7 @@ class DevelopersDetail extends Component {
                   </div>
                 </div>
               </Link>
-            </Zoom>
+            </Fade>
           )
         })
         .slice(0, 10)
