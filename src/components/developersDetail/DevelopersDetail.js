@@ -33,11 +33,11 @@ class DevelopersDetail extends Component {
     render() {
         const Loading = () => {
             return (
-                <Loader type="ThreeDots" color="#FEB9D3" height={26} width={26} style={{
+                <Loader type="Circles" color="#FEB9D3" height={50} width={50} style={{
                 textAlign: 'center'}}/>
             )
         }
-        
+
         const MainOrganisationBox = () => {
             return (
                 this.state.vaccineList.map(vaccine => {
