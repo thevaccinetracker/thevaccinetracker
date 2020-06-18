@@ -6,7 +6,7 @@ import stage4Icon from "../../assets/images/approval.svg"
 import stage5Icon from "../../assets/images/production.svg"
 import Tabletop from "../../../node_modules/tabletop"
 import Loader from "react-loader-spinner"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 import Fade from 'react-reveal/Fade'
 
 class DevelopersDetail extends Component {
