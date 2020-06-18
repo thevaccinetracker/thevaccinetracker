@@ -3,7 +3,7 @@ module.exports = {
     title: `COVID-19 (Coronavirus) Vaccine Tracker Online`,
     description: `An Open-Source COVID-19 Vaccine Tracker online, updated almost daily. Get the latest updates on the vaccine development for coronavirus.`,
     author: `Rohit Bind, Ujjwal Singhal, Mitxiyswang, Faisal, Rishu, Shreyash Barot, Vipin, Mohit Gupta`,
-    keywords: ["COVID-19 vaccine tracker", "COVID-19 vaccine latest update", "coronavirus vaccine latest update", "coronavirus vaccine tracker"],
+    keywords: ["COVID-19 vaccine tracker", "COVID-19 vaccine latest update", "coronavirus vaccine latest update", "coronavirus vaccine tracker","vaccine tracker in layman terms"],
     url: "https://thevaccinetracker.com/",
     siteUrl: `https://thevaccinetracker.com/`,
   },

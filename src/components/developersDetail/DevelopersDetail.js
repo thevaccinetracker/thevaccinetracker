@@ -8,7 +8,6 @@ import Tabletop from "../../../node_modules/tabletop"
 import Loader from "react-loader-spinner"
 import { Link } from "gatsby"
 import Fade from 'react-reveal/Fade'
-// import Slide from 'react-reveal/Slide';
 
 class DevelopersDetail extends Component {
   constructor() {
@@ -101,7 +100,7 @@ class DevelopersDetail extends Component {
           }
           return (
             <Fade bottom key={vaccine.ResearcherID}>
-              {/*<Link to={`/developer/${vaccine.DevelopersName}`}>*/}
+              {/* <Link to={`/developer/${vaccine.slug}`}> */}
                 <div className="mainOrganisationBox">
                   <div className="row">
                     <div className="col-md-1 col-xs-3 hidden-xs">
@@ -128,7 +127,7 @@ class DevelopersDetail extends Component {
                     </div>
                   </div>
                 </div>
-              {/*</Link>*/}
+              {/* </Link> */}
             </Fade>
           )
         })

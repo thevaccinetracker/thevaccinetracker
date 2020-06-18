@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import MainHeader from "../MainHeader";
+import MainFooter from "../MainFooter";
 
 class DeveloperInfo extends Component {
 
@@ -9,7 +11,9 @@ class DeveloperInfo extends Component {
   render() {
     return (
       <div>
-
+        <MainHeader/>
+          
+        <MainFooter/>
       </div>
     );
   }
