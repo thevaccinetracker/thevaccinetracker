@@ -7,6 +7,7 @@ import stage5Icon from "../../assets/images/production.svg"
 import Tabletop from "../../../node_modules/tabletop"
 import Loader from "react-loader-spinner"
 import { Link } from "gatsby"
+import Zoom from 'react-reveal/Zoom'
 
 class DevelopersDetail extends Component {
   constructor() {
@@ -98,34 +99,36 @@ class DevelopersDetail extends Component {
             vaccine.currentStageText = "Stage 5"
           }
           return (
-            <Link to={`/developer/${vaccine.DevelopersName}`} key={vaccine.ResearcherID}>
-              <div className="mainOrganisationBox">
-                <div className="row">
-                  <div className="col-md-1 col-xs-3 hidden-xs">
-                    {vaccine.icon}
-                  </div>
-                  <div className="col-md-7 col-xs-12 companyInfoLabel">
-                    <div className="companyLabel c5Para">Company Name</div>
-                    <h4 className="companyName">{vaccine.DevelopersName}</h4>
-                  </div>
-                  <div className="col-md-4 col-xs-12">
-                    <div className="currentStageGraph">
-                      <div className="stage s1" />
-                      <div className="stage s2" />
-                      <div className="stage s3" />
-                      <div className="stage s4" />
-                      <div className="stage s5" />
+            <Zoom key={vaccine.ResearcherID}>
+              <Link to={`/developer/${vaccine.DevelopersName}`}>
+                <div className="mainOrganisationBox">
+                  <div className="row">
+                    <div className="col-md-1 col-xs-3 hidden-xs">
+                      {vaccine.icon}
                     </div>
-                    <div className="currentStageText">
-                      <p className="gs0Para">Current Stage</p>
-                      <p className="stageNumber c5Para">
-                        {vaccine.currentStageText}
-                      </p>
+                    <div className="col-md-7 col-xs-12 companyInfoLabel">
+                      <div className="companyLabel c5Para">Company Name</div>
+                      <h4 className="companyName">{vaccine.DevelopersName}</h4>
+                    </div>
+                    <div className="col-md-4 col-xs-12">
+                      <div className="currentStageGraph">
+                        <div className="stage s1" />
+                        <div className="stage s2" />
+                        <div className="stage s3" />
+                        <div className="stage s4" />
+                        <div className="stage s5" />
+                      </div>
+                      <div className="currentStageText">
+                        <p className="gs0Para">Current Stage</p>
+                        <p className="stageNumber c5Para">
+                          {vaccine.currentStageText}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </Zoom>
           )
         })
         .slice(0, 10)
