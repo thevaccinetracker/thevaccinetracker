@@ -133,13 +133,13 @@ h6{
 body{
   padding: 0;
   margin: 0;
-  background-color: $c0;
+  background-color: #040932;
   background-image: url(../images/worldmap.svg);
-  background-position: center 80%;
+  background-position: center center;
   background-repeat: no-repeat;
   font-family: 'Roboto', sans-serif;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: 90%;
   background-blend-mode: color-burn;
 }
 
