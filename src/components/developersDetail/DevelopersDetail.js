@@ -101,7 +101,7 @@ class DevelopersDetail extends Component {
           }
           return (
             <Fade bottom key={vaccine.ResearcherID}>
-              <Link to={`/developer/${vaccine.DevelopersName}`}>
+              {/*<Link to={`/developer/${vaccine.DevelopersName}`}>*/}
                 <div className="mainOrganisationBox">
                   <div className="row">
                     <div className="col-md-1 col-xs-3 hidden-xs">
@@ -128,7 +128,7 @@ class DevelopersDetail extends Component {
                     </div>
                   </div>
                 </div>
-              </Link>
+              {/*</Link>*/}
             </Fade>
           )
         })
