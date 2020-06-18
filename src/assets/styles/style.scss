@@ -134,10 +134,13 @@ body{
   padding: 0;
   margin: 0;
   background-color: $c0;
-  // background-image: url(../images/worldmap.svg);
+  background-image: url(../images/worldmap.svg);
   background-position: center 80%;
   background-repeat: no-repeat;
   font-family: 'Roboto', sans-serif;
+  background-attachment: fixed;
+  background-size: cover;
+  background-blend-mode: color-burn;
 }
 
 // *************************************************
