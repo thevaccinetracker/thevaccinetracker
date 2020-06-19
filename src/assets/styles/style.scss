@@ -594,17 +594,17 @@ body{
         &:not(:first-child){
           margin-left: 5px;
         }
+        &.active{
+          height: 12px;
+        }
         &.s1{
           background-color: $c5;
-          height: 12px;
         }
         &.s2{
           background-color: $c4;
-          height: 12px;
         }
         &.s3{
           background-color: $c13;
-          height: 12px;
         }
         &.s4{
           background-color: $c7;

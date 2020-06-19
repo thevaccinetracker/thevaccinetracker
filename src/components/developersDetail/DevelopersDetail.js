@@ -112,9 +112,9 @@ class DevelopersDetail extends Component {
                     </div>
                     <div className="col-md-4 col-xs-12">
                       <div className="currentStageGraph">
-                        <div className="stage s1" />
-                        <div className="stage s2" />
-                        <div className="stage s3" />
+                        <div className="stage s1 active" />
+                        <div className="stage s2 active" />
+                        <div className="stage s3 active" />
                         <div className="stage s4" />
                         <div className="stage s5" />
                       </div>
