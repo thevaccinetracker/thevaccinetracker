@@ -67,7 +67,7 @@ class DeveloperInfo extends Component {
                   {vaccine.DevelopersName} is currently in {vaccineStage.text}.
                 </p>
                 <p>
-                  More information Coming Soon. Please keep checking we are working really very hard to work on each information which is relevent for the users.
+                  Detailed information Coming Soon.
                 </p>
               </div>
             </div>
