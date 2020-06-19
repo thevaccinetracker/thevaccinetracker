@@ -17,11 +17,10 @@ class DevelopersDetail extends Component {
   componentDidMount() {
     let scope = this;
     apiService.getVirusList(function(virusInfo) {
-      let getVaccineList = virusInfo.vaccineData.elements;
       scope.setState({
-        vaccineList: getVaccineList
+        vaccineList: virusInfo
       })
-      console.log(getVaccineList)
+      console.log(virusInfo)
     })
   }
 
