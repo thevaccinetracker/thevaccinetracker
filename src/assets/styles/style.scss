@@ -520,6 +520,25 @@ body {
 
 .mainFooter {
     margin-bottom: 40px;
+    .socialMediaIconsSection {
+        display: flex;
+        .followUS {
+            margin-right: 10px;
+            margin-top: 8px;
+        }
+        .socialMediaIcons {
+            width: 40px;
+            &:not(:first-child) {
+                margin-left: 5px;
+            }
+        }
+    }
+    .allthelinks {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 33px;
+    }
     ul {
         padding: 0;
         li {
@@ -538,8 +557,24 @@ body {
     }
     @media only screen and (max-width: $small-device) {
         ul {
-            text-align: left;
+            text-align: center;
             margin-top: 10px;
+            li {
+                display: inline-block;
+            }
+        }
+        .socialMediaIconsSection {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            .followUS {
+                display: none;
+            }
+        }
+        .allthelinks {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 }
