@@ -1,7 +1,7 @@
 import React, { Component } from "../../../node_modules/react"
 import { vaccineObj } from "../../contants/conts.js";
 import Loader from "react-loader-spinner"
-// import { Link } from "gatsby"
+import { Link } from "gatsby"
 import Fade from 'react-reveal/Fade'
 import { apiService, selectedVaccine } from "../../service/apiService"
 
