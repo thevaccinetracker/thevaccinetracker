@@ -63,14 +63,11 @@ class DeveloperInfo extends Component {
           <div className="row">
             <div className="col-md-12 col-xs-24">
               <div className="vaccineDesc">
-                <p >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse massa orci, euismod sed pharetra eleifend, interdum nec odio. In a felis neque. Nam vitae luctus felis. Cras tincidunt, tellus id convallis tempus, elit nunc sagittis ligula, ac mattis nisi turpis non tortor. Curabitur accumsan blandit nisl quis mattis. Praesent faucibus dolor libero, et euismod velit sagittis vel. Curabitur dictum sem dignissim est fermentum, eget ornare erat mattis. Aliquam ullamcorper at ex quis finibus. Praesent sit amet fringilla magna.
+                <p>
+                  {vaccine.DevelopersName} is currently in {vaccineStage.text}.
                 </p>
                 <p>
-                  Etiam pharetra enim pulvinar dui posuere, bibendum iaculis nisi laoreet. Maecenas condimentum dictum erat, eu eleifend felis porttitor sed. In dignissim libero eu elit ornare ultrices. Proin molestie, felis eget finibus pharetra, eros lacus volutpat lectus, ut imperdiet ex arcu in ligula. In hac habitasse platea dictumst. Aliquam erat lectus, feugiat vitae mollis nec, mattis vitae augue. Quisque tincidunt quis est sit amet ullamcorper. Nulla luctus felis in odio consequat, in tempus dolor commodo. Quisque urna lacus, pellentesque vel justo a, hendrerit finibus tortor. Vestibulum mollis lectus vel pretium tincidunt. 
-                </p>
-                <p>
-                  Integer elementum erat tortor, in sagittis ante iaculis eget. Cras efficitur commodo finibus. Etiam eget turpis vitae elit congue tempus a eu urna. Nunc non ex ultrices massa iaculis cursus vitae id sapien. Mauris ipsum odio, molestie eget diam et, interdum luctus dui. Praesent lacinia mollis risus, consectetur ullamcorper arcu dapibus ac. Donec consectetur nisi ante, in venenatis magna interdum finibus. Mauris fringilla sapien sit amet nulla blandit, in pellentesque metus sollicitudin. Vivamus tempus mattis tortor nec tincidunt. Sed mollis faucibus nibh at placerat. Etiam vel venenatis ligula. Proin consectetur pulvinar odio ac auctor. In hac habitasse platea dictumst. Mauris elit nibh, ornare et justo eu, vehicula congue justo.
+                  More information Coming Soon. Please keep checking we are working really very hard to work on each information which is relevent for the users.
                 </p>
               </div>
             </div>
