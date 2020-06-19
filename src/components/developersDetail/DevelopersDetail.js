@@ -1,13 +1,10 @@
 import React, { Component } from "../../../node_modules/react"
-import stage1Icon from "../../assets/images/exploratory.svg"
-import stage2Icon from "../../assets/images/preClinical.svg"
-import stage3Icon from "../../assets/images/humanTrials.svg"
-import stage4Icon from "../../assets/images/approval.svg"
-import stage5Icon from "../../assets/images/production.svg"
-import Tabletop from "../../../node_modules/tabletop"
+import { vaccineObj } from "../../contants/conts.js";
 import Loader from "react-loader-spinner"
 import { Link } from "gatsby"
 import Fade from 'react-reveal/Fade'
+import { apiService, selectedVaccine } from "../../service/apiService"
+
 
 class DevelopersDetail extends Component {
   constructor() {
@@ -18,16 +15,13 @@ class DevelopersDetail extends Component {
   }
 
   componentDidMount() {
-    Tabletop.init({
-      key: "1ImpYv9-_qKmF8JkdV8YW1tN8IAycPszPpG6VCn-rH4Q",
-      callback: virusInfo => {
-        let getVaccineList = virusInfo.vaccineData.elements
-
-        this.setState({
-          vaccineList: getVaccineList
-        })
-        console.log(this.state.vaccineList)
-      }
+    let scope = this;
+    apiService.getVirusList(function(virusInfo) {
+      let getVaccineList = virusInfo.vaccineData.elements;
+      scope.setState({
+        vaccineList: getVaccineList
+      })
+      console.log(getVaccineList)
     })
   }
 
@@ -49,62 +43,16 @@ class DevelopersDetail extends Component {
     const MainOrganisationBox = () => {
       return this.state.vaccineList
         .map(vaccine => {
-          if (vaccine.currentStage === "s1") {
-            vaccine.icon = (
-              <div className="icon s1">
-                <img src={stage1Icon} alt="Vaccine at Pre Clinical Stage" />
-              </div>
-            )
-            vaccine.currentStageText = "Stage 1"
-          } else if (vaccine.currentStage === "s2") {
-            vaccine.icon = (
-              <div className="icon s2">
-                <img src={stage2Icon} alt="Vaccine at Exploratory Stage" />
-              </div>
-            )
-            vaccine.currentStageText = "Stage 2"
-          } else if (
-            vaccine.currentStage === "s3Phase1" ||
-            vaccine.currentStage === "s3Phase2" ||
-            vaccine.currentStage === "s3Phase3"
-          ) {
-            vaccine.icon = (
-              <div className="icon s3">
-                <img
-                  src={stage3Icon}
-                  alt="Vaccine at Human Trials Stage Phase 1, Phase 2, Phase 3"
-                />
-              </div>
-            )
-            if (vaccine.currentStage === "s3Phase1") {
-              vaccine.currentStageText = "Stage 3 : Phase 1"
-            } else if (vaccine.currentStage === "s3Phase2") {
-              vaccine.currentStageText = "Stage 3 : Phase 2"
-            } else if (vaccine.currentStage === "s3Phase3") {
-              vaccine.currentStageText = "Stage 3 : Phase 3"
-            }
-          } else if (vaccine.currentStage === "s4") {
-            vaccine.icon = (
-              <div className="icon s4">
-                <img src={stage4Icon} alt="Vaccine at Approval Stage" />
-              </div>
-            )
-            vaccine.currentStageText = "Stage 4"
-          } else {
-            vaccine.icon = (
-              <div className="icon s5">
-                <img src={stage5Icon} alt="Vaccine at Approval Stage" />
-              </div>
-            )
-            vaccine.currentStageText = "Stage 5"
-          }
+          let vaccineStage = vaccineObj[vaccine.currentStage];
           return (
             <Fade bottom key={vaccine.ResearcherID}>
-              {/* <Link to={`/developer/${vaccine.slug}`}> */}
+              <Link to={`/developer/${vaccine.slug}`} state={{vaccine}} >
                 <div className="mainOrganisationBox">
                   <div className="row">
                     <div className="col-md-1 col-xs-3 hidden-xs">
-                      {vaccine.icon}
+                      <div className={`icon ${vaccineStage.class}`}>
+                        <img src={vaccineStage.icon} alt={`${vaccineStage.icon_alt}`} />
+                      </div>
                     </div>
                     <div className="col-md-7 col-xs-12 companyInfoLabel">
                       <div className="companyLabel c5Para">Company Name</div>
@@ -121,17 +69,20 @@ class DevelopersDetail extends Component {
                       <div className="currentStageText">
                         <p className="gs0Para">Current Stage</p>
                         <p className="stageNumber c5Para">
-                          {vaccine.currentStageText}
+                          {vaccineStage.text}
                         </p>
                       </div>
                     </div>
+                    {/* <div className="col-md-2 col-xs-12">
+                      <button type="button" className="whiteCTA-outline">More Details</button>
+                    </div> */}
                   </div>
                 </div>
-              {/* </Link> */}
+              </Link>
             </Fade>
           )
         })
-        .slice(0, 10)
+        //.slice(0, 10)
     }
     return (
       <div className="developersDetailedStages">
@@ -139,8 +90,8 @@ class DevelopersDetail extends Component {
         {this.state.vaccineList.length === 0 ? (
           <Loading />
         ) : (
-          <MainOrganisationBox />
-        )}
+            <MainOrganisationBox />
+          )}
       </div>
     )
   }
