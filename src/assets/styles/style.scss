@@ -606,25 +606,33 @@ body {
         }
         .currentStageGraph {
             display: flex;
+            align-items: center;
             margin-top: 10px;
+            .stage, .phase {
+              flex: 1;
+              height: 12px;
+              border-radius: 10px;
+              opacity: 0.2;
+              &:not(:first-child) {
+                  margin-left: 5px;
+              }
+              &.highlight {
+                opacity: 1;
+              }
+            }
             .stage {
-                flex: 1;
-                height: 5px;
-                border-radius: 10px;
-                &:not(:first-child) {
-                    margin-left: 5px;
-                }
                 &.s1 {
                     background-color: $c5;
-                    height: 12px;
                 }
                 &.s2 {
                     background-color: $c4;
-                    height: 12px;
                 }
                 &.s3 {
+                  display: flex;
+                  align-items: center;
+                  .phase {
                     background-color: $c13;
-                    height: 12px;
+                  }
                 }
                 &.s4 {
                     background-color: $c7;
