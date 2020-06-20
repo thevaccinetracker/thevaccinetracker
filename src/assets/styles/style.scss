@@ -1,39 +1,41 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
+@import '~bootstrap/dist/css/bootstrap.min.css';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 // *************************************************
 // ************Common Properties Starts*************
 // *************************************************
+
 // Color Variables
 $c0: #040932;
-$c1: #040A3D;
+$c1: #040a3d;
 $c2: #061058;
-$c3: #0A0769;
-$c4: #7C77BA;
-$c5: #FEB9D3;
-$c6: #FAEBE7;
-$c7: #77CAEC;
-$c8: #5E8CE9;
-$c9: #783BFD;
-$c10: #5E36F7;
-$c11: #3830EF;
-$c12: #0F1243;
-$c13: #FFD84D;
-$c14: #05DAA3;
-//Resets
+$c3: #0a0769;
+$c4: #7c77ba;
+$c5: #feb9d3;
+$c6: #faebe7;
+$c7: #77caec;
+$c8: #5e8ce9;
+$c9: #783bfd;
+$c10: #5e36f7;
+$c11: #3830ef;
+$c12: #0f1243;
+$c13: #ffd84d;
+$c14: #05daa3;
+
+// Resets
 p {
-    margin: 0px;
+  margin: 0px;
 }
 
 .rc-progress-line {
-    border-radius: 10px;
+  border-radius: 10px;
 }
 
 .no-padding {
-    padding: 0px !important;
+  padding: 0px !important;
 }
 
 .rc-progress-line-trail {
-    stroke: rgba(217, 217, 217, 0.1);
+  stroke: rgba(217, 217, 217, 0.1);
 }
 
 // Status Colors
@@ -41,672 +43,790 @@ $sWarning: #ffa502;
 $sDanger: #ef321f;
 $sSuccess: #16a716;
 $sInfo: #0a2edc;
+
 // Greyscales
-$gs0: #FFFFFF;
+$gs0: #ffffff;
+
 // Breakpoints
 $small-device: 768px;
+
 // Text Styles
 .largeHeading {
-    font-size: 60px;
-    font-weight: 800;
-    color: $gs0;
-    @media only screen and (max-width: $small-device) {
-        font-size: 34px;
-    }
+  font-size: 60px;
+  font-weight: 800;
+  color: $gs0;
+
+  @media only screen and (max-width: $small-device) {
+    font-size: 34px;
+  }
 }
 
 .paragraph {
-    font-size: 12px;
-    color: $gs0;
+  font-size: 12px;
+  color: $gs0;
 }
 
 .gs0Para {
-    font-size: 12px;
-    color: $gs0;
-    font-weight: 100;
+  font-size: 12px;
+  color: $gs0;
+  font-weight: 100;
 }
 
 .c5Para {
-    font-size: 12px;
-    color: $c5;
-    font-weight: 200;
+  font-size: 12px;
+  color: $c5;
+  font-weight: 200;
 }
 
 h2 {
-    font-size: 30px;
-    color: $gs0;
-    font-weight: 700;
+  font-size: 30px;
+  color: $gs0;
+  font-weight: 700;
 }
 
 h3 {
-    font-size: 20px;
-    color: $gs0;
-    font-weight: 200;
+  font-size: 20px;
+  color: $gs0;
+  font-weight: 200;
 }
 
 h4 {
-    font-size: 18px;
-    color: $gs0;
-    font-weight: 200;
+  font-size: 18px;
+  color: $gs0;
+  font-weight: 200;
 }
 
 h5 {
-    font-size: 16px;
-    color: $gs0;
-    font-weight: 200;
+  font-size: 16px;
+  color: $gs0;
+  font-weight: 200;
 }
 
 h6 {
-    font-size: 14px;
-    color: $gs0;
-    font-weight: 300;
+  font-size: 14px;
+  color: $gs0;
+  font-weight: 300;
 }
 
 // Button Styles
 .primaryCTA {
-    background-color: $c11;
-    color: $gs0;
-    padding: 10px 30px;
-    transform: scale(1);
-    transition: all .2s ease-in-out;
+  background-color: $c11;
+  color: $gs0;
+  padding: 10px 30px;
+  transform: scale(1);
+  transition: all 0.2s ease-in-out;
 }
 
 .primaryCTA:focus {
-    color: $gs0;
-    border: 0px solid;
-    outline: none;
+  color: $gs0;
+  border: 0px solid;
+  outline: none;
 }
 
 .primaryCTA:hover {
-    color: $gs0;
-    transform: scale(1.1);
+  color: $gs0;
+  transform: scale(1.1);
 }
 
 .whiteCTA-outline {
-    background-color: transparent;
-    color: #fff;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    padding: 10px 30px;
-    transform: scale(1);
-    transition: all .2s ease-in-out;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 10px 30px;
+  transform: scale(1);
+  transition: all 0.2s ease-in-out;
 }
 
 .whiteCTA-outline:hover {
-    color: $gs0;
-    transform: scale(1.1);
+  color: $gs0;
+  transform: scale(1.1);
 }
 
-//Tags
+// Tags
 .tag {
-    padding: 5px 10px;
-    border-radius: 10px;
-    color: $c1;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: $c1;
 }
 
 // Body reset
 body {
-    padding: 0;
-    margin: 0;
-    background-color: #040932;
-    background-image: url(../images/worldmap.svg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    font-family: 'Roboto', sans-serif;
-    background-attachment: fixed;
-    background-size: 80%;
-    background-blend-mode: color-burn;
+  padding: 0;
+  margin: 0;
+  background-color: #040932;
+  background-image: url(../images/worldmap.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  font-family: 'Roboto', sans-serif;
+  background-attachment: fixed;
+  background-size: 80%;
+  background-blend-mode: color-burn;
 }
 
 // *************************************************
 // ****************** Animation*********************
 // *************************************************
+
 .blinking {
-    transform: scale(1);
-    animation: blinkingText 2s infinite;
-    transition-timing-function: ease;
+  transform: scale(1);
+  animation: blinkingText 2s infinite;
+  transition-timing-function: ease;
 }
 
 @keyframes blinkingText {
-    0% {
-        transform: scale(1);
-    }
-    70% {
-        transform: scale(1);
-    }
-    90% {
-        transform: scale(0.75);
-    }
-    100% {
-        transform: scale(1);
-    }
+  0% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(0.75);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 // *************************************************
 // ****************** Animation*********************
 // *************************************************
+
 // *************************************************
 // ************Common Properties Ends***************
 // *************************************************
+
 //**********************************
 // Components Starts here
 //**********************************
-//Main header component starts here
+
+// Main header component starts here
 .mainHeader {
-    margin-top: 20px;
-    .virusMainStatus {
+  margin-top: 20px;
+
+  .virusMainStatus {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .liveUpdates {
+      width: 10px;
+      height: 10px;
+      background: $c0;
+      border-radius: 40px;
+      margin-right: 5px;
+    }
+
+    ul {
+      display: flex;
+      margin-bottom: 0px;
+      align-items: center;
+      justify-content: flex-end;
+      margin-top: 10px;
+
+      li {
+        list-style-type: none;
+        margin-left: -25px;
         display: flex;
-        justify-content: flex-end;
+        flex-direction: row;
         align-items: center;
-        .liveUpdates {
-            width: 10px;
-            height: 10px;
-            background: $c0;
-            border-radius: 40px;
-            margin-right: 5px;
-        }
-        ul {
-            display: flex;
-            margin-bottom: 0px;
-            align-items: center;
-            justify-content: flex-end;
-            margin-top: 10px;
-            li {
-                list-style-type: none;
-                margin-left: -25px;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-            }
-        }
-        .virusType {
-            border-radius: 6px;
-            color: $c0;
-            background-color: $c5;
-            padding: 4px 14px 4px 13px;
-            font-weight: 800;
-            z-index: 1;
-        }
-        .vaccineStatus {
-            background: $c4;
-            padding: 4px 20px 4px 40px;
-            border-radius: 6px;
-            font-weight: 800;
-            color: $gs0;
-            z-index: 0;
-        }
-        .treatmentStatus {
-            background: $sWarning;
-        }
+      }
     }
-    @media only screen and (max-width: $small-device) {
-        .virusMainStatus {
-            float: left;
-            margin-top: 20px;
-            ul {
-                padding: 0;
-                li {
-                    margin-left: 0;
-                }
-                li:not(:first-child) {
-                    white-space: nowrap;
-                    margin-left: -25px;
-                }
-            }
-        }
-        & {
-            margin-top: 40px;
-        }
+
+    .virusType {
+      border-radius: 6px;
+      color: $c0;
+      background-color: $c5;
+      padding: 4px 14px 4px 13px;
+      font-weight: 800;
+      z-index: 1;
     }
+
+    .vaccineStatus {
+      background: $c4;
+      padding: 4px 20px 4px 40px;
+      border-radius: 6px;
+      font-weight: 800;
+      color: $gs0;
+      z-index: 0;
+    }
+
+    .treatmentStatus {
+      background: $sWarning;
+    }
+  }
+
+  @media only screen and (max-width: $small-device) {
+    .virusMainStatus {
+      float: left;
+      margin-top: 20px;
+
+      ul {
+        padding: 0;
+
+        li {
+          margin-left: 0;
+        }
+
+        li:not(:first-child) {
+          white-space: nowrap;
+          margin-left: -25px;
+        }
+      }
+    }
+
+    & {
+      margin-top: 40px;
+    }
+  }
 }
 
-//main header component Ends here
+// Main header component ends here
+
 .homePage {
-    .firstFold {
-        margin-top: 30px;
-        h1 {
-            margin-top: 20px;
-            font-size: 20px;
-            font-weight: 500;
-            color: $c4;
-            margin-bottom: 0px;
-        }
-        .mainSimpleTracker {
-            margin-top: 60px;
-            margin-bottom: 120px;
-        }
-        .upcoming {
-            text-align: center;
-        }
-        @media only screen and (max-width: $small-device) {
-            h1 {
-                text-align: left;
-                color: $c4 !important;
-            }
-            .upcoming {
-                text-align: left;
-            }
-        }
+  .firstFold {
+    margin-top: 30px;
+
+    h1 {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: 500;
+      color: $c4;
+      margin-bottom: 0px;
     }
+
+    .mainSimpleTracker {
+      margin-top: 60px;
+      margin-bottom: 120px;
+    }
+
+    .upcoming {
+      text-align: center;
+    }
+
+    @media only screen and (max-width: $small-device) {
+      h1 {
+        text-align: left;
+        color: $c4 !important;
+      }
+
+      .upcoming {
+        text-align: left;
+      }
+    }
+  }
 }
 
 .simpleVaccineTreatmentTracker {
-    background-color: $gs0;
-    padding: 20px;
+  background-color: $gs0;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  margin-bottom: 20px;
+  min-height: 120px;
+  max-width: 420px;
+
+  .icon {
+    width: 80px;
+    background-color: $c4;
     border-radius: 10px;
     display: flex;
-    margin-bottom: 20px;
-    min-height: 120px;
-    max-width: 420px;
-    .icon {
-        width: 80px;
-        background-color: $c4;
-        border-radius: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .infoSection {
+    margin-left: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 85%;
+
+    .type {
+      color: $c4;
+      font-weight: 800;
+      font-size: 14px;
+      margin-bottom: 10px;
     }
+
+    .infoNumber {
+      width: 100%;
+      justify-content: space-between;
+      display: flex;
+
+      .count:not(:first-child) {
+        margin-left: 30px;
+      }
+
+      .count {
+        .number {
+          font-size: 36px;
+          font-weight: 600;
+          line-height: 1;
+          color: $c0;
+          min-height: 36px;
+        }
+
+        span {
+          color: $c8;
+        }
+
+        .countlabel {
+          color: $c4;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: $small-device) {
     .infoSection {
-        margin-left: 20px;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        flex-direction: column;
-        width: 85%;
-        .type {
-            color: $c4;
-            font-weight: 800;
-            font-size: 14px;
-            margin-bottom: 10px;
+      margin-left: 15px;
+
+      .infoNumber {
+        .count:not(:first-child) {
+          margin-left: 20px;
         }
-        .infoNumber {
-            width: 100%;
-            justify-content: space-between;
-            display: flex;
-            .count:not(:first-child) {
-                margin-left: 30px;
-            }
-            .count {
-                .number {
-                    font-size: 36px;
-                    font-weight: 600;
-                    line-height: 1;
-                    color: $c0;
-                    min-height: 36px;
-                }
-                span {
-                    color: $c8;
-                }
-                .countlabel {
-                    color: $c4;
-                    font-size: 10px;
-                }
-            }
+
+        .count {
+          .countlabel {
+            font-size: 8px;
+          }
         }
+      }
     }
-    @media only screen and (max-width: $small-device) {
-        .infoSection {
-            margin-left: 15px;
-            .infoNumber {
-                .count:not(:first-child) {
-                    margin-left: 20px;
-                }
-                .count {
-                    .countlabel {
-                        font-size: 8px;
-                    }
-                }
-            }
-        }
-    }
+  }
 }
 
 .pagenotfound {
+  h1 {
+    margin-top: 40px;
+  }
+
+  .pagenotfoundImage {
+    display: unset;
+    margin-top: 50px;
+  }
+  .pagenotfoundButton {
+    margin: 50px 0;
+  }
+
+  @media only screen and (max-width: $small-device) {
     h1 {
-        margin-top: 40px;
+      margin-top: 100px;
     }
+
     .pagenotfoundImage {
-        display: unset;
-        margin-top: 50px;
+      margin-top: 50px;
     }
+
     .pagenotfoundButton {
-        margin: 50px 0;
+      margin: 50px 0;
     }
-    @media only screen and (max-width: $small-device) {
-        h1 {
-            margin-top: 100px;
-        }
-        .pagenotfoundImage {
-            margin-top: 50px;
-        }
-        .pagenotfoundButton {
-            margin: 50px 0;
-        }
-    }
+  }
 }
 
 .covidVaccineStagesAndPhases {
-    display: flex;
-    margin: 20px 0 40px 0;
-    .stages {
-        padding: 30px 20px;
-        background-color: $c12;
-        border-radius: 10px;
-        transition: all 0.5s ease;
-        &:hover {
-            background: $c2;
-        }
+  display: flex;
+  margin: 20px 0 40px 0;
+
+  .stages {
+    padding: 30px 20px;
+    background-color: $c12;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+
+    &:hover {
+      background: $c2;
     }
-    .stages:not(:first-child) {
-        margin-left: 10px;
+  }
+
+  .stages:not(:first-child) {
+    margin-left: 10px;
+  }
+
+  .stage1,
+  .stage2,
+  .stage4,
+  .stage5 {
+    flex: 1;
+
+    .icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 20px;
+      }
     }
-    .stage1,
-    .stage2,
-    .stage4,
-    .stage5 {
-        flex: 1;
-        .icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 10px;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            img {
-                width: 20px;
-            }
-        }
-        .totalStageCount {
-            h2 {
-                margin-top: 30px;
-                margin-bottom: 10px;
-            }
-        }
+
+    .totalStageCount {
+      h2 {
+        margin-top: 30px;
+        margin-bottom: 10px;
+      }
     }
-    .stage3 {
-        flex: 2;
-        .icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 10px;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            img {
-                width: 20px;
-            }
-        }
-        .totalStageCount {
-            display: flex;
-            h2 {
-                margin-top: 30px;
-                margin-bottom: 10px;
-            }
-            .phases {
-                margin-right: 25px;
-            }
-        }
+  }
+
+  .stage3 {
+    flex: 2;
+
+    .icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 20px;
+      }
     }
-    .stage1 {
-        .icon {
-            background-color: $c5;
-        }
+
+    .totalStageCount {
+      display: flex;
+
+      h2 {
+        margin-top: 30px;
+        margin-bottom: 10px;
+      }
+
+      .phases {
+        margin-right: 25px;
+      }
     }
-    .stage2 {
-        .icon {
-            background-color: $c4;
-        }
+  }
+
+  .stage1 {
+    .icon {
+      background-color: $c5;
     }
-    .stage3 {
-        .icon {
-            background-color: $c13;
-        }
-        .progressBar {
-            margin-top: 19px;
-        }
+  }
+
+  .stage2 {
+    .icon {
+      background-color: $c4;
     }
-    .stage4 {
-        .icon {
-            background-color: $c7;
-        }
+  }
+
+  .stage3 {
+    .icon {
+      background-color: $c13;
     }
-    .stage5 {
-        .icon {
-            background-color: $c14;
-        }
-    }
-    .progressCount {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        .indicatorPara {
-            flex: 1;
-            margin-left: 5px;
-        }
-    }
+
     .progressBar {
-        margin-top: 45px;
+      margin-top: 19px;
     }
-    .successIndicator {
-        max-width: 5px;
-        height: 5px;
-        width: 5px;
-        border-radius: 10px;
-        background-color: $sSuccess;
-        flex: 1;
+  }
+
+  .stage4 {
+    .icon {
+      background-color: $c7;
     }
-    .ongoingIndicator {
-        max-width: 5px;
-        height: 5px;
-        width: 5px;
-        border-radius: 10px;
-        background-color: $sWarning;
-        flex: 1;
+  }
+
+  .stage5 {
+    .icon {
+      background-color: $c14;
     }
-    @media only screen and (max-width: $small-device) {
-        .stages {
-            min-width: 200px;
-        }
-        .stage3 {
-            min-width: 310px !important;
-        }
-        &.covidVaccineStagesAndPhases {
-            overflow-x: auto;
-        }
+  }
+
+  .progressCount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .indicatorPara {
+      flex: 1;
+      margin-left: 5px;
     }
+  }
+
+  .progressBar {
+    margin-top: 45px;
+  }
+
+  .successIndicator {
+    max-width: 5px;
+    height: 5px;
+    width: 5px;
+    border-radius: 10px;
+    background-color: $sSuccess;
+    flex: 1;
+  }
+
+  .ongoingIndicator {
+    max-width: 5px;
+    height: 5px;
+    width: 5px;
+    border-radius: 10px;
+    background-color: $sWarning;
+    flex: 1;
+  }
+
+  @media only screen and (max-width: $small-device) {
+    .stages {
+      min-width: 200px;
+    }
+
+    .stage3 {
+      min-width: 310px !important;
+    }
+
+    &.covidVaccineStagesAndPhases {
+      overflow-x: auto;
+    }
+  }
 }
 
 .mainFooter {
-    margin-bottom: 40px;
-    .socialMediaIconsSection {
-        display: flex;
-        .followUS {
-            margin-right: 10px;
-            margin-top: 8px;
-        }
-        .socialMediaIcons {
-            width: 40px;
-            &:not(:first-child) {
-                margin-left: 5px;
-            }
-        }
+  margin-bottom: 40px;
+
+  .socialMediaIconsSection {
+    display: flex;
+
+    .followUS {
+      margin-right: 10px;
+      margin-top: 8px;
     }
-    .allthelinks {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        height: 33px;
+
+    .socialMediaIcons {
+      width: 40px;
+
+      &:not(:first-child) {
+        margin-left: 5px;
+      }
     }
+  }
+
+  .allthelinks {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 33px;
+  }
+
+  ul {
+    padding: 0;
+
+    li {
+      display: inline;
+
+      a {
+        color: $c7;
+        font-size: 12px;
+      }
+    }
+
+    li:not(:first-child) {
+      margin-left: 20px;
+    }
+  }
+
+  .paragraph {
+    color: $c4;
+  }
+
+  @media only screen and (max-width: $small-device) {
     ul {
-        padding: 0;
-        li {
-            display: inline;
-            a {
-                color: $c7;
-                font-size: 12px;
-            }
-        }
-        li:not(:first-child) {
-            margin-left: 20px;
-        }
+      text-align: center;
+      margin-top: 10px;
+
+      li {
+        display: inline-block;
+      }
     }
-    .paragraph {
-        color: $c4;
+
+    .socialMediaIconsSection {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+
+      .followUS {
+        display: none;
+      }
     }
-    @media only screen and (max-width: $small-device) {
-        ul {
-            text-align: center;
-            margin-top: 10px;
-            li {
-                display: inline-block;
-            }
-        }
-        .socialMediaIconsSection {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-            .followUS {
-                display: none;
-            }
-        }
-        .allthelinks {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+
+    .allthelinks {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
+  }
 }
 
 .developersDetailedStages {
-    margin-bottom: 40px;
-    margin-top: 40px;
-    h1 {
-        margin-bottom: 20px!important;
+  margin-bottom: 40px;
+  margin-top: 40px;
+
+  h1 {
+    margin-bottom: 20px !important;
+  }
+
+  .stage3Bifercation {
+    display: flex;
+
+    .stage3 {
+      background-color: $c13;
     }
-    .stage3Bifercation {
-        display: flex;
-        .stage3 {
-            background-color: $c13;
-        }
+  }
+
+  .mainOrganisationBox {
+    min-height: 60px;
+    padding: 40px;
+    border-radius: 10px;
+    background: $c12;
+    transition: all 0.5s ease;
+    margin-bottom: 10px;
+
+    &:hover {
+      background-color: $c2;
     }
-    .mainOrganisationBox {
-        min-height: 60px;
-        padding: 40px;
+
+    h4 {
+      font-weight: 500;
+    }
+
+    .currentStageGraph {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+
+      .stage,
+      .phase {
+        flex: 1;
+        height: 12px;
         border-radius: 10px;
-        background: $c12;
-        transition: all 0.5s ease;
-        margin-bottom: 10px;
-        &:hover {
-            background-color: $c2;
+        opacity: 0.2;
+
+        &:not(:first-child) {
+          margin-left: 5px;
         }
-        h4 {
-            font-weight: 500;
+
+        &.highlight {
+          opacity: 1;
         }
-        .currentStageGraph {
-            display: flex;
-            align-items: center;
-            margin-top: 10px;
-            .stage, .phase {
-              flex: 1;
-              height: 12px;
-              border-radius: 10px;
-              opacity: 0.2;
-              &:not(:first-child) {
-                  margin-left: 5px;
-              }
-              &.highlight {
-                opacity: 1;
-              }
-            }
-            .stage {
-                &.s1 {
-                    background-color: $c5;
-                }
-                &.s2 {
-                    background-color: $c4;
-                }
-                &.s3 {
-                  display: flex;
-                  align-items: center;
-                  .phase {
-                    background-color: $c13;
-                  }
-                }
-                &.s4 {
-                    background-color: $c7;
-                }
-                &.s5 {
-                    background-color: $c14;
-                }
-            }
+      }
+
+      .stage {
+        &.s1 {
+          background-color: $c5;
         }
-        .currentStageText {
-            display: flex;
-            p {
-                flex: 1;
-                font-weight: 400;
-                margin-top: 10px;
-            }
-            .stageNumber {
-                text-align: right;
-            }
+
+        &.s2 {
+          background-color: $c4;
         }
-        .companyName {
-            margin: 4px 0 0 0;
+
+        &.s3 {
+          display: flex;
+          align-items: center;
+
+          .phase {
+            background-color: $c13;
+          }
         }
-        .companyLabel {
-            margin-top: 5px;
+
+        &.s4 {
+          background-color: $c7;
         }
-        .companyInfoLabel {
-            padding: 0px;
+
+        &.s5 {
+          background-color: $c14;
         }
-        .vaccineDesc {
-            color: #fff;
-            margin-top: 30px;
-        }
-        .vaccineDesc p {
-            margin-bottom: 10px;
-        }
-        .icon {
-            height: 50px;
-            border-radius: 6px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            &.s1 {
-                background-color: $c5;
-            }
-            &.s2 {
-                background-color: $c4;
-            }
-            &.s3 {
-                background-color: $c13;
-            }
-            &.s4 {
-                background-color: $c7;
-            }
-            &.s5 {
-                background-color: $c13;
-            }
-        }
+      }
     }
-    @media only screen and (max-width: $small-device) {
-        .mainOrganisationBox {
-            padding: 20px;
-            .currentStageGraph {
-                margin-top: 20px;
-            }
-            h4 {
-                font-size: 14px;
-                font-weight: 300;
-            }
-            .companyInfoLabel {
-                padding: 0 15px;
-            }
-        }
+
+    .currentStageText {
+      display: flex;
+
+      p {
+        flex: 1;
+        font-weight: 400;
+        margin-top: 10px;
+      }
+
+      .stageNumber {
+        text-align: right;
+      }
     }
+
+    .companyName {
+      margin: 4px 0 0 0;
+    }
+
+    .companyLabel {
+      margin-top: 5px;
+    }
+
+    .companyInfoLabel {
+      padding: 0px;
+    }
+
+    .vaccineDesc {
+      color: #fff;
+      margin-top: 30px;
+    }
+
+    .vaccineDesc p {
+      margin-bottom: 10px;
+    }
+
+    .icon {
+      height: 50px;
+      border-radius: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &.s1 {
+        background-color: $c5;
+      }
+
+      &.s2 {
+        background-color: $c4;
+      }
+
+      &.s3 {
+        background-color: $c13;
+      }
+
+      &.s4 {
+        background-color: $c7;
+      }
+
+      &.s5 {
+        background-color: $c13;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $small-device) {
+    .mainOrganisationBox {
+      padding: 20px;
+
+      .currentStageGraph {
+        margin-top: 20px;
+      }
+
+      h4 {
+        font-size: 14px;
+        font-weight: 300;
+      }
+
+      .companyInfoLabel {
+        padding: 0 15px;
+      }
+    }
+  }
 }
 
 //*******************************
