@@ -1,9 +1,9 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { Helmet } from "react-helmet"
-import { useLocation } from "@reach/router"
-import { useStaticQuery, graphql } from "gatsby"
-import socialImage from "../assets/images/Logo-white-bg.png"
+import { useLocation } from '@reach/router'
+import { graphql, useStaticQuery } from 'gatsby'
+import PropTypes from 'prop-types'
+import React from 'react'
+import { Helmet } from 'react-helmet'
+import socialImage from '../assets/images/Logo-white-bg.png'
 
 const SEO = ({ title, description, article }) => {
   const { pathname } = useLocation()
@@ -19,14 +19,14 @@ const SEO = ({ title, description, article }) => {
     title: title || defaultTitle,
     description: description || defaultDescription,
     url: `${siteUrl}${pathname}`,
-    image : socialImage,
+    image: socialImage,
     keywords
   }
   return (
     <Helmet title={seo.title}>
       <meta name="description" content={seo.description} />
       {seo.image && <meta name="image" content={seo.image} />}
-      <meta name="keywords" content={seo.keywords.join(",")} />
+      <meta name="keywords" content={seo.keywords.join(',')} />
       {seo.url && <meta property="og:url" content={seo.url} />}
       {(article ? true : null) && <meta property="og:type" content="article" />}
       {seo.title && <meta property="og:title" content={seo.title} />}
@@ -51,14 +51,14 @@ SEO.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string,
-  article: PropTypes.bool,
+  article: PropTypes.bool
 }
 SEO.defaultProps = {
   lang: `en`,
   title: null,
   description: null,
   image: null,
-  article: false,
+  article: false
 }
 const query = graphql`
   query SEO {

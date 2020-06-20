@@ -1,22 +1,21 @@
-import React, { Component } from 'react';
-import MainHeader from "../MainHeader";
-import MainFooter from "../MainFooter";
-import "../../assets/styles/style.scss";
-import { vaccineObj } from "../../contants/conts.js";
+import React, { Component } from 'react'
+import '../../assets/styles/style.scss'
+import { vaccineObj } from '../../contants/conts.js'
+import MainFooter from '../MainFooter'
+import MainHeader from '../MainHeader'
 // import { apiService, selectedVaccine } from '../../service/apiService';
 
 class DeveloperInfo extends Component {
-
   constructor() {
-    super();
+    super()
     this.state = {
       vaccine: {}
     }
-    this.ResearcherID  ="";
+    this.ResearcherID = ''
   }
 
-  componentDidMount() { 
-    const { state } = this.props.location;
+  componentDidMount() {
+    const { state } = this.props.location
     console.log(state)
     this.setState({
       vaccine: state.vaccine
@@ -24,13 +23,13 @@ class DeveloperInfo extends Component {
   }
 
   render() {
-      const MainOrganisationBox = () => {
-      let vaccine = this.state.vaccine;
-      let vaccineStage ={}
-      if(vaccine && vaccine.currentStage) {
-        vaccineStage= vaccineObj[vaccine.currentStage] ||{};
+    const MainOrganisationBox = () => {
+      let vaccine = this.state.vaccine
+      let vaccineStage = {}
+      if (vaccine && vaccine.currentStage) {
+        vaccineStage = vaccineObj[vaccine.currentStage] || {}
       }
-      return (        
+      return (
         <div className="mainOrganisationBox">
           <div className="row">
             <div className="col-md-1 col-xs-3 hidden-xs">
@@ -54,9 +53,7 @@ class DeveloperInfo extends Component {
               </div>
               <div className="currentStageText">
                 <p className="gs0Para">Current Stage</p>
-                <p className="stageNumber c5Para">
-                  {vaccineStage.text}
-                </p>
+                <p className="stageNumber c5Para">{vaccineStage.text}</p>
               </div>
             </div>
           </div>
@@ -66,33 +63,31 @@ class DeveloperInfo extends Component {
                 <p>
                   {vaccine.DevelopersName} is currently in {vaccineStage.text}.
                 </p>
-                <p>
-                  Detailed information Coming Soon.
-                </p>
+                <p>Detailed information Coming Soon.</p>
               </div>
             </div>
           </div>
         </div>
-      );
+      )
     }
 
     return (
       <div>
         <MainHeader />
-          <div className="firstFold">
-            <div className="container">
-              <div className="row">
-                <div className="col-md-12">
-                  <div className="developersDetailedStages">
-                    <MainOrganisationBox />
-                  </div>
+        <div className="firstFold">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-12">
+                <div className="developersDetailedStages">
+                  <MainOrganisationBox />
                 </div>
               </div>
             </div>
           </div>
+        </div>
         <MainFooter />
-      </div >
-    );
+      </div>
+    )
   }
 }
-export default DeveloperInfo;
+export default DeveloperInfo

@@ -1,6 +1,6 @@
-import React, { Component } from "../../../node_modules/react";
-import TrackerMain from "../trackerMain/TrackerMain";
-import DevelopersDetail from "../developersDetail/DevelopersDetail";
+import React, { Component } from '../../../node_modules/react'
+import DevelopersDetail from '../developersDetail/DevelopersDetail'
+import TrackerMain from '../trackerMain/TrackerMain'
 
 class HomePage extends Component {
   render() {
@@ -18,18 +18,18 @@ class HomePage extends Component {
           </div>
           <div className="row">
             <div className="col-md-12">
-              <TrackerMain/>
+              <TrackerMain />
             </div>
           </div>
           <div className="row">
             <div className="col-md-12">
-              <DevelopersDetail/>
+              <DevelopersDetail />
             </div>
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default HomePage;
+export default HomePage

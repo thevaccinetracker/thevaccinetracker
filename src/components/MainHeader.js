@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import logo from "../assets/images/logo.svg";
+import React, { Component } from 'react'
+import logo from '../assets/images/logo.svg'
 
 class MainHeader extends Component {
   render() {
@@ -8,7 +8,11 @@ class MainHeader extends Component {
         <div className="row">
           <div className="col-md-6 col-xs-12">
             <a href="/">
-              <img src={logo} alt="The Vaccine Tracker Logo" className="img img-responsive"  />
+              <img
+                src={logo}
+                alt="The Vaccine Tracker Logo"
+                className="img img-responsive"
+              />
             </a>
           </div>
           <div className="col-md-6 col-xs-12">
@@ -27,8 +31,8 @@ class MainHeader extends Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default MainHeader;
+export default MainHeader

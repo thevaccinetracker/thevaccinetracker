@@ -1,11 +1,9 @@
 // import {Router} from '@reach/router';
 import React from 'react'
-
 import '../assets/styles/style.scss'
-
-import MainHeader from '../components/MainHeader'
-import MainFooter from '../components/MainFooter'
 import DevelopersDetail from '../components/developersDetail/DevelopersDetail'
+import MainFooter from '../components/MainFooter'
+import MainHeader from '../components/MainHeader'
 
 const AllVaccineDevelopers = () => {
   return (

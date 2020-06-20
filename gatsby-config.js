@@ -3,9 +3,15 @@ module.exports = {
     title: `COVID-19 (Coronavirus) Vaccine Tracker Online`,
     description: `An Open-Source COVID-19 Vaccine Tracker online, updated almost daily. Get the latest updates on the vaccine development for coronavirus.`,
     author: `Rohit Bind, Ujjwal Singhal, Mitxiyswang, Faisal, Rishu, Shreyash Barot, Vipin, Mohit Gupta`,
-    keywords: ["COVID-19 vaccine tracker", "COVID-19 vaccine latest update", "coronavirus vaccine latest update", "coronavirus vaccine tracker","vaccine tracker in layman terms"],
-    url: "https://thevaccinetracker.com/",
-    siteUrl: `https://thevaccinetracker.com/`,
+    keywords: [
+      'COVID-19 vaccine tracker',
+      'COVID-19 vaccine latest update',
+      'coronavirus vaccine latest update',
+      'coronavirus vaccine tracker',
+      'vaccine tracker in layman terms'
+    ],
+    url: 'https://thevaccinetracker.com/',
+    siteUrl: `https://thevaccinetracker.com/`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -15,8 +21,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/assets/images`,
-      },
+        path: `${__dirname}/src/assets/images`
+      }
     },
     {
       resolve: 'gatsby-plugin-robots-txt',
@@ -24,14 +30,14 @@ module.exports = {
         host: 'https://thevaccinetracker.com/',
         sitemap: 'https://thevaccinetracker.com/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }]
-      },
+      }
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-168784956-1",
+        trackingId: 'UA-168784956-1',
         head: true
-      },
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -44,11 +50,11 @@ module.exports = {
         background_color: `#3830EF`,
         theme_color: `#3830EF`,
         display: `minimal-ui`,
-        icon: `src/assets/images/favicon.png`, // This path is relative to the root of the site.
-      },
-    },
+        icon: `src/assets/images/favicon.png` // This path is relative to the root of the site.
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-  ],
+  ]
 }
