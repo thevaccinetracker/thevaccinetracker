@@ -1,10 +1,10 @@
-import React, { Component } from "../../../node_modules/react"
-import { vaccineObj } from "../../contants/conts.js";
-import Loader from "react-loader-spinner"
+import Loader from "react-loader-spinner";
 // import { Link } from "gatsby"
-import Fade from 'react-reveal/Fade'
+import Fade from 'react-reveal/Fade';
+import React, { Component } from "../../../node_modules/react";
+import { vaccineObj } from "../../contants/conts.js";
 // import { apiService, selectedVaccine } from "../../service/apiService"
-import { apiService } from "../../service/apiService"
+import { apiService } from "../../service/apiService";
 
 
 class DevelopersDetail extends Component {
@@ -19,9 +19,12 @@ class DevelopersDetail extends Component {
     let scope = this;
     apiService.getVirusList(function(virusInfo) {
       scope.setState({
-        vaccineList: virusInfo
+        vaccineList: virusInfo.map(vaccine => ({
+          ...vaccine,
+          stage: parseInt(vaccine.currentStage.charAt(1)),
+          phase: parseInt(vaccine.currentStage.split("Phase")[1]) || null
+        }))
       })
-      console.log(virusInfo)
     })
   }
 
@@ -60,11 +63,40 @@ class DevelopersDetail extends Component {
                     </div>
                     <div className="col-md-4 col-xs-12">
                       <div className="currentStageGraph">
-                        <div className="stage s1 active" />
-                        <div className="stage s2 active" />
-                        <div className="stage s3 active" />
-                        <div className="stage s4" />
-                        <div className="stage s5" />
+                        <div className={`stage s1 ${
+                          vaccine.stage >= 1 ? "highlight" : ""
+                        }`} />
+                        <div className={`stage s2 ${
+                          vaccine.stage >= 2 ? "highlight" : ""
+                        }`} />
+                        <div className={`stage s3 ${
+                          vaccine.stage >= 3 ? "highlight" : ""
+                        }`}>
+                          <div className={`phase p1 ${
+                            vaccine.stage >= 4 ||
+                            (vaccine.stage === 3 && vaccine.phase >= 1)
+                              ? "highlight"
+                              : ""
+                          }`} />
+                          <div className={`phase p2 ${
+                            vaccine.stage >= 4 ||
+                            (vaccine.stage === 3 && vaccine.phase >= 2)
+                              ? "highlight"
+                              : ""
+                          }`} />
+                          <div className={`phase p3 ${
+                            vaccine.stage >= 4 ||
+                            (vaccine.stage === 3 && vaccine.phase >= 3)
+                              ? "highlight"
+                              : ""
+                          }`} />
+                        </div>
+                        <div className={`stage s4 ${
+                          vaccine.stage >= 4 ? "highlight" : ""
+                        }`} />
+                        <div className={`stage s5 ${
+                          vaccine.stage >= 5 ? "highlight" : ""
+                        }`} />
                       </div>
                       <div className="currentStageText">
                         <p className="gs0Para">Current Stage</p>
