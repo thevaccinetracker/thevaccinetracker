@@ -1,10 +1,9 @@
 import React, { Component } from "../../../node_modules/react"
 import { vaccineObj } from "../../contants/conts.js";
 import Loader from "react-loader-spinner"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 import Fade from 'react-reveal/Fade'
 import { apiService, selectedVaccine } from "../../service/apiService"
-
 
 class DevelopersDetail extends Component {
   constructor() {
@@ -45,7 +44,7 @@ class DevelopersDetail extends Component {
           let vaccineStage = vaccineObj[vaccine.currentStage];
           return (
             <Fade bottom key={vaccine.ResearcherID}>
-              <Link to={`/developer/${vaccine.slug}`} state={{vaccine}} >
+              {/* <Link to={`/developer/${vaccine.slug}`} state={{vaccine}} > */}
                 <div className="mainOrganisationBox">
                   <div className="row">
                     <div className="col-md-1 col-xs-3 hidden-xs">
@@ -77,10 +76,10 @@ class DevelopersDetail extends Component {
                     </div> */}
                   </div>
                 </div>
-              </Link>
+              {/* </Link> */}
             </Fade>
           )
-        })
+        }).slice(0, 10)
         //.slice(0, 10)
     }
     return (
