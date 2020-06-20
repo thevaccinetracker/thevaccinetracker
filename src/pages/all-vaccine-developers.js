@@ -1,12 +1,11 @@
-import {Router} from '@reach/router';
-import React from 'react';
+// import {Router} from '@reach/router';
+import React from 'react'
 
-import "../assets/styles/style.scss";
+import '../assets/styles/style.scss'
 
-import MainHeader from "../components/MainHeader";
-import MainFooter from "../components/MainFooter";
-import DevelopersDetail from "../components/developersDetail/DevelopersDetail";
-
+import MainHeader from '../components/MainHeader'
+import MainFooter from '../components/MainFooter'
+import DevelopersDetail from '../components/developersDetail/DevelopersDetail'
 
 const AllVaccineDevelopers = () => {
   return (
@@ -15,18 +14,18 @@ const AllVaccineDevelopers = () => {
         <IndexPage path='/'/>
         <DeveloperInfo path='/developer/:slug'/>
       </Router> */}
-      <MainHeader/>
+      <MainHeader />
       <div className="firstFold">
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-            <DevelopersDetail />
+              <DevelopersDetail />
             </div>
           </div>
         </div>
       </div>
-      <MainFooter />      
+      <MainFooter />
     </div>
   )
 }
-export default AllVaccineDevelopers;
+export default AllVaccineDevelopers
