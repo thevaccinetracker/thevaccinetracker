@@ -3,7 +3,7 @@ import MainHeader from "../MainHeader";
 import MainFooter from "../MainFooter";
 import "../../assets/styles/style.scss";
 import { vaccineObj } from "../../contants/conts.js";
-import { apiService, selectedVaccine } from '../../service/apiService';
+// import { apiService, selectedVaccine } from '../../service/apiService';
 
 class DeveloperInfo extends Component {
 

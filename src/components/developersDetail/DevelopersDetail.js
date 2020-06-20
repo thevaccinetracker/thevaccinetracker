@@ -3,7 +3,9 @@ import { vaccineObj } from "../../contants/conts.js";
 import Loader from "react-loader-spinner"
 // import { Link } from "gatsby"
 import Fade from 'react-reveal/Fade'
-import { apiService, selectedVaccine } from "../../service/apiService"
+// import { apiService, selectedVaccine } from "../../service/apiService"
+import { apiService } from "../../service/apiService"
+
 
 class DevelopersDetail extends Component {
   constructor() {
