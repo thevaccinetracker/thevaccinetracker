@@ -32,6 +32,8 @@
     "tabletop": "^1.6.3"
   },
   "devDependencies": {
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
     "prettier": "2.0.5"
   },
   "keywords": [
@@ -53,5 +55,16 @@
   },
   "bugs": {
     "url": "https://github.com/thevaccinetracker/thevaccinetracker/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
