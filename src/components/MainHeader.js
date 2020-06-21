@@ -7,6 +7,7 @@ class MainHeader extends Component {
       <div className="container mainHeader">
         <div className="row">
           <div className="col-md-6 col-xs-12">
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <a href="/">
               <img
                 src={logo}
