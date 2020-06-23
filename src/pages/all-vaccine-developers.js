@@ -10,7 +10,7 @@ const AllVaccineDevelopers = () => {
     <div className="homePage">
       <SEO
         title="All the COVID-19 vaccine developers or researchers"
-        description="See all the list of vaccine developers working on the development of the COVID-19 vaccine and their status"
+        description="See all the list of vaccine developers working on the development of the COVID-19 vaccine and their current latest status"
       />
       <MainHeader />
       <div className="firstFold">
