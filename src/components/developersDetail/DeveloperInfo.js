@@ -45,11 +45,56 @@ class DeveloperInfo extends Component {
           <div className="row">
             <div className="col-md-4 col-xs-12">
               <div className="currentStageGraph">
-                <div className="stage s1" />
-                <div className="stage s2" />
-                <div className="stage s3" />
-                <div className="stage s4" />
-                <div className="stage s5" />
+                <div
+                  className={`stage s1 ${
+                    vaccine.stage >= 1 ? 'highlight' : ''
+                  }`}
+                />
+                <div
+                  className={`stage s2 ${
+                    vaccine.stage >= 2 ? 'highlight' : ''
+                  }`}
+                />
+                <div
+                  className={`stage s3 ${
+                    vaccine.stage >= 3 ? 'highlight' : ''
+                  }`}
+                >
+                  <div
+                    className={`phase p1 ${
+                      vaccine.stage >= 4 ||
+                      (vaccine.stage === 3 && vaccine.phase >= 1)
+                        ? 'highlight'
+                        : ''
+                    }`}
+                  />
+                  <div
+                    className={`phase p2 ${
+                      vaccine.stage >= 4 ||
+                      (vaccine.stage === 3 && vaccine.phase >= 2)
+                        ? 'highlight'
+                        : ''
+                    }`}
+                  />
+                  <div
+                    className={`phase p3 ${
+                      vaccine.stage >= 4 ||
+                      (vaccine.stage === 3 && vaccine.phase >= 3)
+                        ? 'highlight'
+                        : ''
+                    }`}
+                  />
+                </div>
+                <div
+                  className={`stage s4 ${
+                    vaccine.stage >= 4 ? 'highlight' : ''
+                  }`}
+                />
+                <div
+                  className={`stage s5 ${
+                    vaccine.stage >= 5 ? 'highlight' : ''
+                  }`}
+                />
               </div>
               <div className="currentStageText">
                 <p className="gs0Para">Current Stage</p>

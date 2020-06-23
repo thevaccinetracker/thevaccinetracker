@@ -1,5 +1,10 @@
 import React, { Component } from 'react'
 import logo from '../assets/images/logo.svg'
+import whatsappIcon from '../assets/images/whatsappIcon.svg'
+import { Dropdown } from 'semantic-ui-react'
+import twitterIcon from '../assets/images/twitter.svg'
+import facebookIcon from '../assets/images/facebook.svg'
+import copyIcon from '../assets/images/copyIcon.svg'
 
 class MainHeader extends Component {
   render() {
@@ -19,15 +24,57 @@ class MainHeader extends Component {
           <div className="col-md-6 col-xs-12">
             <div className="virusMainStatus">
               <ul>
-                {/* <li>
-                  <a href="https://www.producthunt.com/posts/covid-19-vaccine-tracker?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-covid-19-vaccine-tracker" target="_blank" rel="noreferrer"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=206313" alt="COVID-19 Vaccine Tracker - Get the latest updates on the vaccine development for Corona | Product Hunt Embed"  height="28px" /></a>
-                </li> */}
                 <li className="virusType">
                   <div className="blinking liveUpdates"></div>
                   COVID-19
                 </li>
                 <li className="overallStatus vaccineStatus">VACCINE TRACKER</li>
               </ul>
+              <Dropdown
+                text="Share"
+                pointing
+                className="link item shareButton"
+                icon="share"
+              >
+                <Dropdown.Menu>
+                  <Dropdown.Item>
+                    <img
+                      src={whatsappIcon}
+                      alt="whatsapp share"
+                      className="img img-responsive"
+                      width="10"
+                    />
+                    WhatsApp
+                  </Dropdown.Item>
+                  <Dropdown.Item>
+                    <img
+                      src={facebookIcon}
+                      alt="facebook share"
+                      className="img img-responsive"
+                      width="10"
+                    />
+                    Facebook
+                  </Dropdown.Item>
+                  <Dropdown.Item>
+                    <img
+                      src={twitterIcon}
+                      alt="twitter share"
+                      className="img img-responsive"
+                      width="10"
+                    />
+                    Twitter
+                  </Dropdown.Item>
+                  <Dropdown.Item>
+                    <img
+                      src={copyIcon}
+                      alt="copy link share"
+                      className="img img-responsive"
+                      width="10"
+                    />
+                    Copy Link
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
             </div>
           </div>
         </div>

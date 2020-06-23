@@ -23,7 +23,10 @@ class HomePage extends Component {
           </div>
           <div className="row">
             <div className="col-md-12">
-              <DevelopersDetail />
+              <DevelopersDetail
+                showDataFor={10}
+                title={`Top 10 COVID-19 Vaccine developers and their latest status`}
+              />
             </div>
           </div>
         </div>

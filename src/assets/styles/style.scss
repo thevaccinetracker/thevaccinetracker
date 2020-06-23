@@ -152,16 +152,14 @@ h6 {
 
 // Body reset
 body {
-  padding: 0;
-  margin: 0;
-  background-color: #040932;
-  background-image: url(../images/worldmap.svg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  font-family: 'Roboto', sans-serif;
-  background-attachment: fixed;
-  background-size: 80%;
-  background-blend-mode: color-burn;
+  background-color: #040932 !important;
+  background-image: url(../images/worldmap.svg) !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  font-family: 'Roboto', sans-serif !important;
+  background-attachment: fixed !important;
+  background-size: 80% !important;
+  background-blend-mode: color-burn !important;
 }
 
 // *************************************************
@@ -209,6 +207,7 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    margin-top: 20px;
 
     .liveUpdates {
       width: 10px;
@@ -223,7 +222,6 @@ body {
       margin-bottom: 0px;
       align-items: center;
       justify-content: flex-end;
-      margin-top: 10px;
 
       li {
         list-style-type: none;
@@ -260,8 +258,6 @@ body {
   @media only screen and (max-width: $small-device) {
     .virusMainStatus {
       float: left;
-      margin-top: 20px;
-
       ul {
         padding: 0;
 
@@ -275,9 +271,30 @@ body {
         }
       }
     }
-
     & {
       margin-top: 40px;
+    }
+  }
+}
+
+.shareButton {
+  background-color: $c14;
+  padding: 4px 10px;
+  color: $c0;
+  border-radius: 6px;
+  margin-left: 20px;
+  .icon {
+    float: left;
+  }
+  .menu {
+    padding: 12px 0 !important;
+  }
+  .menu {
+    .item {
+      display: flex !important;
+    }
+    &::after {
+      display: none !important;
     }
   }
 }
@@ -431,7 +448,12 @@ body {
 .covidVaccineStagesAndPhases {
   display: flex;
   margin: 20px 0 40px 0;
-
+  .stageTitle {
+    margin-top: 20px;
+  }
+  .stageNumber {
+    margin-top: 10px;
+  }
   .stages {
     padding: 30px 20px;
     background-color: $c12;
@@ -667,7 +689,26 @@ body {
 .developersDetailedStages {
   margin-bottom: 40px;
   margin-top: 40px;
-
+  .devlopersHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .search {
+    input {
+      background: $c1 !important;
+      width: 300px;
+      border: 1px solid $c4 !important;
+      color: $c4 !important;
+      ::placeholder {
+        color: red;
+        opacity: 1;
+      }
+    }
+    .icon {
+      color: $c4;
+    }
+  }
   h1 {
     margin-bottom: 20px !important;
   }
