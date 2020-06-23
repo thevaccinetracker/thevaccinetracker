@@ -157,17 +157,21 @@ class DevelopersDetail extends Component {
           <div className="heading">
             <h1>{this.props.title}</h1>
           </div>
-          <div className="search">
-            <div class="ui icon input">
-              <input
-                placeholder="Search for Vaccine Developer"
-                type="text"
-                value={this.state.searchEntered}
-                onChange={this.updateSearch.bind(this)}
-              />
-              <i aria-hidden="true" class="search icon"></i>
+          {this.props.showSearch === true ? (
+            <div className="search">
+              <div class="ui icon input">
+                <input
+                  placeholder="Search for Vaccine Developer"
+                  type="text"
+                  value={this.state.searchEntered}
+                  onChange={this.updateSearch.bind(this)}
+                />
+                <i aria-hidden="true" class="search icon"></i>
+              </div>
             </div>
-          </div>
+          ) : (
+            <div className="search"></div>
+          )}
         </div>
 
         {this.state.vaccineList.length === 0 ? (

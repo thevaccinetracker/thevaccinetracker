@@ -26,6 +26,7 @@ class HomePage extends Component {
               <DevelopersDetail
                 showDataFor={10}
                 title={`Top 10 COVID-19 Vaccine developers and their latest status`}
+                showSearch={false}
               />
             </div>
           </div>

@@ -297,6 +297,11 @@ body {
       display: none !important;
     }
   }
+  @media only screen and (max-width: $small-device) {
+    &.shareButton {
+      display: none !important;
+    }
+  }
 }
 
 // Main header component ends here
@@ -865,6 +870,16 @@ body {
 
       .companyInfoLabel {
         padding: 0 15px;
+      }
+    }
+    .devlopersHeader {
+      display: block;
+      margin-bottom: 20px;
+    }
+    .search {
+      width: 100%;
+      .input {
+        width: 100%;
       }
     }
   }
