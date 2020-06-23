@@ -3,6 +3,7 @@ import '../../assets/styles/style.scss'
 import { vaccineObj } from '../../contants/conts.js'
 import MainFooter from '../MainFooter'
 import MainHeader from '../MainHeader'
+import SEO from '../../components/seo'
 // import { apiService, selectedVaccine } from '../../service/apiService';
 
 class DeveloperInfo extends Component {
@@ -118,6 +119,11 @@ class DeveloperInfo extends Component {
 
     return (
       <div>
+        <SEO
+          title={
+            'Current stage of ' + this.state.vaccine.DevelopersName + ' Vaccine'
+          }
+        />
         <MainHeader />
         <div className="firstFold">
           <div className="container">
