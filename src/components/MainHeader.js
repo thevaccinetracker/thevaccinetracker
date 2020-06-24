@@ -96,7 +96,7 @@ class MainHeader extends Component {
                     onClick={() =>
                       window.open(
                         `https://twitter.com/intent/tweet?url=${url}`,
-                        '_self'
+                        '_target'
                       )
                     }
                   >
