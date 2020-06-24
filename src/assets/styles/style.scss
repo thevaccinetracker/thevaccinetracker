@@ -257,7 +257,7 @@ body {
 
   @media only screen and (max-width: $small-device) {
     .virusMainStatus {
-      font-size: 9px;
+      font-size: 12px;
       float: left;
       ul {
         padding: 0;
@@ -309,7 +309,7 @@ body {
   padding: 4px 10px;
   color: $c0;
   border-radius: 6px;
-  margin-left: 20px;
+  margin-left: 10px;
   .icon {
     float: left;
   }
