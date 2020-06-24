@@ -5,9 +5,32 @@ import { Dropdown } from 'semantic-ui-react'
 import twitterIcon from '../assets/images/twitter.svg'
 import facebookIcon from '../assets/images/facebook.svg'
 import copyIcon from '../assets/images/copyIcon.svg'
+import Toast from 'react-bootstrap/Toast'
 
 class MainHeader extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      show: false
+    }
+  }
+
+  setShow = () => {
+    this.setState({
+      show: false
+    })
+  }
+
+  copyToClipBoard = () => {
+    this.setState({
+      show: true
+    })
+    navigator.clipboard.writeText('https://www.thevaccinetracker.com')
+  }
+
   render() {
+    const { show } = this.state
+    const url = 'www.thevaccinetracker.com'
     return (
       <div className="container mainHeader">
         <div className="row">
@@ -25,7 +48,7 @@ class MainHeader extends Component {
             <div className="virusMainStatus">
               <ul>
                 <li className="virusType">
-                  <div className="blinking liveUpdates"></div>
+                  <div className="blinking liveUpdates" />
                   COVID-19
                 </li>
                 <li className="overallStatus vaccineStatus">VACCINE TRACKER</li>
@@ -37,7 +60,11 @@ class MainHeader extends Component {
                 icon="share"
               >
                 <Dropdown.Menu>
-                  <Dropdown.Item>
+                  <Dropdown.Item
+                    onClick={() =>
+                      window.open(`https://wa.me/?text=${url}`, '_self')
+                    }
+                  >
                     <img
                       src={whatsappIcon}
                       alt="whatsapp share"
@@ -46,7 +73,17 @@ class MainHeader extends Component {
                     />
                     WhatsApp
                   </Dropdown.Item>
-                  <Dropdown.Item>
+                  <Dropdown.Item
+                    onClick={() => {
+                      window.open(
+                        'https://www.facebook.com/sharer/sharer.php?u=' +
+                          encodeURIComponent(url),
+                        'facebook-share-dialog',
+                        'width=626,height=436'
+                      )
+                      return false
+                    }}
+                  >
                     <img
                       src={facebookIcon}
                       alt="facebook share"
@@ -55,7 +92,14 @@ class MainHeader extends Component {
                     />
                     Facebook
                   </Dropdown.Item>
-                  <Dropdown.Item>
+                  <Dropdown.Item
+                    onClick={() =>
+                      window.open(
+                        `https://twitter.com/intent/tweet?url=${url}`,
+                        '_self'
+                      )
+                    }
+                  >
                     <img
                       src={twitterIcon}
                       alt="twitter share"
@@ -64,7 +108,7 @@ class MainHeader extends Component {
                     />
                     Twitter
                   </Dropdown.Item>
-                  <Dropdown.Item>
+                  <Dropdown.Item onClick={this.copyToClipBoard}>
                     <img
                       src={copyIcon}
                       alt="copy link share"
@@ -78,6 +122,16 @@ class MainHeader extends Component {
             </div>
           </div>
         </div>
+        <Toast
+          onClose={() => this.setShow(false)}
+          show={show}
+          delay={1000}
+          autohide
+        >
+          <Toast.Body style={{ textAlign: 'center' }}>
+            Copied To ClipBoard !
+          </Toast.Body>
+        </Toast>
       </div>
     )
   }
