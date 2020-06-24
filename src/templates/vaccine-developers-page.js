@@ -17,7 +17,7 @@ class DeveloperInfo extends Component {
 
   componentDidMount() {
     const { state } = this.props.location
-    console.log(state)
+    // console.log(state)
     this.setState({
       vaccine: state.vaccine
     })

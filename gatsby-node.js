@@ -2,6 +2,7 @@ const path = require('path')
 
 exports.onCreatePage = async ({ page, actions }) => {
   const { createPage } = actions
+
   const categories = [
     {
       name: 'university-of-oxford-astrazeneca',
@@ -20,12 +21,4 @@ exports.onCreatePage = async ({ page, actions }) => {
       context: { categories }
     })
   })
-
-  // if (page.path.match(/^\/developer/)) {
-  //   createPage({
-  //     path: '/developer/',
-  //     matchPath: '/developer/*',
-  //     component: path.resolve('src/pages/developer.js')
-  //   })
-  // }
 }
