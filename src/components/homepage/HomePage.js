@@ -11,7 +11,7 @@ class HomePage extends Component {
             <div className="col-md-12">
               <div className="firstFold">
                 <h1 className="text-left">
-                  COVID-19 vaccine development stages &amp; status
+                  COVID-19 / Coronavirus vaccine development stages and status
                 </h1>
               </div>
             </div>
@@ -25,7 +25,7 @@ class HomePage extends Component {
             <div className="col-md-12">
               <DevelopersDetail
                 showDataFor={10}
-                title={`Top 10 COVID-19 Vaccine developers and their latest status`}
+                title={`Top 10 COVID-19 / Coronavirus Vaccine developers and their latest status`}
                 showSearch={false}
               />
             </div>
