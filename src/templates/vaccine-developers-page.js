@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-// import { graphql } from "gatsby"
 import '../assets/styles/style.scss'
 import { vaccineObj } from '../contants/conts.js'
 import MainFooter from '../components/MainFooter'
@@ -7,7 +6,7 @@ import MainHeader from '../components/MainHeader'
 import SEO from '../components/seo'
 // import { apiService, selectedVaccine } from '../../service/apiService';
 
-class DeveloperInfo extends Component({ data }) {
+class DeveloperInfo extends Component {
   constructor() {
     super()
     this.state = {
@@ -17,9 +16,8 @@ class DeveloperInfo extends Component({ data }) {
   }
 
   componentDidMount() {
-    console.log(data)
     const { state } = this.props.location
-    // console.log(state)
+    console.log(state)
     this.setState({
       vaccine: state.vaccine
     })
@@ -144,14 +142,3 @@ class DeveloperInfo extends Component({ data }) {
   }
 }
 export default DeveloperInfo
-
-// export const query = graphql`
-//   query($slug: String!) {
-//     markdownRemark(fields: { slug: { eq: $slug } }) {
-//       html
-//       frontmatter {
-//         title
-//       }
-//     }
-//   }
-// `
