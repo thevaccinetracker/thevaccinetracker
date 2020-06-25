@@ -3,12 +3,12 @@ import React from 'react'
 import DeveloperInfo from '../components/developersDetail/DeveloperInfo'
 import IndexPage from './index'
 
-const Developer = () => {
+const Developer = ({ pageContext: { vaccine } }) => {
   return (
     <div>
       <Router>
         <IndexPage path="/" />
-        <DeveloperInfo path="/developer/:slug" />
+        <DeveloperInfo vaccine={vaccine} path="/developer/:slug" />
       </Router>
     </div>
   )
