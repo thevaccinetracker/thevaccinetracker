@@ -67,3 +67,6 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+
+#API Key
+the-vaccine-tracker-395fdaa554f5.json

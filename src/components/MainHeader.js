@@ -6,6 +6,7 @@ import twitterIcon from '../assets/images/twitter.svg'
 import facebookIcon from '../assets/images/facebook.svg'
 import copyIcon from '../assets/images/copyIcon.svg'
 import Toast from 'react-bootstrap/Toast'
+import { Link } from 'gatsby'
 
 class MainHeader extends Component {
   constructor(props) {
@@ -36,13 +37,13 @@ class MainHeader extends Component {
         <div className="row">
           <div className="col-md-6 col-xs-12">
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-            <a href="/">
+            <Link to="/">
               <img
                 src={logo}
                 alt="The Vaccine Tracker Logo"
                 className="img img-responsive"
               />
-            </a>
+            </Link>
           </div>
           <div className="col-md-6 col-xs-12">
             <div className="virusMainStatus">
