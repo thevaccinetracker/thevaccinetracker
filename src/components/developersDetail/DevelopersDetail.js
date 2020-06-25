@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import Fade from 'react-reveal/Fade'
 import React, { Component } from '../../../node_modules/react'
 import { vaccineObj } from '../../contants/conts.js'
-import { apiService } from '../../service/apiService'
+import { graphql, useStaticQuery } from 'gatsby'
 
 class DevelopersDetail extends Component {
   constructor() {
@@ -15,15 +15,12 @@ class DevelopersDetail extends Component {
   }
 
   componentDidMount() {
-    let scope = this
-    apiService.getVirusList(function (virusInfo) {
-      scope.setState({
-        vaccineList: virusInfo.map(vaccine => ({
-          ...vaccine,
-          stage: parseInt(vaccine.currentStage.charAt(1)),
-          phase: parseInt(vaccine.currentStage.split('Phase')[1]) || null
-        }))
-      })
+    this.setState({
+      vaccineList: this.props.vaccines.map(vaccine => ({
+        ...vaccine,
+        stage: parseInt(vaccine.currentstage.charAt(1)),
+        phase: parseInt(vaccine.currentstage.split('Phase')[1]) || null
+      }))
     })
   }
 
@@ -52,22 +49,19 @@ class DevelopersDetail extends Component {
       let filteredVaccineList = this.state.vaccineList.filter(
         vaccineDeveloper => {
           return (
-            vaccineDeveloper.DevelopersName.indexOf(
-              this.state.searchEntered
-            ) !== -1
+            vaccineDeveloper.developersname
+              .toLowerCase()
+              .indexOf(this.state.searchEntered.toLowerCase()) !== -1
           )
         }
       )
 
       return filteredVaccineList
         .map(vaccine => {
-          let vaccineStage = vaccineObj[vaccine.currentStage]
+          let vaccineStage = vaccineObj[vaccine.currentstage]
           return (
-            <Fade bottom key={vaccine.ResearcherID}>
-              <Link
-                to={`/all-vaccine-developers/${vaccine.slug}`}
-                state={{ vaccine }}
-              >
+            <Fade bottom key={vaccine.researcherid}>
+              <Link to={`/all-vaccine-developers/${vaccine.slug}`}>
                 <div className="mainOrganisationBox">
                   <div className="row">
                     <div className="col-md-1 col-xs-3 hidden-xs">
@@ -80,7 +74,7 @@ class DevelopersDetail extends Component {
                     </div>
                     <div className="col-md-7 col-xs-12 companyInfoLabel">
                       <div className="companyLabel c5Para">Company Name</div>
-                      <h4 className="companyName">{vaccine.DevelopersName}</h4>
+                      <h4 className="companyName">{vaccine.developersname}</h4>
                     </div>
                     <div className="col-md-4 col-xs-12">
                       <div className="currentStageGraph">
@@ -186,4 +180,29 @@ class DevelopersDetail extends Component {
   }
 }
 
-export default DevelopersDetail
+export default props => {
+  const data = useStaticQuery(graphql`
+    query {
+      allGoogleSheetVaccineDataRow {
+        edges {
+          node {
+            id
+            no
+            slug
+            currentstage
+            developersname
+            rawphases
+            researcherid
+          }
+        }
+        totalCount
+      }
+    }
+  `)
+  let vaccines = []
+  data.allGoogleSheetVaccineDataRow.edges.forEach(edge => {
+    const vaccine = edge.node
+    vaccines = [...vaccines, { ...vaccine }]
+  })
+  return <DevelopersDetail {...props} vaccines={vaccines} />
+}
