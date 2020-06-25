@@ -1,24 +1,23 @@
-const path = require('path')
-
-exports.onCreatePage = async ({ page, actions }) => {
-  const { createPage } = actions
-
-  const categories = [
-    {
-      name: 'university-of-oxford-astrazeneca',
-      sub: []
-    },
-    {
-      name: 'cansino-biological-inc-beijing-institute-of-biotechnology',
-      sub: []
+exports.createPages = async function ({ actions, graphql }) {
+  const { data } = await graphql(`
+    query {
+      allGoogleSheetVaccineDataRow {
+        edges {
+          node {
+            id
+            slug
+          }
+        }
+        totalCount
+      }
     }
-  ]
-
-  categories.forEach(categories => {
-    createPage({
-      path: `/all-vaccine-developers/${categories.name}`,
+  `)
+  data.allGoogleSheetVaccineDataRow.edges.forEach(edge => {
+    const slug = edge.node.slug
+    actions.createPage({
+      path: `/all-vaccine-developers/${slug}`,
       component: require.resolve(`./src/templates/vaccine-developers-page.js`),
-      context: { categories }
+      context: { slug: slug }
     })
   })
 }

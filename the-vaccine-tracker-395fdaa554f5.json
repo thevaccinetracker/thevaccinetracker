@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "the-vaccine-tracker",
+  "private_key_id": "395fdaa554f58abfedcb6903b987602e3a083a2d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDcx/GlCNru5wAC\nCWYKjBWGzTAsaJFEBHB0DJOLRQtddVio0A/aLgRnFJPMHTXQHn6uCLgO2jIlyr6U\n/cgCZjMx3ET8bDeLwO8qBA88wijxiARYkxOwDmja29H5JkzvG8NRWfE6FxPF6HY2\nw8rMHG5bxHDeAw507DYPSGaamro1ON/7rETGzGqQlcf/DWTalEo14K+6SjHgs8gW\nEuLGXU8E2FZV0IbEnj8lK/sRaW+r9oH8OA+eG0ZTXrHP8aCbBLSqgx882lgNDsVY\n76hF0BZi29BiJ7iTOU4z2cduFdXNw8xdmQ0WPyKADbUVBEQHrKCX20GyFmeFR1b+\nhvWtZLnhAgMBAAECggEAAx/jSBolew8S3XSDmK+d2GAMB/zc3XEQpFvPNL/f5s0z\n2YPETaqsDkdoxhE9wznDQjRGYpNs9UL2yoYC8CHBJLoA0e+4I4ax+8695na6/JwX\nr6c5Npslmb9Vq+iCWznx3DNhKhjMg1cEYUcJFjVqzGqtzD6P1FDJfRLhvNtmuj0S\nl6sDaey4liCe2ujTXut/hPvmANlhU27UJzH4HGDs8B+mkvSK9Ww25UVYcNILS+7L\nnn6/Zh0cxM+ftvBI+WZd9Y2ZR7uRanTb42UsqRAf76Z3e1z31sTzAO3FkXljYg/H\nnBdSoZV5kSXrLEj2oGUsgcqNkgZPVpmyNWe7f11X/wKBgQDwCfq90/RwTZUWx81v\nO3VORHWJU3Z86dG0Cnp7JKae9v6wb2pA+9OAmOe95HF6bCnmNTmzL+Z2dnEv6LzB\nIGOptKsAhJ/kXHWtRKKxVmnAW+GU+lhxaGOHIXLXF+7XDCuEUdQfEWhJJRQ1ftVD\niPlM/xtVIw6eYVfCIJTJ56hOBwKBgQDrdiZB0zQGLAlkM1X2hRL+kfEEzEsIgl0n\nxgHBpzlKm0f/b66/ymZ27VsW5wEItt9c55mCJOwdlMfTK8uZUjzAdZ8IIh7PUZMQ\njo5dIbFpRaiiZ4wmzvtgtJ7U8Y7z3h32Gz6W00QbkGL735CYnas2ErrbJgqVacHR\nAmVLWU6+1wKBgQDL4o4aAxiS8zL5gIicPFKtQjTbigsQmsJGPMhAJKdqSr2WO2xy\n+fNyPW5JuuowZANKyFbUPpFwebY2TWdWWx6MHStKa1wsaeSCYdQW8SEuBF0dX28U\nFOjE9MJItMln26xy3dZg9TYxOs9piOu4S3YF0oHy1K4sFN6nw2jd/mjUrQKBgQDQ\nL1mqD6xK3Lq8/mq+GXDu5micnmilMGZfGUJKT6lnHp5s6fkvGCy6cCh+umZ+pvoc\nsaVXnX+qs/Zt7qYIfN68KAMhdNGa6nxGQlT7YSP0eSOd3EHdulomaeyZSK7lTfld\ntT8EqezpFiN+oW++kIFlwO+3fg4ThztXqm+XTHJEZwKBgQDaKSb+bpdOVnFGKQ2c\nxo2TcH0BP63Bo4uQfLSF3IBrOmjKaB9Ix6sIhih+ji+C7ojmGaUoiDHvFoe5pVnp\njdgixEucBKju+HQoCs7rV6p0l9h2IbFTgnXiMfm3N8VOp9y+Heyh/oCo01unX8Jp\noMMEEOcG84av+yYCwW9PdX/ing==\n-----END PRIVATE KEY-----\n",
+  "client_email": "the-vaccine-tracker@the-vaccine-tracker.iam.gserviceaccount.com",
+  "client_id": "104731379321612461381",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/the-vaccine-tracker%40the-vaccine-tracker.iam.gserviceaccount.com"
+}
