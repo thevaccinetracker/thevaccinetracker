@@ -52,14 +52,6 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/assets/images/favicon.png` // This path is relative to the root of the site.
       }
-    },
-    {
-      resolve: 'gatsby-source-google-sheets',
-      options: {
-        spreadsheetId: '1ImpYv9-_qKmF8JkdV8YW1tN8IAycPszPpG6VCn-rH4Q',
-        worksheetTitle: 'vaccineData',
-        credentials: require('./the-vaccine-tracker-395fdaa554f5.json')
-      }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

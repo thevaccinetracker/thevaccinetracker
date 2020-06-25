@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import Fade from 'react-reveal/Fade'
 import React, { Component } from '../../../node_modules/react'
 import { vaccineObj } from '../../contants/conts.js'
+// import { apiService, selectedVaccine } from "../../service/apiService"
 import { apiService } from '../../service/apiService'
 
 class DevelopersDetail extends Component {
@@ -64,10 +65,7 @@ class DevelopersDetail extends Component {
           let vaccineStage = vaccineObj[vaccine.currentStage]
           return (
             <Fade bottom key={vaccine.ResearcherID}>
-              <Link
-                to={`/all-vaccine-developers/${vaccine.slug}`}
-                state={{ vaccine }}
-              >
+              <Link to={`/developer/${vaccine.slug}`} state={{ vaccine }}>
                 <div className="mainOrganisationBox">
                   <div className="row">
                     <div className="col-md-1 col-xs-3 hidden-xs">
@@ -161,14 +159,14 @@ class DevelopersDetail extends Component {
           </div>
           {this.props.showSearch === true ? (
             <div className="search">
-              <div className="ui icon input">
+              <div class="ui icon input">
                 <input
                   placeholder="Search for Vaccine Developer"
                   type="text"
                   value={this.state.searchEntered}
                   onChange={this.updateSearch.bind(this)}
                 />
-                <i aria-hidden="true" className="search icon"></i>
+                <i aria-hidden="true" class="search icon"></i>
               </div>
             </div>
           ) : (
