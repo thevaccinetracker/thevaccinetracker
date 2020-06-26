@@ -1,9 +1,9 @@
-import React from 'react'
-import '../assets/styles/style.scss'
-import DevelopersDetail from '../components/developersDetail/DevelopersDetail'
-import MainFooter from '../components/MainFooter'
-import MainHeader from '../components/MainHeader'
-import SEO from '../components/seo'
+import * as React from "react";
+import "../assets/styles/style.scss";
+import DevelopersDetail from "../components/developersDetail/DevelopersDetail";
+import MainFooter from "../components/MainFooter";
+import MainHeader from "../components/MainHeader";
+import SEO from "../components/seo";
 
 const AllVaccineDevelopers = () => {
   return (
@@ -12,7 +12,7 @@ const AllVaccineDevelopers = () => {
         title="All the COVID-19 vaccine developers or researchers"
         description="See all the list of vaccine developers working on the development of the COVID-19 vaccine and their current latest status"
       />
-      <MainHeader />
+      <MainHeader/>
       <div className="firstFold">
         <div className="container">
           <div className="row">
@@ -25,8 +25,8 @@ const AllVaccineDevelopers = () => {
           </div>
         </div>
       </div>
-      <MainFooter />
+      <MainFooter/>
     </div>
-  )
-}
-export default AllVaccineDevelopers
+  );
+};
+export default React.memo(AllVaccineDevelopers);

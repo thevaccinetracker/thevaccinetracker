@@ -1,8 +1,8 @@
-import React, { Component } from '../../../node_modules/react'
-import DevelopersDetail from '../developersDetail/DevelopersDetail'
-import TrackerMain from '../trackerMain/TrackerMain'
+import * as React from "react";
+import DevelopersDetail from "../developersDetail/DevelopersDetail";
+import TrackerMain from "../trackerMain/TrackerMain";
 
-class HomePage extends Component {
+class HomePage extends React.Component {
   render() {
     return (
       <div className="firstFold">
@@ -18,7 +18,7 @@ class HomePage extends Component {
           </div>
           <div className="row">
             <div className="col-md-12">
-              <TrackerMain />
+              <TrackerMain/>
             </div>
           </div>
           <div className="row">
@@ -32,8 +32,8 @@ class HomePage extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default HomePage
+export default HomePage;

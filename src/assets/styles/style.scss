@@ -259,6 +259,7 @@ body {
     .virusMainStatus {
       font-size: 12px;
       float: left;
+
       ul {
         padding: 0;
 
@@ -310,16 +311,20 @@ body {
   color: $c0;
   border-radius: 6px;
   margin-left: 10px;
+
   .icon {
     float: left;
   }
+
   .menu {
     padding: 12px 0 !important;
   }
+
   .menu {
     .item {
       display: flex !important;
     }
+
     &::after {
       display: none !important;
     }
@@ -453,6 +458,7 @@ body {
     display: unset;
     margin-top: 50px;
   }
+
   .pagenotfoundButton {
     margin: 50px 0;
   }
@@ -475,12 +481,15 @@ body {
 .covidVaccineStagesAndPhases {
   display: flex;
   margin: 20px 0 40px 0;
+
   .stageTitle {
     margin-top: 20px;
   }
+
   .stageNumber {
     margin-top: 10px;
   }
+
   .stages {
     padding: 30px 20px;
     background-color: $c12;
@@ -716,26 +725,31 @@ body {
 .developersDetailedStages {
   margin-bottom: 40px;
   margin-top: 40px;
+
   .devlopersHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
   .search {
     input {
       background: $c1 !important;
       width: 300px;
       border: 1px solid $c4 !important;
       color: $c4 !important;
+
       ::placeholder {
         color: red;
         opacity: 1;
       }
     }
+
     .icon {
       color: $c4;
     }
   }
+
   h1 {
     margin-bottom: 20px !important;
   }
@@ -900,6 +914,7 @@ body {
     }
     .search {
       width: 100%;
+
       .input {
         width: 100%;
       }

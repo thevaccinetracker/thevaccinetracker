@@ -26,7 +26,7 @@ exports.createPages = async function ({ actions, graphql }) {
     }
     actions.createPage({
       path: `/all-vaccine-developers/${vaccine.slug}`,
-      component: require.resolve(`./src/templates/vaccine-developers-page.js`),
+      component: require.resolve(`./src/templates/vaccine-developers-page.tsx`),
       context: { vaccine }
     })
   })
