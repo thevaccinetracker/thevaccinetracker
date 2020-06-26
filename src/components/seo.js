@@ -8,22 +8,32 @@ import socialImage from '../assets/images/Logo-white-bg.png'
 const SEO = ({ title, description, article }) => {
   const { pathname } = useLocation()
   const { site } = useStaticQuery(query)
+
   const {
+    lang,
     defaultTitle,
     defaultDescription,
     keywords,
     siteUrl,
     twitterUsername
   } = site.siteMetadata
+
   const seo = {
+    lang: lang,
     title: title || defaultTitle,
     description: description || defaultDescription,
     url: `${siteUrl}${pathname}`,
     image: socialImage,
     keywords
   }
+
   return (
-    <Helmet title={seo.title}>
+    <Helmet
+      htmlAttributes={{
+        lang: 'en'
+      }}
+      title={seo.title}
+    >
       <meta name="description" content={seo.description} />
       {seo.image && <meta name="image" content={seo.image} />}
       <meta name="keywords" content={seo.keywords.join(',')} />
@@ -46,13 +56,16 @@ const SEO = ({ title, description, article }) => {
     </Helmet>
   )
 }
+
 export default SEO
+
 SEO.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string,
   article: PropTypes.bool
 }
+
 SEO.defaultProps = {
   lang: `en`,
   title: null,
@@ -60,6 +73,7 @@ SEO.defaultProps = {
   image: null,
   article: false
 }
+
 const query = graphql`
   query SEO {
     site {
