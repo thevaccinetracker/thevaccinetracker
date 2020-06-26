@@ -2,7 +2,7 @@ import * as React from "react";
 import DevelopersDetail from "../developersDetail/DevelopersDetail";
 import TrackerMain from "../trackerMain/TrackerMain";
 
-class HomePage extends React.Component {
+class HomePage extends React.PureComponent {
   render() {
     return (
       <div className="firstFold">

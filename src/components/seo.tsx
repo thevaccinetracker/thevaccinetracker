@@ -45,6 +45,7 @@ const SEO = (props: SEOProps) => {
   };
   return (
     <Helmet title={seo.title}>
+      <html lang="en"/>
       <meta name="description" content={seo.description}/>
       {seo.image && <meta name="image" content={seo.image}/>}
       <meta name="keywords" content={seo.keywords.join(",")}/>
