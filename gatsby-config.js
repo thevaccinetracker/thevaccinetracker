@@ -60,6 +60,14 @@ module.exports = {
         worksheetTitle: 'vaccineData',
         credentials: require('./the-vaccine-tracker-395fdaa554f5.json')
       }
+    },
+    {
+      resolve: 'gatsby-source-google-sheets',
+      options: {
+        spreadsheetId: '1ImpYv9-_qKmF8JkdV8YW1tN8IAycPszPpG6VCn-rH4Q',
+        worksheetTitle: 'VaccineCounts',
+        credentials: require('./the-vaccine-tracker-395fdaa554f5.json')
+      }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
