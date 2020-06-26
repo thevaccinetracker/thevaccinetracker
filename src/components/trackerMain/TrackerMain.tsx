@@ -83,9 +83,10 @@ class TrackerMain extends React.PureComponent<TrackerMainProps, TrackerMainState
           color="#FEB9D3"
           height={26}
           width={26}
-          // style={{
-          //   textAlign: "left"
-          // }}
+          // @ts-ignore
+          style={{
+            textAlign: "left"
+          }}
         />
       );
     };

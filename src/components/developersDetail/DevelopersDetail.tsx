@@ -153,9 +153,10 @@ class DevelopersDetail extends React.PureComponent<DevelopersDetailProps, Develo
           color="#FEB9D3"
           height={40}
           width={40}
-          // style={{
-          //   textAlign: "center"
-          // }}
+          // @ts-ignore
+          style={{
+            textAlign: "center"
+          }}
         />
       );
     };

@@ -22,9 +22,10 @@ class SimpleTracker extends React.PureComponent<SimpleTrackerProps, SimpleTracke
           color="#FEB9D3"
           height={26}
           width={26}
-          // style={{
-          //   textAlign: "left"
-          // }}
+          // @ts-ignore
+          style={{
+            textAlign: "left"
+          }}
         />
       );
     };
