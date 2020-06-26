@@ -907,6 +907,19 @@ body {
   }
 }
 
+.top10Vaccines {
+  .gs0Para {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  @media only screen and (max-width: $small-device) {
+    .gs0Para {
+      margin-top: 10px;
+      font-size: 12px;
+    }
+  }
+}
+
 //*******************************
 // Components Ends Here
 //*******************************
