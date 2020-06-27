@@ -1,12 +1,21 @@
-import React, { Component } from 'react'
-import '../assets/styles/style.scss'
-import MainFooter from '../components/MainFooter'
-import MainHeader from '../components/MainHeader'
-import SEO from '../components/seo'
-import 'semantic-ui-css/semantic.min.css'
-import DevelopersDetail from '../components/developersDetail/DevelopersDetail'
+import * as React from "react";
+import "../assets/styles/style.scss";
+import MainFooter from "../components/MainFooter";
+import MainHeader from "../components/MainHeader";
+import SEO from "../components/seo";
+import "semantic-ui-css/semantic.min.css";
+import DevelopersDetail from "../components/developersDetail/DevelopersDetail";
 
-class topVaccineDevelopers extends Component {
+
+export interface TopVaccineDevelopersProps {
+
+}
+
+export interface TopVaccineDevelopersState {
+
+}
+
+class TopVaccineDevelopers extends React.PureComponent<TopVaccineDevelopersProps, TopVaccineDevelopersState> {
   render() {
     return (
       <div className="homePage">
@@ -14,7 +23,7 @@ class topVaccineDevelopers extends Component {
           title="Top 10 COVID-19 or Coronavirus Vaccine Contenders"
           description="See all the top 10 list of vaccine developers working on the development of the COVID-19 vaccine and their current latest status"
         />
-        <MainHeader />
+        <MainHeader/>
         <div className="firstFold top10Vaccines">
           <div className="container">
             <div className="row">
@@ -45,10 +54,10 @@ class topVaccineDevelopers extends Component {
             </div>
           </div>
         </div>
-        <MainFooter />
+        <MainFooter/>
       </div>
-    )
+    );
   }
 }
 
-export default topVaccineDevelopers
+export default TopVaccineDevelopers;

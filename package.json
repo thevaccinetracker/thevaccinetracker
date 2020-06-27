@@ -39,6 +39,8 @@
     "tabletop": "^1.6.3"
   },
   "devDependencies": {
+    "@types/react-helmet": "^6.0.0",
+    "@types/react-loader-spinner": "^3.1.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
     "prettier": "2.0.5"

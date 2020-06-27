@@ -70,3 +70,7 @@ yarn-error.log
 
 #API Key
 the-vaccine-tracker-395fdaa554f5.json
+
+# IDE
+.vscode/
+.idea/

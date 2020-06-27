@@ -1,41 +1,51 @@
-import React, { Component } from 'react'
-import '../../assets/styles/style.scss'
-import { vaccineObj } from '../../contants/conts.js'
-import MainFooter from '../MainFooter'
-import MainHeader from '../MainHeader'
-import SEO from '../../components/seo'
-// import { apiService, selectedVaccine } from '../../service/apiService';
+import * as React from "react";
+import { vaccineObj } from "../../contants/conts";
+import MainFooter from "../MainFooter";
+import MainHeader from "../MainHeader";
+import SEO from "../seo";
+import "../../assets/styles/style.scss";
 
-class DeveloperInfo extends Component {
-  constructor() {
-    super()
+export interface DeveloperInfoProps {
+
+}
+
+export interface DeveloperInfoState {
+  vaccine: any;
+}
+
+class DeveloperInfo extends React.PureComponent<DeveloperInfoProps, DeveloperInfoState> {
+  private ResearcherID: string;
+
+  constructor(props: DeveloperInfoProps) {
+    super(props);
     this.state = {
       vaccine: {}
-    }
-    this.ResearcherID = ''
+    };
+    this.ResearcherID = "";
   }
 
   componentDidMount() {
-    const { state } = this.props.location
-    console.log(state)
+    // @ts-ignore
+    const { state } = this.props.location;
+    console.log(state);
     this.setState({
       vaccine: state.vaccine
-    })
+    });
   }
 
   render() {
     const MainOrganisationBox = () => {
-      let vaccine = this.state.vaccine
-      let vaccineStage = {}
+      let vaccine = this.state.vaccine;
+      let vaccineStage: any = {};
       if (vaccine && vaccine.currentStage) {
-        vaccineStage = vaccineObj[vaccine.currentStage] || {}
+        vaccineStage = vaccineObj[vaccine.currentStage] || {};
       }
       return (
         <div className="mainOrganisationBox">
           <div className="row">
             <div className="col-md-1 col-xs-3 hidden-xs">
               <div className={`icon ${vaccineStage.class}`}>
-                <img src={vaccineStage.icon} alt={`${vaccineStage.icon_alt}`} />
+                <img src={vaccineStage.icon} alt={`${vaccineStage.icon_alt}`}/>
               </div>
             </div>
             <div className="col-md-11 col-xs-12 companyInfoLabel">
@@ -48,52 +58,52 @@ class DeveloperInfo extends Component {
               <div className="currentStageGraph">
                 <div
                   className={`stage s1 ${
-                    vaccine.stage >= 1 ? 'highlight' : ''
+                    vaccine.stage >= 1 ? "highlight" : ""
                   }`}
                 />
                 <div
                   className={`stage s2 ${
-                    vaccine.stage >= 2 ? 'highlight' : ''
+                    vaccine.stage >= 2 ? "highlight" : ""
                   }`}
                 />
                 <div
                   className={`stage s3 ${
-                    vaccine.stage >= 3 ? 'highlight' : ''
+                    vaccine.stage >= 3 ? "highlight" : ""
                   }`}
                 >
                   <div
                     className={`phase p1 ${
                       vaccine.stage >= 4 ||
                       (vaccine.stage === 3 && vaccine.phase >= 1)
-                        ? 'highlight'
-                        : ''
+                        ? "highlight"
+                        : ""
                     }`}
                   />
                   <div
                     className={`phase p2 ${
                       vaccine.stage >= 4 ||
                       (vaccine.stage === 3 && vaccine.phase >= 2)
-                        ? 'highlight'
-                        : ''
+                        ? "highlight"
+                        : ""
                     }`}
                   />
                   <div
                     className={`phase p3 ${
                       vaccine.stage >= 4 ||
                       (vaccine.stage === 3 && vaccine.phase >= 3)
-                        ? 'highlight'
-                        : ''
+                        ? "highlight"
+                        : ""
                     }`}
                   />
                 </div>
                 <div
                   className={`stage s4 ${
-                    vaccine.stage >= 4 ? 'highlight' : ''
+                    vaccine.stage >= 4 ? "highlight" : ""
                   }`}
                 />
                 <div
                   className={`stage s5 ${
-                    vaccine.stage >= 5 ? 'highlight' : ''
+                    vaccine.stage >= 5 ? "highlight" : ""
                   }`}
                 />
               </div>
@@ -114,31 +124,32 @@ class DeveloperInfo extends Component {
             </div>
           </div>
         </div>
-      )
-    }
+      );
+    };
 
     return (
       <div>
         <SEO
           title={
-            'Current stage of ' + this.state.vaccine.DevelopersName + ' Vaccine'
+            "Current stage of " + this.state.vaccine.DevelopersName + " Vaccine"
           }
         />
-        <MainHeader />
+        <MainHeader/>
         <div className="firstFold">
           <div className="container">
             <div className="row">
               <div className="col-md-12">
                 <div className="developersDetailedStages">
-                  <MainOrganisationBox />
+                  <MainOrganisationBox/>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <MainFooter />
+        <MainFooter/>
       </div>
-    )
+    );
   }
 }
-export default DeveloperInfo
+
+export default DeveloperInfo;

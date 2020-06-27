@@ -1,10 +1,22 @@
-import React, { Component } from 'react'
-import facebookIcon from '../assets/images/facebook.svg'
-import producthuntIcon from '../assets/images/producthunt.svg'
-import twitterIcon from '../assets/images/twitter.svg'
-import youtubeIcon from '../assets/images/youtube.svg'
+import * as React from "react";
+// @ts-ignore
+import facebookIcon from "../assets/images/facebook.svg";
+// @ts-ignore
+import producthuntIcon from "../assets/images/producthunt.svg";
+// @ts-ignore
+import twitterIcon from "../assets/images/twitter.svg";
+// @ts-ignore
+import youtubeIcon from "../assets/images/youtube.svg";
 
-class MainHeader extends Component {
+export interface MainFooterProps {
+
+}
+
+export interface MainFooterState {
+
+}
+
+class MainFooter extends React.PureComponent<MainFooterProps, MainFooterState> {
   render() {
     return (
       <div className="container mainFooter">
@@ -121,8 +133,8 @@ class MainHeader extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default MainHeader
+export default MainFooter;

@@ -1,42 +1,55 @@
-import React, { Component } from 'react'
-import logo from '../assets/images/logo.svg'
-import whatsappIcon from '../assets/images/whatsappIcon.svg'
-import { Dropdown } from 'semantic-ui-react'
-import twitterIcon from '../assets/images/twitter.svg'
-import facebookIcon from '../assets/images/facebook.svg'
-import copyIcon from '../assets/images/copyIcon.svg'
-import Toast from 'react-bootstrap/Toast'
-import { Link } from 'gatsby'
+import * as React from "react";
+import { Dropdown } from "semantic-ui-react";
+import Toast from "react-bootstrap/Toast";
+import { Link } from "gatsby";
+// @ts-ignore
+import logo from "../assets/images/logo.svg";
+// @ts-ignore
+import whatsappIcon from "../assets/images/whatsappIcon.svg";
+// @ts-ignore
+import twitterIcon from "../assets/images/twitter.svg";
+// @ts-ignore
+import facebookIcon from "../assets/images/facebook.svg";
+// @ts-ignore
+import copyIcon from "../assets/images/copyIcon.svg";
 
-class MainHeader extends Component {
+
+export interface MainHeaderProps {
+
+}
+
+export interface MainHeaderState {
+  show: boolean;
+}
+
+class MainHeader extends React.PureComponent<MainHeaderProps, MainHeaderState> {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       show: false
-    }
+    };
   }
 
   setShow = () => {
     this.setState({
       show: false
-    })
-  }
+    });
+  };
 
   copyToClipBoard = () => {
     this.setState({
       show: true
-    })
-    navigator.clipboard.writeText('https://www.thevaccinetracker.com')
-  }
+    });
+    navigator.clipboard.writeText("https://www.thevaccinetracker.com");
+  };
 
   render() {
-    const { show } = this.state
-    const url = 'www.thevaccinetracker.com'
+    const { show } = this.state;
+    const url = "www.thevaccinetracker.com";
     return (
       <div className="container mainHeader">
         <div className="row">
           <div className="col-md-6 col-xs-12">
-            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <Link to="/">
               <img
                 src={logo}
@@ -49,7 +62,7 @@ class MainHeader extends Component {
             <div className="virusMainStatus">
               <ul>
                 <li className="virusType">
-                  <div className="blinking liveUpdates" />
+                  <div className="blinking liveUpdates"/>
                   COVID-19
                 </li>
                 <li className="overallStatus vaccineStatus">VACCINE TRACKER</li>
@@ -63,7 +76,7 @@ class MainHeader extends Component {
                 <Dropdown.Menu>
                   <Dropdown.Item
                     onClick={() =>
-                      window.open(`https://wa.me/?text=${url}`, '_self')
+                      window.open(`https://wa.me/?text=${url}`, "_self")
                     }
                   >
                     <img
@@ -77,12 +90,12 @@ class MainHeader extends Component {
                   <Dropdown.Item
                     onClick={() => {
                       window.open(
-                        'https://www.facebook.com/sharer/sharer.php?u=' +
-                          encodeURIComponent(url),
-                        'facebook-share-dialog',
-                        'width=626,height=436'
-                      )
-                      return false
+                        "https://www.facebook.com/sharer/sharer.php?u=" +
+                        encodeURIComponent(url),
+                        "facebook-share-dialog",
+                        "width=626,height=436"
+                      );
+                      return false;
                     }}
                   >
                     <img
@@ -97,7 +110,7 @@ class MainHeader extends Component {
                     onClick={() =>
                       window.open(
                         `https://twitter.com/intent/tweet?url=${url}`,
-                        '_target'
+                        "_target"
                       )
                     }
                   >
@@ -124,18 +137,18 @@ class MainHeader extends Component {
           </div>
         </div>
         <Toast
-          onClose={() => this.setShow(false)}
+          onClose={() => this.setShow()}
           show={show}
           delay={1000}
           autohide
         >
-          <Toast.Body style={{ textAlign: 'center' }}>
+          <Toast.Body style={{ textAlign: "center" }}>
             Copied To ClipBoard !
           </Toast.Body>
         </Toast>
       </div>
-    )
+    );
   }
 }
 
-export default MainHeader
+export default MainHeader;

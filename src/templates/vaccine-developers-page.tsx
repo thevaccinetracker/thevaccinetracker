@@ -1,30 +1,42 @@
-import React, { Component } from 'react'
-import '../assets/styles/style.scss'
-import { vaccineObj } from '../contants/conts.js'
-import MainFooter from '../components/MainFooter'
-import MainHeader from '../components/MainHeader'
-import SEO from '../components/seo'
+import * as React from "react";
+import "../assets/styles/style.scss";
+import { vaccineObj } from "../contants/conts";
+import MainFooter from "../components/MainFooter";
+import MainHeader from "../components/MainHeader";
+import SEO from "../components/seo";
+import { PageProps } from "gatsby";
 
-class DeveloperInfo extends Component {
-  constructor() {
-    super()
-    this.ResearcherID = ''
+export interface DeveloperInfoProp extends PageProps {
+
+}
+
+export interface DeveloperInfoState {
+
+}
+
+class DeveloperInfo extends React.PureComponent<DeveloperInfoProp, DeveloperInfoState> {
+  private ResearcherID: string;
+
+  constructor(props: DeveloperInfoProp) {
+    super(props);
+    this.ResearcherID = "";
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+  }
 
   MainOrganisationBox = () => {
-    let vaccine = this.props.pageContext.vaccine
-    let vaccineStage = {}
+    let vaccine = (this.props.pageContext as any).vaccine;
+    let vaccineStage: any = {};
     if (vaccine && vaccine.currentstage) {
-      vaccineStage = vaccineObj[vaccine.currentstage] || {}
+      vaccineStage = vaccineObj[vaccine.currentstage] || {};
     }
     return (
       <div className="mainOrganisationBox">
         <div className="row">
           <div className="col-md-1 col-xs-3 hidden-xs">
             <div className={`icon ${vaccineStage.class}`}>
-              <img src={vaccineStage.icon} alt={`${vaccineStage.icon_alt}`} />
+              <img src={vaccineStage.icon} alt={`${vaccineStage.icon_alt}`}/>
             </div>
           </div>
           <div className="col-md-11 col-xs-12 companyInfoLabel">
@@ -36,44 +48,44 @@ class DeveloperInfo extends Component {
           <div className="col-md-4 col-xs-12">
             <div className="currentStageGraph">
               <div
-                className={`stage s1 ${vaccine.stage >= 1 ? 'highlight' : ''}`}
+                className={`stage s1 ${vaccine.stage >= 1 ? "highlight" : ""}`}
               />
               <div
-                className={`stage s2 ${vaccine.stage >= 2 ? 'highlight' : ''}`}
+                className={`stage s2 ${vaccine.stage >= 2 ? "highlight" : ""}`}
               />
               <div
-                className={`stage s3 ${vaccine.stage >= 3 ? 'highlight' : ''}`}
+                className={`stage s3 ${vaccine.stage >= 3 ? "highlight" : ""}`}
               >
                 <div
                   className={`phase p1 ${
                     vaccine.stage >= 4 ||
                     (vaccine.stage === 3 && vaccine.phase >= 1)
-                      ? 'highlight'
-                      : ''
+                      ? "highlight"
+                      : ""
                   }`}
                 />
                 <div
                   className={`phase p2 ${
                     vaccine.stage >= 4 ||
                     (vaccine.stage === 3 && vaccine.phase >= 2)
-                      ? 'highlight'
-                      : ''
+                      ? "highlight"
+                      : ""
                   }`}
                 />
                 <div
                   className={`phase p3 ${
                     vaccine.stage >= 4 ||
                     (vaccine.stage === 3 && vaccine.phase >= 3)
-                      ? 'highlight'
-                      : ''
+                      ? "highlight"
+                      : ""
                   }`}
                 />
               </div>
               <div
-                className={`stage s4 ${vaccine.stage >= 4 ? 'highlight' : ''}`}
+                className={`stage s4 ${vaccine.stage >= 4 ? "highlight" : ""}`}
               />
               <div
-                className={`stage s5 ${vaccine.stage >= 5 ? 'highlight' : ''}`}
+                className={`stage s5 ${vaccine.stage >= 5 ? "highlight" : ""}`}
               />
             </div>
             <div className="currentStageText">
@@ -93,20 +105,20 @@ class DeveloperInfo extends Component {
           </div>
         </div>
       </div>
-    )
-  }
+    );
+  };
 
   render() {
     return (
       <div>
         <SEO
           title={
-            'Current stage of ' +
-            this.props.pageContext.vaccine.developersname +
-            ' Vaccine'
+            "Current stage of " +
+            (this.props.pageContext as any).vaccine.developersname +
+            " Vaccine"
           }
         />
-        <MainHeader />
+        <MainHeader/>
         <div className="firstFold">
           <div className="container">
             <div className="row">
@@ -118,9 +130,10 @@ class DeveloperInfo extends Component {
             </div>
           </div>
         </div>
-        <MainFooter />
+        <MainFooter/>
       </div>
-    )
+    );
   }
 }
-export default DeveloperInfo
+
+export default DeveloperInfo;
