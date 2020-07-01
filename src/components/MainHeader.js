@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import logo from '../assets/images/logo.svg'
+import logo from '../assets/images/tvt_logo.svg'
 import whatsappIcon from '../assets/images/whatsappIcon.svg'
 import { Dropdown } from 'semantic-ui-react'
 import twitterIcon from '../assets/images/twitter.svg'
@@ -42,6 +42,7 @@ class MainHeader extends Component {
                 src={logo}
                 alt="The Vaccine Tracker Logo"
                 className="img img-responsive"
+                width="140"
               />
             </Link>
           </div>
