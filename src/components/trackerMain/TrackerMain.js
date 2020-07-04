@@ -1,7 +1,7 @@
 import { Line } from 'rc-progress'
 import Loader from 'react-loader-spinner'
-import React, { Component } from '../../../node_modules/react'
-import Tabletop from '../../../node_modules/tabletop'
+import React, { Component } from 'react'
+import Tabletop from 'tabletop'
 import stage4Icon from '../../assets/images/approval.svg'
 import stage1Icon from '../../assets/images/exploratory.svg'
 import stage3Icon from '../../assets/images/humanTrials.svg'
@@ -114,7 +114,7 @@ class TrackerMain extends Component {
             />
           </div>
           <div className="progressCount">
-            <div className="ongoingIndicator"></div>
+            <div className="ongoingIndicator" />
             <div className="gs0Para indicatorPara">Ongoing</div>
             <div className="count gs0Para">
               {this.state.stageOngoing.stage1}{' '}
@@ -122,7 +122,7 @@ class TrackerMain extends Component {
             </div>
           </div>
           <div className="progressCount">
-            <div className="successIndicator"></div>
+            <div className="successIndicator" />
             <div className="gs0Para indicatorPara">Success</div>
             <div className="count gs0Para">
               {this.state.stageSuccess.stage1}{' '}
@@ -169,7 +169,7 @@ class TrackerMain extends Component {
             />
           </div>
           <div className="progressCount">
-            <div className="ongoingIndicator"></div>
+            <div className="ongoingIndicator" />
             <div className="gs0Para indicatorPara">Ongoing</div>
             <div className="count gs0Para">
               {this.state.stageOngoing.stage2}{' '}
@@ -177,7 +177,7 @@ class TrackerMain extends Component {
             </div>
           </div>
           <div className="progressCount">
-            <div className="successIndicator"></div>
+            <div className="successIndicator" />
             <div className="gs0Para indicatorPara">Success</div>
             <div className="count gs0Para">
               {this.state.stageSuccess.stage2}{' '}
@@ -245,7 +245,7 @@ class TrackerMain extends Component {
           </div>
 
           <div className="progressCount">
-            <div className="ongoingIndicator"></div>
+            <div className="ongoingIndicator" />
             <div className="gs0Para indicatorPara">Ongoing</div>
             <div className="count gs0Para">
               {this.state.stage3Ongoing}{' '}
@@ -253,7 +253,7 @@ class TrackerMain extends Component {
             </div>
           </div>
           <div className="progressCount">
-            <div className="successIndicator"></div>
+            <div className="successIndicator" />
             <div className="gs0Para indicatorPara">Success</div>
             <div className="count gs0Para">
               {this.state.stage3Success}{' '}
@@ -299,7 +299,7 @@ class TrackerMain extends Component {
           </div>
 
           <div className="progressCount">
-            <div className="ongoingIndicator"></div>
+            <div className="ongoingIndicator" />
             <div className="gs0Para indicatorPara">Ongoing</div>
             <div className="count gs0Para">
               {this.state.stageOngoing.stage4}{' '}
@@ -307,7 +307,7 @@ class TrackerMain extends Component {
             </div>
           </div>
           <div className="progressCount">
-            <div className="successIndicator"></div>
+            <div className="successIndicator" />
             <div className="gs0Para indicatorPara">Success</div>
             <div className="count gs0Para">
               {this.state.stageSuccess.stage4}{' '}
@@ -353,7 +353,7 @@ class TrackerMain extends Component {
           </div>
 
           <div className="progressCount">
-            <div className="ongoingIndicator"></div>
+            <div className="ongoingIndicator" />
             <div className="gs0Para indicatorPara">Ongoing</div>
             <div className="count gs0Para">
               {this.state.stageOngoing.stage5}{' '}
@@ -361,7 +361,7 @@ class TrackerMain extends Component {
             </div>
           </div>
           <div className="progressCount">
-            <div className="successIndicator"></div>
+            <div className="successIndicator" />
             <div className="gs0Para indicatorPara">Success</div>
             <div className="count gs0Para">
               {this.state.stageSuccess.stage4}{' '}

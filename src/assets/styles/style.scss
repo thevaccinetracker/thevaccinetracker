@@ -259,6 +259,7 @@ body {
     .virusMainStatus {
       font-size: 12px;
       float: left;
+
       ul {
         padding: 0;
 
@@ -310,16 +311,20 @@ body {
   color: $c0;
   border-radius: 6px;
   margin-left: 10px;
+
   .icon {
     float: left;
   }
+
   .menu {
     padding: 12px 0 !important;
   }
+
   .menu {
     .item {
       display: flex !important;
     }
+
     &::after {
       display: none !important;
     }
@@ -453,6 +458,7 @@ body {
     display: unset;
     margin-top: 50px;
   }
+
   .pagenotfoundButton {
     margin: 50px 0;
   }
@@ -475,12 +481,15 @@ body {
 .covidVaccineStagesAndPhases {
   display: flex;
   margin: 20px 0 40px 0;
+
   .stageTitle {
     margin-top: 20px;
   }
+
   .stageNumber {
     margin-top: 10px;
   }
+
   .stages {
     padding: 30px 20px;
     background-color: $c12;
@@ -716,26 +725,31 @@ body {
 .developersDetailedStages {
   margin-bottom: 40px;
   margin-top: 40px;
+
   .devlopersHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
   .search {
     input {
       background: $c1 !important;
       width: 300px;
       border: 1px solid $c4 !important;
       color: $c4 !important;
+
       ::placeholder {
         color: red;
         opacity: 1;
       }
     }
+
     .icon {
       color: $c4;
     }
   }
+
   h1 {
     margin-bottom: 20px !important;
   }
@@ -748,163 +762,164 @@ body {
     }
   }
 
-  .mainOrganisationBox {
-    min-height: 60px;
-    padding: 40px;
-    border-radius: 10px;
-    background: $c12;
-    transition: all 0.5s ease;
-    margin-bottom: 10px;
-
-    &:hover {
-      background-color: $c2;
-    }
-
-    h4 {
-      font-weight: 500;
-    }
-
-    .currentStageGraph {
-      display: flex;
-      align-items: center;
-      margin-top: 10px;
-
-      .stage,
-      .phase {
-        flex: 1;
-        height: 12px;
-        border-radius: 10px;
-        opacity: 0.2;
-
-        &:not(:first-child) {
-          margin-left: 5px;
-        }
-
-        &.highlight {
-          opacity: 1;
-        }
-      }
-
-      .stage {
-        &.s1 {
-          background-color: $c5;
-        }
-
-        &.s2 {
-          background-color: $c4;
-        }
-
-        &.s3 {
-          display: flex;
-          align-items: center;
-
-          .phase {
-            background-color: $c13;
-          }
-        }
-
-        &.s4 {
-          background-color: $c7;
-        }
-
-        &.s5 {
-          background-color: $c14;
-        }
-      }
-    }
-
-    .currentStageText {
-      display: flex;
-
-      p {
-        flex: 1;
-        font-weight: 400;
-        margin-top: 10px;
-      }
-
-      .stageNumber {
-        text-align: right;
-      }
-    }
-
-    .companyName {
-      margin: 4px 0 0 0;
-    }
-
-    .companyLabel {
-      margin-top: 5px;
-    }
-
-    .companyInfoLabel {
-      padding: 0px;
-    }
-
-    .vaccineDesc {
-      color: #fff;
-      margin-top: 30px;
-    }
-
-    .vaccineDesc p {
-      margin-bottom: 10px;
-    }
-
-    .icon {
-      height: 50px;
-      border-radius: 6px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      &.s1 {
-        background-color: $c5;
-      }
-
-      &.s2 {
-        background-color: $c4;
-      }
-
-      &.s3 {
-        background-color: $c13;
-      }
-
-      &.s4 {
-        background-color: $c7;
-      }
-
-      &.s5 {
-        background-color: $c13;
-      }
-    }
-  }
-
-  @media only screen and (max-width: $small-device) {
-    .mainOrganisationBox {
-      padding: 20px;
-
-      .currentStageGraph {
-        margin-top: 20px;
-      }
-
-      h4 {
-        font-size: 14px;
-        font-weight: 300;
-      }
-
-      .companyInfoLabel {
-        padding: 0 15px;
-      }
-    }
-    .devlopersHeader {
-      display: block;
-      margin-bottom: 20px;
-    }
-    .search {
-      width: 100%;
-      .input {
-        width: 100%;
-      }
-    }
-  }
+  //.mainOrganisationBox {
+  //  min-height: 60px;
+  //  padding: 40px;
+  //  border-radius: 10px;
+  //  background: $c12;
+  //  transition: all 0.5s ease;
+  //  margin-bottom: 10px;
+  //
+  //  &:hover {
+  //    background-color: $c2;
+  //  }
+  //
+  //  h4 {
+  //    font-weight: 500;
+  //  }
+  //
+  //  .currentStageGraph {
+  //    display: flex;
+  //    align-items: center;
+  //    margin-top: 10px;
+  //
+  //    .stage,
+  //    .phase {
+  //      flex: 1;
+  //      height: 12px;
+  //      border-radius: 10px;
+  //      opacity: 0.2;
+  //
+  //      &:not(:first-child) {
+  //        margin-left: 5px;
+  //      }
+  //
+  //      &.highlight {
+  //        opacity: 1;
+  //      }
+  //    }
+  //
+  //    .stage {
+  //      &.s1 {
+  //        background-color: $c5;
+  //      }
+  //
+  //      &.s2 {
+  //        background-color: $c4;
+  //      }
+  //
+  //      &.s3 {
+  //        display: flex;
+  //        align-items: center;
+  //
+  //        .phase {
+  //          background-color: $c13;
+  //        }
+  //      }
+  //
+  //      &.s4 {
+  //        background-color: $c7;
+  //      }
+  //
+  //      &.s5 {
+  //        background-color: $c14;
+  //      }
+  //    }
+  //  }
+  //
+  //  .currentStageText {
+  //    display: flex;
+  //
+  //    p {
+  //      flex: 1;
+  //      font-weight: 400;
+  //      margin-top: 10px;
+  //    }
+  //
+  //    .stageNumber {
+  //      text-align: right;
+  //    }
+  //  }
+  //
+  //  .companyName {
+  //    margin: 4px 0 0 0;
+  //  }
+  //
+  //  .companyLabel {
+  //    margin-top: 5px;
+  //  }
+  //
+  //  .companyInfoLabel {
+  //    padding: 0px;
+  //  }
+  //
+  //  .vaccineDesc {
+  //    color: #fff;
+  //    margin-top: 30px;
+  //  }
+  //
+  //  .vaccineDesc p {
+  //    margin-bottom: 10px;
+  //  }
+  //
+  //  .icon {
+  //    height: 50px;
+  //    border-radius: 6px;
+  //    display: flex;
+  //    justify-content: center;
+  //    align-items: center;
+  //
+  //    &.s1 {
+  //      background-color: $c5;
+  //    }
+  //
+  //    &.s2 {
+  //      background-color: $c4;
+  //    }
+  //
+  //    &.s3 {
+  //      background-color: $c13;
+  //    }
+  //
+  //    &.s4 {
+  //      background-color: $c7;
+  //    }
+  //
+  //    &.s5 {
+  //      background-color: $c13;
+  //    }
+  //  }
+  //}
+  //
+  //@media only screen and (max-width: $small-device) {
+  //  .mainOrganisationBox {
+  //    padding: 20px;
+  //
+  //    .currentStageGraph {
+  //      margin-top: 20px;
+  //    }
+  //
+  //    h4 {
+  //      font-size: 14px;
+  //      font-weight: 300;
+  //    }
+  //
+  //    .companyInfoLabel {
+  //      padding: 0 15px;
+  //    }
+  //  }
+  //  .devlopersHeader {
+  //    display: block;
+  //    margin-bottom: 20px;
+  //  }
+  //  .search {
+  //    width: 100%;
+  //
+  //    .input {
+  //      width: 100%;
+  //    }
+  //  }
+  //}
 }
 
 .top10Vaccines {
@@ -912,6 +927,7 @@ body {
     margin-top: 20px;
     font-size: 16px;
   }
+
   @media only screen and (max-width: $small-device) {
     .gs0Para {
       margin-top: 10px;
@@ -923,3 +939,228 @@ body {
 //*******************************
 // Components Ends Here
 //*******************************
+
+.vaccine-stages-row {
+  display: flex;
+  margin: 0;
+
+  .col:nth-child(2) {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .col {
+    // flex-grow: 1;
+    width: 50%;
+  }
+
+  .vaccine-stages-heading {
+    font-size: 3rem !important;
+    @media only screen and (max-width: $small-device) {
+      font-size: 2rem !important;
+    }
+  }
+}
+
+.vaccine-stages {
+  color: $c5;
+
+  .stages {
+    &:hover {
+      background: $c12;
+    }
+
+    &:nth-child(2) {
+      flex: 5 1;
+    }
+  }
+
+  .stage3 {
+    flex: 1 1 !important;
+  }
+
+  p {
+    color: #ffffff;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+  }
+
+  @media only screen and (max-width: $small-device - 1) {
+    width: 100%;
+    flex-wrap: wrap;
+    .vaccine-container {
+      margin-left: 0 !important;
+      margin-top: 20px;
+    }
+  }
+}
+
+.developers-container {
+  overflow-y: hidden;
+  margin-top: 20px;
+  overflow-x: hidden;
+
+  @media only screen and (min-width: $small-device) {
+    max-height: 250px;
+    overflow-y: auto;
+  }
+
+  .icon.s3 {
+    background: $c13;
+  }
+
+  .mainOrganisationBox {
+    padding: 10px;
+
+    .row {
+      margin: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: $small-device) {
+  .stages {
+    min-width: 200px;
+  }
+
+  .vaccine-container {
+    min-width: 310px !important;
+  }
+}
+
+.stage3Bifercation {
+  display: flex;
+
+  .stage3 {
+    background-color: $c13;
+  }
+}
+
+.mainOrganisationBox {
+  min-height: 60px;
+  padding: 40px;
+  border-radius: 10px;
+  background: $c12;
+  transition: all 0.5s ease;
+  margin-bottom: 10px;
+
+  &:hover {
+    background-color: $c2;
+  }
+
+  h4 {
+    font-weight: 500;
+  }
+
+  .currentStageGraph {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+
+    .stage,
+    .phase {
+      flex: 1;
+      height: 12px;
+      border-radius: 10px;
+      opacity: 0.2;
+
+      &:not(:first-child) {
+        margin-left: 5px;
+      }
+
+      &.highlight {
+        opacity: 1;
+      }
+    }
+
+    .stage {
+      &.s1 {
+        background-color: $c5;
+      }
+
+      &.s2 {
+        background-color: $c4;
+      }
+
+      &.s3 {
+        display: flex;
+        align-items: center;
+
+        .phase {
+          background-color: $c13;
+        }
+      }
+
+      &.s4 {
+        background-color: $c7;
+      }
+
+      &.s5 {
+        background-color: $c14;
+      }
+    }
+  }
+
+  .currentStageText {
+    display: flex;
+
+    p {
+      flex: 1;
+      font-weight: 400;
+      margin-top: 10px;
+    }
+
+    .stageNumber {
+      text-align: right;
+    }
+  }
+
+  .companyName {
+    margin: 4px 0 0 0;
+  }
+
+  .companyLabel {
+    margin-top: 5px;
+  }
+
+  .companyInfoLabel {
+    padding: 0px;
+  }
+
+  .vaccineDesc {
+    color: #fff;
+    margin-top: 30px;
+  }
+
+  .vaccineDesc p {
+    margin-bottom: 10px;
+  }
+
+  .icon {
+    height: 50px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.s1 {
+      background-color: $c5;
+    }
+
+    &.s2 {
+      background-color: $c4;
+    }
+
+    &.s3 {
+      background-color: $c13;
+    }
+
+    &.s4 {
+      background-color: $c7;
+    }
+
+    &.s5 {
+      background-color: $c13;
+    }
+  }
+}

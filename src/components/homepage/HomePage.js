@@ -1,8 +1,8 @@
-import React, { Component } from '../../../node_modules/react'
+import React from 'react'
 import DevelopersDetail from '../developersDetail/DevelopersDetail'
 import TrackerMain from '../trackerMain/TrackerMain'
 
-class HomePage extends Component {
+class HomePage extends React.Component {
   render() {
     return (
       <div className="firstFold">

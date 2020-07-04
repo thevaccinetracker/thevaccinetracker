@@ -123,4 +123,5 @@ class DeveloperInfo extends Component {
     )
   }
 }
+
 export default DeveloperInfo
