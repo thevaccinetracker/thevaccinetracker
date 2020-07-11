@@ -1,6 +1,6 @@
 import Loader from 'react-loader-spinner'
 import React from 'react'
-import { vaccineObj } from '../../contants/conts.js'
+// import { vaccineObj } from '../../contants/conts.js'
 import { graphql, useStaticQuery } from 'gatsby'
 import VaccineCard from '../vaccineCard/vaccineCard'
 
@@ -57,7 +57,7 @@ class DevelopersDetail extends React.Component {
 
       return filteredVaccineList
         .map((vaccine, index) => {
-          let vaccineStage = vaccineObj[vaccine.currentstage]
+          // let vaccineStage = vaccineObj[vaccine.currentstage]
           return <VaccineCard key={index} vaccine={vaccine} />
         })
         .slice(0, this.props.showDataFor)

@@ -3,13 +3,14 @@ import facebookIcon from '../assets/images/facebook.svg'
 import producthuntIcon from '../assets/images/producthunt.svg'
 import twitterIcon from '../assets/images/twitter.svg'
 import youtubeIcon from '../assets/images/youtube.svg'
+import { Link } from 'gatsby'
 
 class MainHeader extends Component {
   render() {
     return (
       <div className="container mainFooter">
         <div className="row">
-          <div className="col-md-7">
+          <div className="col-md-3">
             <div className="socialMediaIconsSection">
               <div className="followUS">
                 <p className="paragraph">Follow us on</p>
@@ -68,9 +69,19 @@ class MainHeader extends Component {
               </div>
             </div>
           </div>
-          <div className="col-md-5 text-right">
+          <div className="col-md-9 text-right">
             <div className="allthelinks">
               <ul>
+                <li>
+                  <Link to="/all-vaccine-developers">
+                    All Vaccine Developers
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/top-10-corona-vaccines-getting-developed">
+                    Top 10 Vaccine Developers
+                  </Link>
+                </li>
                 <li>
                   <a
                     href="https://rohitbind.typeform.com/to/Kso14D"
