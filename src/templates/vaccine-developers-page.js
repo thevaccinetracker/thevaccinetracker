@@ -33,7 +33,7 @@ class DeveloperInfo extends Component {
           </div>
         </div>
         <div className="row">
-          <div className="col-md-4 col-xs-12">
+          <div className="col-md-4 col-xs-12 no-padding">
             <div className="currentStageGraph">
               <div
                 className={`stage s1 ${vaccine.stage >= 1 ? 'highlight' : ''}`}

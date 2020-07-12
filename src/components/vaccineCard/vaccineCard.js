@@ -20,7 +20,7 @@ const VaccineCard = props => {
               <div className="companyLabel c5Para">Company Name</div>
               <h4 className="companyName">{vaccine.developersname}</h4>
             </div>
-            <div className="col-md-4 col-xs-12">
+            <div className="col-md-4 col-xs-12 no-padding">
               <div className="currentStageGraph">
                 <div
                   className={`stage s1 ${

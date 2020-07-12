@@ -15,15 +15,12 @@ import stage5Icon from '../assets/images/production.svg'
 
 class VaccineStages extends React.Component {
   stageMessage = {
-    1: `This is the first step in developing a new vaccine for any disease. This stage 
-        involves laboratory research done by different scientists. Researchers try to identify the structure
-        of proteins that build up the virus and focus on building an antigen , natural or synthetic that might
-        help protect the disease by creating antibodies that boosts up our immune system and helps our body to
-        fight the virus in a better way.`,
-    2: `Second stage`,
-    3: `Third stage`,
-    4: `Fourth Stage`,
-    5: `Fifth Stage`
+    1: `This is the first step in developing a new vaccine for any disease. This stage involves laboratory research done by different scientists. Researchers try to identify the structure of proteins that build up the virus and focus on building an antigen , natural or synthetic that might help protect the disease by creating antibodies that boosts up our immune system and helps our body to fight the virus in a better way.`,
+    2: `This stage involves the initial phase of testing usually done on animals in order to assess the safety of the vaccine and its ability to develop an immune response. These tests further give an idea to researchers of the cellular responses they might expect in humans. Researchers may adapt the candidate vaccine during the preclinical state to try to make it more effective. They may further do challenge studies with the animals, meaning that they vaccinate the animals and then attempt to infect them with the target pathogen. Animal subjects may include mice and monkeys.These are also used to see how effective the vaccine is at preventing the disease, and allows researchers to adopt the vaccine.
+    Many candidate vaccines never progress beyond this stage because they fail to produce the required immune response.`,
+    3: `This stage further includes three stages. The primary stage includes testing a small group of individuals usually between 20-80 people. These tests intend to assess the safety of the vaccine and the type and extent of the immune response that the vaccine invokes.  In the second stage, the clinical study is expanded and vaccines are given to people who have characteristics (such as age and physical health) similar to those for whom the new vaccine is intended. This stage targets populations who are ideally those most at risk of the disease. In third stage candidate vaccines move on to larger trials, involving thousands to tens of thousands of individuals. Here the vaccine is given to thousands of individuals and tested for efficacy and safety.`,
+    4: `After the successful third stage clinical trials, the candidate vaccine goes through a set of regulatory review and approval procedures from the concerned authorities. In the USA,  the FDA takes care of the regulatory review and approval procedure. After a successful third stage of clinical trial, the vaccine developer will submit a Biologics License Application to the FDA. Then the FDA will inspect the factory where the vaccine will be made and approve the labeling of the vaccine.In India, The Central Drugs Standard Control Organisation (CDSCO) is responsible for the same.`,
+    5: `Once a vaccine has been created at a small scale and passed safety tests, it can be used in clinical trials. However, important manufacturing capacity, like infrastructure, personnel, and equipment, will be required to produce large quantities of a vaccine to be used. The regulatory organizations continue to monitor the production of the vaccine, including inspecting facilities and reviewing the manufacturer’s tests of lots of vaccines for potency, safety, and purity.`
   }
 
   loading = () => {

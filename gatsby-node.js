@@ -58,13 +58,7 @@ exports.createPages = async function ({ actions, graphql }) {
       context: { vaccine }
     })
   })
-  const stages = [
-    'vaccine-development-stage-1',
-    'vaccine-development-stage-2',
-    'vaccine-development-stage-3',
-    'vaccine-development-stage-4',
-    'vaccine-development-stage-5'
-  ]
+  const stages = ['stage-1', 'stage-2', 'stage-3', 'stage-4', 'stage-5']
   stages.forEach(stage => {
     let stageNo = stage.split('-')[1]
     actions.createPage({
