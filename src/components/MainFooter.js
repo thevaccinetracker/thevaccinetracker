@@ -10,11 +10,11 @@ class MainHeader extends Component {
     return (
       <div className="container mainFooter">
         <div className="row">
-          <div className="col-md-3">
+          <div className="col-md-2">
             <div className="socialMediaIconsSection">
-              <div className="followUS">
+              {/* <div className="followUS">
                 <p className="paragraph">Follow us on</p>
-              </div>
+              </div> */}
               <div className="socialMediaIcons facebookIcon">
                 <a
                   href="https://www.facebook.com/thevaccinetracker/"
@@ -69,11 +69,14 @@ class MainHeader extends Component {
               </div>
             </div>
           </div>
-          <div className="col-md-9 text-right">
+          <div className="col-md-10 text-right">
             <div className="allthelinks">
               <ul>
                 <li>
                   <Link to="/blogs">Blogs</Link>
+                </li>
+                <li>
+                  <Link to="/stage-1">Stages in Vaccine Development</Link>
                 </li>
                 <li>
                   <Link to="/all-vaccine-developers">
