@@ -961,6 +961,12 @@ body {
       font-size: 2rem !important;
     }
   }
+
+  @media only screen and (max-width: $small-device) {
+    .vaccineIllustration {
+      display: none !important;
+    }
+  }
 }
 
 .vaccine-stages {
@@ -1162,6 +1168,33 @@ body {
 
     &.s5 {
       background-color: $c13;
+    }
+  }
+}
+
+.mainStageNumbers {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  margin-top: 20px;
+  li:not(:last-child) {
+    margin-right: 10px;
+  }
+  li {
+    border: 1px solid $c4;
+    padding: 5px 10px;
+    color: $c4;
+    border-radius: 4px;
+    a {
+      color: $c4;
+    }
+    &.active {
+      background: $c4;
+      color: $c12;
+      a {
+        color: $c12;
+      }
     }
   }
 }

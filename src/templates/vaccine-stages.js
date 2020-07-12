@@ -12,6 +12,7 @@ import stage2Icon from '../assets/images/preClinical.svg'
 import stage3Icon from '../assets/images/humanTrials.svg'
 import stage4Icon from '../assets/images/approval.svg'
 import stage5Icon from '../assets/images/production.svg'
+import { Link } from 'gatsby'
 
 class VaccineStages extends React.Component {
   stageMessage = {
@@ -457,8 +458,25 @@ class VaccineStages extends React.Component {
                 <h1 className="vaccine-stages-heading">
                   Vaccine Development Stages
                 </h1>
+                <ul className="mainStageNumbers">
+                  <li>
+                    <Link to="/stage-1">Stage 1</Link>
+                  </li>
+                  <li>
+                    <Link to="/stage-2">Stage 2</Link>
+                  </li>
+                  <li>
+                    <Link to="/stage-3">Stage 3</Link>
+                  </li>
+                  <li>
+                    <Link to="/stage-4">Stage 4</Link>
+                  </li>
+                  <li className="active">
+                    <Link to="/stage-5">Stage 5</Link>
+                  </li>
+                </ul>
               </div>
-              <div className="col">
+              <div className="col vaccineIllustration">
                 <img
                   alt="Vaccine development stages"
                   className="img img-responsive"
