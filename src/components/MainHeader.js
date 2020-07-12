@@ -42,7 +42,7 @@ class MainHeader extends Component {
                 src={logo}
                 alt="The Vaccine Tracker Logo"
                 className="img img-responsive"
-                width="140"
+                width="160"
               />
             </Link>
           </div>
