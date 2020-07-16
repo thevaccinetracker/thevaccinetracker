@@ -1,11 +1,10 @@
 import Loader from 'react-loader-spinner'
-import { Link } from 'gatsby'
-import Fade from 'react-reveal/Fade'
-import React, { Component } from '../../../node_modules/react'
-import { vaccineObj } from '../../contants/conts.js'
+import React from 'react'
+// import { vaccineObj } from '../../contants/conts.js'
 import { graphql, useStaticQuery } from 'gatsby'
+import VaccineCard from '../vaccineCard/vaccineCard'
 
-class DevelopersDetail extends Component {
+class DevelopersDetail extends React.Component {
   constructor() {
     super()
     this.state = {
@@ -57,95 +56,9 @@ class DevelopersDetail extends Component {
       )
 
       return filteredVaccineList
-        .map(vaccine => {
-          let vaccineStage = vaccineObj[vaccine.currentstage]
-          return (
-            <Fade bottom key={vaccine.researcherid}>
-              <Link to={`/all-vaccine-developers/${vaccine.slug}`}>
-                <div className="mainOrganisationBox">
-                  <div className="row">
-                    <div className="col-md-1 col-xs-3 hidden-xs">
-                      <div className={`icon ${vaccineStage.class}`}>
-                        <img
-                          src={vaccineStage.icon}
-                          alt={`${vaccineStage.icon_alt}`}
-                        />
-                      </div>
-                    </div>
-                    <div className="col-md-7 col-xs-12 companyInfoLabel">
-                      <div className="companyLabel c5Para">
-                        Organisation Name
-                      </div>
-                      <h4 className="companyName">{vaccine.developersname}</h4>
-                    </div>
-                    <div className="col-md-4 col-xs-12">
-                      <div className="currentStageGraph">
-                        <div
-                          className={`stage s1 ${
-                            vaccine.stage >= 1 ? 'highlight' : ''
-                          }`}
-                        />
-                        <div
-                          className={`stage s2 ${
-                            vaccine.stage >= 2 ? 'highlight' : ''
-                          }`}
-                        />
-                        <div
-                          className={`stage s3 ${
-                            vaccine.stage >= 3 ? 'highlight' : ''
-                          }`}
-                        >
-                          <div
-                            className={`phase p1 ${
-                              vaccine.stage >= 4 ||
-                              (vaccine.stage === 3 && vaccine.phase >= 1)
-                                ? 'highlight'
-                                : ''
-                            }`}
-                          />
-                          <div
-                            className={`phase p2 ${
-                              vaccine.stage >= 4 ||
-                              (vaccine.stage === 3 && vaccine.phase >= 2)
-                                ? 'highlight'
-                                : ''
-                            }`}
-                          />
-                          <div
-                            className={`phase p3 ${
-                              vaccine.stage >= 4 ||
-                              (vaccine.stage === 3 && vaccine.phase >= 3)
-                                ? 'highlight'
-                                : ''
-                            }`}
-                          />
-                        </div>
-                        <div
-                          className={`stage s4 ${
-                            vaccine.stage >= 4 ? 'highlight' : ''
-                          }`}
-                        />
-                        <div
-                          className={`stage s5 ${
-                            vaccine.stage >= 5 ? 'highlight' : ''
-                          }`}
-                        />
-                      </div>
-                      <div className="currentStageText">
-                        <p className="gs0Para">Current Stage</p>
-                        <p className="stageNumber c5Para">
-                          {vaccineStage.text}
-                        </p>
-                      </div>
-                    </div>
-                    {/* <div className="col-md-2 col-xs-12">
-                        <button type="button" className="whiteCTA-outline">More Details</button>
-                      </div> */}
-                  </div>
-                </div>
-              </Link>
-            </Fade>
-          )
+        .map((vaccine, index) => {
+          // let vaccineStage = vaccineObj[vaccine.currentstage]
+          return <VaccineCard key={index} vaccine={vaccine} />
         })
         .slice(0, this.props.showDataFor)
     }
@@ -164,11 +77,11 @@ class DevelopersDetail extends Component {
                   value={this.state.searchEntered}
                   onChange={this.updateSearch.bind(this)}
                 />
-                <i aria-hidden="true" className="search icon"></i>
+                <i aria-hidden="true" className="search icon" />
               </div>
             </div>
           ) : (
-            <div className="search"></div>
+            <div className="search" />
           )}
         </div>
 

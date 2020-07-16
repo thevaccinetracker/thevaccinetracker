@@ -29,4 +29,4 @@ const AllVaccineDevelopers = () => {
     </div>
   )
 }
-export default AllVaccineDevelopers
+export default React.memo(AllVaccineDevelopers)

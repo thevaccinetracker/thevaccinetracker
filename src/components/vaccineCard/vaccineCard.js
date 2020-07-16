@@ -1,36 +1,14 @@
-import React, { Component } from 'react'
-import '../../assets/styles/style.scss'
-import { vaccineObj } from '../../contants/conts.js'
-import MainFooter from '../MainFooter'
-import MainHeader from '../MainHeader'
-import SEO from '../../components/seo'
-// import { apiService, selectedVaccine } from '../../service/apiService';
+import React from 'react'
+import { vaccineObj } from '../../contants/conts'
+import Fade from 'react-reveal/Fade'
+import { Link } from 'gatsby'
 
-class DeveloperInfo extends Component {
-  constructor() {
-    super()
-    this.state = {
-      vaccine: {}
-    }
-    this.ResearcherID = ''
-  }
-
-  componentDidMount() {
-    const { state } = this.props.location
-    console.log(state)
-    this.setState({
-      vaccine: state.vaccine
-    })
-  }
-
-  render() {
-    const MainOrganisationBox = () => {
-      let vaccine = this.state.vaccine
-      let vaccineStage = {}
-      if (vaccine && vaccine.currentStage) {
-        vaccineStage = vaccineObj[vaccine.currentStage] || {}
-      }
-      return (
+const VaccineCard = props => {
+  const vaccine = props.vaccine
+  const vaccineStage = vaccineObj[vaccine.currentstage]
+  return (
+    <Fade bottom key={vaccine.researcherid}>
+      <Link to={`/all-vaccine-developers/${vaccine.slug}`}>
         <div className="mainOrganisationBox">
           <div className="row">
             <div className="col-md-1 col-xs-3 hidden-xs">
@@ -38,12 +16,10 @@ class DeveloperInfo extends Component {
                 <img src={vaccineStage.icon} alt={`${vaccineStage.icon_alt}`} />
               </div>
             </div>
-            <div className="col-md-11 col-xs-12 companyInfoLabel">
-              <div className="companyLabel c5Para">Organisation Name</div>
-              <h4 className="companyName">{vaccine.DevelopersName}</h4>
+            <div className="col-md-7 col-xs-12 companyInfoLabel">
+              <div className="companyLabel c5Para">Company Name</div>
+              <h4 className="companyName">{vaccine.developersname}</h4>
             </div>
-          </div>
-          <div className="row">
             <div className="col-md-4 col-xs-12 no-padding">
               <div className="currentStageGraph">
                 <div
@@ -103,42 +79,10 @@ class DeveloperInfo extends Component {
               </div>
             </div>
           </div>
-          <div className="row">
-            <div className="col-md-12 col-xs-24">
-              <div className="vaccineDesc">
-                <p>
-                  {vaccine.DevelopersName} is currently in {vaccineStage.text}.
-                </p>
-                <p>Detailed information Coming Soon.</p>
-              </div>
-            </div>
-          </div>
         </div>
-      )
-    }
-
-    return (
-      <div>
-        <SEO
-          title={
-            'Current stage of ' + this.state.vaccine.DevelopersName + ' Vaccine'
-          }
-        />
-        <MainHeader />
-        <div className="firstFold">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-12">
-                <div className="developersDetailedStages">
-                  <MainOrganisationBox />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <MainFooter />
-      </div>
-    )
-  }
+      </Link>
+    </Fade>
+  )
 }
-export default DeveloperInfo
+
+export default React.memo(VaccineCard)
