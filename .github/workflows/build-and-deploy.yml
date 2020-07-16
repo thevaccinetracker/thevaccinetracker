@@ -1,0 +1,78 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - master
+      - 'releases/**'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    env:
+      app-directory: ./app
+      blog-directory: ./blog
+
+    strategy:
+      matrix:
+        node-version:
+          - 12.x
+
+    steps:
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Checkout thevaccinetracker
+        uses: actions/checkout@v2
+        with:
+          path: ${{ env.app-directory }}
+
+      - name: Write gcloud service account credentials to thevaccinetracker folder
+        shell: bash
+        env:
+          GCLOUD_SERVICE_ACCOUNT: ${{ secrets.GCLOUD_SERVICE_ACCOUNT }}
+        run: echo "$GCLOUD_SERVICE_ACCOUNT" > ${{ env.app-directory }}/the-vaccine-tracker-395fdaa554f5.json
+
+      - name: Clone Blog
+        uses: actions/checkout@v2
+        with:
+          repository: thevaccinetracker/blogs
+          path: ${{ env.blog-directory }}
+
+      - name: Install thevaccinetracker dependencies
+        run: npm install
+        working-directory: ${{ env.app-directory }}
+
+      - name: Build thevaccine tracker
+        uses: jzweifel/gatsby-cli-github-action@master
+        env:
+          GATSBY_PROJECT_PATH: ${{ env.app-directory }}
+        with:
+          gatsby-arg: build --prefix-paths
+
+      - name: Install blog dependencies
+        run: npm install
+        working-directory: ${{ env.blog-directory }}
+
+      - name: Build blog
+        uses: jzweifel/gatsby-cli-github-action@master
+        env:
+          GATSBY_PROJECT_PATH: ${{ env.blog-directory }}
+        with:
+          gatsby-arg: build --prefix-paths
+
+      - name: Copy blog build files to thevaccinetracker/blogs
+        shell: bash
+        run: sudo mkdir ${{ env.app-directory }}/public/blogs && sudo cp -r ${{ env.blog-directory }}/public/* ${{ env.app-directory }}/public/blogs
+
+      - name: Deploy to GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          target_branch: gh-pages
+          build_dir: ${{ env.app-directory }}/public
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

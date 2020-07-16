@@ -39,7 +39,7 @@ class DeveloperInfo extends Component {
               </div>
             </div>
             <div className="col-md-11 col-xs-12 companyInfoLabel">
-              <div className="companyLabel c5Para">Company Name</div>
+              <div className="companyLabel c5Para">Organisation Name</div>
               <h4 className="companyName">{vaccine.DevelopersName}</h4>
             </div>
           </div>
