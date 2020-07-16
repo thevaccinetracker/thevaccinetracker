@@ -23,7 +23,7 @@ $c14: #05daa3;
 
 // Resets
 p {
-  margin: 0px;
+  margin: 0;
 }
 
 .rc-progress-line {
@@ -31,7 +31,7 @@ p {
 }
 
 .no-padding {
-  padding: 0px !important;
+  padding: 0 !important;
 }
 
 .rc-progress-line-trail {
@@ -119,7 +119,7 @@ h6 {
 
 .primaryCTA:focus {
   color: $gs0;
-  border: 0px solid;
+  border: 0 solid;
   outline: none;
 }
 
@@ -219,7 +219,7 @@ body {
 
     ul {
       display: flex;
-      margin-bottom: 0px;
+      margin-bottom: 0;
       align-items: center;
       justify-content: flex-end;
 
@@ -480,7 +480,7 @@ body {
 
 .covidVaccineStagesAndPhases {
   display: flex;
-  margin: 0px 0 40px 0;
+  margin: 0 0 40px;
 
   .stageTitle {
     margin-top: 20px;
@@ -642,7 +642,7 @@ body {
 
     &.covidVaccineStagesAndPhases {
       overflow-x: auto;
-      margin: 20px 0 40px 0;
+      margin: 20px 0 40px;
     }
   }
 }
@@ -1017,7 +1017,7 @@ body {
   }
 
   .mainOrganisationBox {
-    padding: 10px 0px;
+    padding: 10px 0;
 
     .row {
       margin: 0;
@@ -1123,7 +1123,7 @@ body {
   }
 
   .companyName {
-    margin: 4px 0 0 0;
+    margin: 4px 0 0;
   }
 
   .companyLabel {
@@ -1131,7 +1131,7 @@ body {
   }
 
   .companyInfoLabel {
-    padding: 0px;
+    padding: 0;
   }
 
   .vaccineDesc {
