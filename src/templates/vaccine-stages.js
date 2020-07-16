@@ -439,6 +439,7 @@ class VaccineStages extends React.Component {
   }
 
   render() {
+    const { path } = this.props
     const stage = parseInt(this.props.path.split('-')[1])
     const {
       stageOngoing,
@@ -459,19 +460,19 @@ class VaccineStages extends React.Component {
                   Vaccine Development Stages
                 </h1>
                 <ul className="mainStageNumbers">
-                  <li>
+                  <li className={path === '/stage-1' ? 'active' : ''}>
                     <Link to="/stage-1">Stage 1</Link>
                   </li>
-                  <li>
+                  <li className={path === '/stage-2' ? 'active' : ''}>
                     <Link to="/stage-2">Stage 2</Link>
                   </li>
-                  <li>
+                  <li className={path === '/stage-3' ? 'active' : ''}>
                     <Link to="/stage-3">Stage 3</Link>
                   </li>
-                  <li>
+                  <li className={path === '/stage-4' ? 'active' : ''}>
                     <Link to="/stage-4">Stage 4</Link>
                   </li>
-                  <li className="active">
+                  <li className={path === '/stage-5' ? 'active' : ''}>
                     <Link to="/stage-5">Stage 5</Link>
                   </li>
                 </ul>
