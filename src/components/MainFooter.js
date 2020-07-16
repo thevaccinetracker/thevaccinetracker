@@ -73,7 +73,7 @@ class MainHeader extends Component {
             <div className="allthelinks">
               <ul>
                 <li>
-                  <Link to="/blogs">Blogs</Link>
+                  <Link to="/blogs/">Blogs</Link>
                 </li>
                 <li>
                   <Link to="/stage-1">Stages in Vaccine Development</Link>

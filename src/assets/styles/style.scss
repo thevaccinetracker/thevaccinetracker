@@ -1178,6 +1178,7 @@ body {
   list-style-type: none;
   display: flex;
   margin-top: 20px;
+
   li:not(:last-child) {
     margin-right: 10px;
   }
@@ -1188,6 +1189,13 @@ body {
     border-radius: 4px;
     a {
       color: $c4;
+    }
+    &:hover {
+      background: $c4;
+      color: $c12;
+      a {
+        color: $c12;
+      }
     }
     &.active {
       background: $c4;
