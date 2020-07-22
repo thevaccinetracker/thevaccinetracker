@@ -73,7 +73,14 @@ class MainHeader extends Component {
             <div className="allthelinks">
               <ul>
                 <li>
-                  <Link to="/blogs/">Blogs</Link>
+                  <a
+                    href="https://thevaccinetracker.com/blogs/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Blogs
+                  </a>
+                  {/* <Link to="/blogs/">Blogs</Link> */}
                 </li>
                 <li>
                   <Link to="/stage-1">Stages in Vaccine Development</Link>
