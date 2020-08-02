@@ -80,7 +80,7 @@ class MainHeader extends Component {
                   >
                     Blogs
                   </a>
-                  {/* <Link to="/blogs/">Blogs</Link> */}
+                  {/* <Link to="/blogs/">Blog</Link> */}
                 </li>
                 <li>
                   <Link to="/stage-1">Stages in Vaccine Development</Link>
