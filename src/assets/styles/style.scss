@@ -479,6 +479,7 @@ body {
 }
 
 .covidVaccineStagesAndPhases {
+  overflow-x: auto;
   display: flex;
   margin: 0 0 40px;
 
@@ -495,6 +496,7 @@ body {
     background-color: $c12;
     border-radius: 10px;
     transition: all 0.5s ease;
+    min-width: 190px;
 
     &:hover {
       background: $c2;
@@ -535,6 +537,7 @@ body {
 
   .stage3 {
     flex: 2;
+    min-width: 310px;
 
     .icon {
       width: 50px;
@@ -633,7 +636,7 @@ body {
 
   @media only screen and (max-width: $small-device) {
     .stages {
-      min-width: 200px;
+      min-width: 190px;
     }
 
     .stage3 {
