@@ -479,9 +479,18 @@ body {
 }
 
 .covidVaccineStagesAndPhases {
-  overflow-x: auto;
+  &::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.4) !important;
+    border: 0.3em solid $c0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #ffffff !important;
+    border-radius: 10px;
+  }
+
   display: flex;
-  margin: 0 0 40px;
+  overflow-x: auto;
 
   .stageTitle {
     margin-top: 20px;
@@ -492,6 +501,7 @@ body {
   }
 
   .stages {
+    margin-bottom: 20px;
     padding: 30px 20px;
     background-color: $c12;
     border-radius: 10px;
@@ -645,7 +655,6 @@ body {
 
     &.covidVaccineStagesAndPhases {
       overflow-x: auto;
-      margin: 20px 0 40px;
     }
   }
 }
