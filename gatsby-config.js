@@ -68,6 +68,13 @@ module.exports = {
         worksheetTitle: 'VaccineCounts',
         credentials: require('./the-vaccine-tracker-395fdaa554f5.json')
       }
+    },
+    {
+      resolve: `gatsby-plugin-hotjar`,
+      options: {
+        id: 1933246,
+        sv: 6
+      }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
