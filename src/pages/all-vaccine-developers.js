@@ -18,7 +18,7 @@ const AllVaccineDevelopers = () => {
           <div className="row">
             <div className="col-md-12">
               <DevelopersDetail
-                title={`All COVID-19 / Coronavirus Vaccine developers and their latest status`}
+                title={`All COVID-19 or Coronavirus Vaccine developers and their latest status`}
                 showSearch={true}
               />
             </div>
