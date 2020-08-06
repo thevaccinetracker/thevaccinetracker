@@ -21,7 +21,7 @@ class HomePage extends React.Component {
               <TrackerMain />
             </div>
           </div>
-          <div className="row">
+          <div className="row" style={{ marginTop: '-30px' }}>
             <div className="col-md-12">
               <DevelopersDetail
                 showDataFor={10}
