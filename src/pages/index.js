@@ -18,5 +18,5 @@ class IndexPage extends Component {
     )
   }
 }
-
+//Vaccine Date Updated
 export default IndexPage
