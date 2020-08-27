@@ -88,7 +88,7 @@ class DeveloperInfo extends Component {
               <p>
                 {vaccine.developersname} is currently in {vaccineStage.text}.
               </p>
-              <p>Detailed information Coming Soon.</p>
+              {/* <p>Detailed information Coming Soon.</p> */}
             </div>
           </div>
         </div>
