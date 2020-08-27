@@ -455,7 +455,7 @@ class VaccineStages extends React.Component {
         <div className="firstFold">
           <div className="container">
             <div className="vaccine-stages-row row">
-              <div className="col">
+              <div className="">
                 <h1 className="vaccine-stages-heading">
                   Vaccine Development Stages
                 </h1>
