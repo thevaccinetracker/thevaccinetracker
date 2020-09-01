@@ -18,5 +18,6 @@ class IndexPage extends Component {
     )
   }
 }
-//Vaccine Date Updated
+//Vaccine Data Updated
+//Updated on 01 Sept 2020
 export default IndexPage
