@@ -41,21 +41,21 @@ const contributers = () => {
       name: 'Akash Deep',
       profilePic: akash,
       designation: 'Product Head',
-      linkedin: '#',
-      twitter: '#',
-      facebook: '#',
+      linkedin: 'https://www.linkedin.com/in/deep-akash/',
+      twitter: '',
+      facebook: '',
       email: 'i13akashd@iimidr.ac.in',
-      portfolioLink: '#'
+      portfolioLink: ''
     },
     {
       name: 'Ujjwal Singhal',
       profilePic: ujjwal,
       designation: 'Full Stack Engineer',
       linkedin: 'https://www.linkedin.com/in/ujjwalsinghal',
-      twitter: '',
-      facebook: '',
-      email: '',
-      portfolioLink: ''
+      twitter: 'https://twitter.com/ujjwal8880',
+      facebook: 'https://www.facebook.com/ujjwal.singhal.19/',
+      email: 'ujjwalsinghal19@gmail.com',
+      portfolioLink: 'https://www.cakeresume.com/ujjwal-singhal'
     },
     {
       name: 'Suyash Deshpande',
@@ -64,17 +64,17 @@ const contributers = () => {
       linkedin: 'https://www.linkedin.com/in/suyashdeshpande/',
       twitter: '',
       facebook: '',
-      email: '',
+      email: 'suyashdeshpande1998@gmail.com',
       portfolioLink: ''
     },
     {
       name: 'Shailesh V',
       profilePic: shailesh,
       designation: 'Backend Engineer',
-      linkedin: '',
+      linkedin: 'https://www.linkedin.com/in/shailesh-vishvakrama-66292282/',
       twitter: '',
       facebook: '',
-      email: '',
+      email: 'shaileshrv.1432@gmail.com',
       portfolioLink: ''
     },
     {
@@ -84,8 +84,8 @@ const contributers = () => {
       linkedin: 'https://www.linkedin.com/in/priyalmittal/',
       twitter: '',
       facebook: '',
-      email: '',
-      portfolioLink: ''
+      email: 'priyal96@outlook.com',
+      portfolioLink: 'https://www.behance.net/priyalmittal'
     },
     {
       name: 'Rahil Raza Saifi',
@@ -101,37 +101,37 @@ const contributers = () => {
       name: 'Vipin TV',
       profilePic: vipin,
       designation: 'Data Researcher / UX Deigner',
-      linkedin: '',
+      linkedin: 'https://www.linkedin.com/in/vipin-viswan-36a398147',
       twitter: '',
       facebook: '',
-      email: '',
+      email: 'vipinviswantv@gmail.com',
       portfolioLink: ''
     },
     {
       name: 'Shreyash Sharma',
       profilePic: shreyashSharma,
       designation: 'UX Designer',
-      linkedin: '',
-      twitter: '',
-      facebook: '',
-      email: '',
-      portfolioLink: ''
+      linkedin: 'https://www.linkedin.com/in/shreyash-sharma-3a5bb371/',
+      twitter: 'https://twitter.com/shreyashsharma2?s=09',
+      facebook: 'https://www.facebook.com/mitxiyswang',
+      email: 'mitxiyswang@gmail.com',
+      portfolioLink: 'https://www.behance.net/shreyash_sharma'
     },
     {
       name: 'Mayank Patel',
       profilePic: mayank,
       designation: 'UX Designer',
-      linkedin: '',
-      twitter: '',
-      facebook: '',
-      email: '',
-      portfolioLink: ''
+      linkedin: 'https://www.linkedin.com/in/mayank-patel-a00575ab/',
+      twitter: 'https://twitter.com/mayankap93',
+      facebook: 'https://www.facebook.com/mayankap93',
+      email: 'mayankap93@gmail.com',
+      portfolioLink: 'https://www.behance.net/mayankapatel'
     },
     {
       name: 'Faisal Alam',
       profilePic: faisal,
       designation: 'Backend & Dev Ops Engineer',
-      linkedin: '',
+      linkedin: 'https://www.linkedin.com/in/ifaisalalam/',
       twitter: '',
       facebook: '',
       email: '',
@@ -141,27 +141,27 @@ const contributers = () => {
       name: 'Mohit Gupta',
       profilePic: mohit,
       designation: 'Full Stack Engineer',
-      linkedin: '',
+      linkedin: 'https://www.linkedin.com/in/mohit-gupta-developer',
       twitter: '',
       facebook: '',
-      email: '',
-      portfolioLink: ''
+      email: 'mohitgupta3mail@gmail.com',
+      portfolioLink: 'https://www.github.com/thedeveloperr'
     },
     {
       name: 'Rishu Kumar',
       profilePic: rishu,
       designation: 'Front End Enigineer',
-      linkedin: '',
+      linkedin: 'https://www.linkedin.com/in/rishu-kumar-9a39ab148',
       twitter: '',
       facebook: '',
-      email: '',
-      portfolioLink: ''
+      email: 'rishukr06@gmail.com',
+      portfolioLink: 'https://rishu.engineer'
     },
     {
       name: 'Shravan Kumar',
       profilePic: shravan,
       designation: 'Product Mentor',
-      linkedin: '',
+      linkedin: 'https://www.linkedin.com/in/shra1cumar/',
       twitter: '',
       facebook: '',
       email: '',
@@ -171,21 +171,21 @@ const contributers = () => {
       name: 'Abhishek Gowda',
       profilePic: abhishek,
       designation: 'Organic Expert',
-      linkedin: '',
-      twitter: '',
-      facebook: '',
-      email: '',
+      linkedin: 'https://www.linkedin.com/in/abhishek-c-gowda/',
+      twitter: 'https://twitter.com/abhishekgowda05',
+      facebook: 'https://www.facebook.com/abhishekcgowda05',
+      email: 'abhishekcgowda21@gmail.com',
       portfolioLink: ''
     },
     {
       name: 'Shreyash Barot',
       profilePic: shreyashBarot,
       designation: 'UX Designer / Brand Identity',
-      linkedin: '',
-      twitter: '',
-      facebook: '',
-      email: '',
-      portfolioLink: ''
+      linkedin: 'https://www.linkedin.com/in/shreyashbarot/',
+      twitter: 'https://twitter.com/shreyash_barot',
+      facebook: 'https://www.facebook.com/sbarot2611/',
+      email: 'sbarot2611@gmail.com',
+      portfolioLink: 'https://dribbble.com/shreyash_barot'
     }
   ]
 
@@ -193,24 +193,24 @@ const contributers = () => {
     const { contributer, imageSrc, media } = props
     const link = media === 'email' ? `mailto:${contributer}` : contributer
     return contributer ? (
-        <li>
-          <a href={link} target="_blank" rel="noreferrer">
-            <img src={imageSrc} className="img-responsive" alt={imageSrc} />
-          </a>
-        </li>
+      <li>
+        <a href={link} target="_blank" rel="noreferrer">
+          <img src={imageSrc} className="img-responsive" alt={imageSrc} />
+        </a>
+      </li>
     ) : (
-        ''
+      ''
     )
   }
 
-  const listOfContributer = contributersData.map(contributer => (
-      <div className="col-md-3 col-xs-6">
-        <div className="contributerCard">
-          <img
-              src={contributer.profilePic}
-              className="img-responsive"
-              alt={'Contributer'}
-          />
+  const listOfContributer = contributersData.map((contributer, index) => (
+    <div className="col-md-3 col-xs-6" key={index}>
+      <div className="contributerCard">
+        <img
+          src={contributer.profilePic}
+          className="img-responsive"
+          alt={'Contributer'}
+        />
         <h3 className="name">{contributer.name}</h3>
         <h5 className="designation" title={contributer.designation}>
           {contributer.designation}
