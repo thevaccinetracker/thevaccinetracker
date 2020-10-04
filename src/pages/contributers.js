@@ -189,62 +189,64 @@ const contributers = () => {
     }
   ]
 
+  const IconWithUrl = props => {
+    const { contributer, imageSrc, media } = props
+    const link = media === 'email' ? `mailto:${contributer}` : contributer
+    return contributer ? (
+        <li>
+          <a href={link} target="_blank" rel="noreferrer">
+            <img src={imageSrc} className="img-responsive" alt={imageSrc} />
+          </a>
+        </li>
+    ) : (
+        ''
+    )
+  }
+
   const listOfContributer = contributersData.map(contributer => (
-    <div className="col-md-3 col-xs-6">
-      <div className="contributerCard">
-        <img
-          src={contributer.profilePic}
-          className="img-responsive"
-          alt={'Contributer'}
-        />
+      <div className="col-md-3 col-xs-6">
+        <div className="contributerCard">
+          <img
+              src={contributer.profilePic}
+              className="img-responsive"
+              alt={'Contributer'}
+          />
         <h3 className="name">{contributer.name}</h3>
-        <h5 className="designation">{contributer.designation}</h5>
+        <h5 className="designation" title={contributer.designation}>
+          {contributer.designation}
+        </h5>
         <ul className="contributer-portfolio">
-          <li>
-            <a href={`${contributer.linkedin}`} target="_blank">
-              <img
-                src={contributerLinkedin}
-                className="img-responsive"
-                alt={'Linkedin'}
-              />
-            </a>
-          </li>
-          <li>
-            <a href={`${contributer.twitter}`} target="_blank">
-              <img
-                src={contributertwitter}
-                className="img-responsive"
-                alt={'twitter'}
-              />
-            </a>
-          </li>
-          <li>
-            <a href={`${contributer.facebook}`} target="_blank">
-              <img
-                src={contributerFacebook}
-                className="img-responsive"
-                alt={'facebook'}
-              />
-            </a>
-          </li>
-          <li>
-            <a href={`mailto:${contributer.email}`} target="_blank">
-              <img
-                src={contributerEmail}
-                className="img-responsive"
-                alt={'email'}
-              />
-            </a>
-          </li>
-          <li>
-            <a href={`${contributer.portfolioLink}`} target="_blank">
-              <img
-                src={contributerLink}
-                className="img-responsive"
-                alt={'portfolio'}
-              />
-            </a>
-          </li>
+          {
+            <IconWithUrl
+              contributer={contributer.linkedin}
+              imageSrc={contributerLinkedin}
+            />
+          }
+          {
+            <IconWithUrl
+              contributer={contributer.twitter}
+              imageSrc={contributertwitter}
+            />
+          }
+          {
+            <IconWithUrl
+              contributer={contributer.facebook}
+              imageSrc={contributerFacebook}
+            />
+          }
+          {
+            <IconWithUrl
+              contributer={contributer.email}
+              imageSrc={contributerEmail}
+              media="email"
+            />
+          }
+          {
+            <IconWithUrl
+              contributer={contributer.portfolioLink}
+              imageSrc={contributerLink}
+            />
+          }
         </ul>
       </div>
     </div>
