@@ -100,7 +100,7 @@ const contributers = () => {
     {
       name: 'Vipin TV',
       profilePic: vipin,
-      designation: 'Data Researcher / UX De...',
+      designation: 'Data Researcher / UX Deigner',
       linkedin: '',
       twitter: '',
       facebook: '',
@@ -130,7 +130,7 @@ const contributers = () => {
     {
       name: 'Faisal Alam',
       profilePic: faisal,
-      designation: 'Backend & Dev Ops',
+      designation: 'Backend & Dev Ops Engineer',
       linkedin: '',
       twitter: '',
       facebook: '',

@@ -1277,6 +1277,9 @@ body {
         color: $gs0;
         font-weight: 300;
         margin-top: 0px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
         @media only screen and (max-width: $small-device) {
           & {
             font-size: 12px;
