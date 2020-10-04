@@ -1229,6 +1229,13 @@ body {
     line-height: 0.9;
     margin-top: 80px;
     margin-bottom: 28px;
+    @media only screen and (max-width: $small-device) {
+      & {
+        font-size: 40px;
+        margin-top: 50px;
+        margin-bottom: 18px;
+      }
+    }
   }
   .subHeading {
     font-size: 20px;
@@ -1238,22 +1245,43 @@ body {
     line-height: 0.9;
     margin-top: 0;
     margin-bottom: 80px;
+    @media only screen and (max-width: $small-device) {
+      & {
+        font-size: 16px;
+        margin-bottom: 48px;
+      }
+    }
   }
   .superHeroes {
     margin-bottom: 60px;
     .contributerCard {
       margin-bottom: 80px;
+      @media only screen and (max-width: $small-device) {
+        & {
+          margin-bottom: 40px;
+        }
+      }
       .name {
         font-size: 28px;
         color: $c5;
         font-weight: 800;
         margin-bottom: 4px;
+        @media only screen and (max-width: $small-device) {
+          & {
+            font-size: 16px;
+          }
+        }
       }
       .designation {
         font-size: 18px;
         color: $gs0;
         font-weight: 300;
         margin-top: 0px;
+        @media only screen and (max-width: $small-device) {
+          & {
+            font-size: 12px;
+          }
+        }
       }
       .contributer-portfolio {
         padding: 0;

@@ -100,7 +100,7 @@ const contributers = () => {
     {
       name: 'Vipin TV',
       profilePic: vipin,
-      designation: 'Data Researcher / UX Designer',
+      designation: 'Data Researcher / UX De...',
       linkedin: '',
       twitter: '',
       facebook: '',
@@ -128,9 +128,9 @@ const contributers = () => {
       portfolioLink: ''
     },
     {
-      name: 'Faisal',
+      name: 'Faisal Alam',
       profilePic: faisal,
-      designation: 'Backend & Dev Ops Engineer',
+      designation: 'Backend & Dev Ops',
       linkedin: '',
       twitter: '',
       facebook: '',
@@ -190,7 +190,7 @@ const contributers = () => {
   ]
 
   const listOfContributer = contributersData.map(contributer => (
-    <div className="col-md-3">
+    <div className="col-md-3 col-xs-6">
       <div className="contributerCard">
         <img
           src={contributer.profilePic}
