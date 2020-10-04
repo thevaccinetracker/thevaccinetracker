@@ -1219,3 +1219,50 @@ body {
     }
   }
 }
+
+.ourSuperheros {
+  .mainHeading {
+    font-size: 60px;
+    color: $gs0;
+    width: 300px;
+    font-weight: 800;
+    line-height: 0.9;
+    margin-top: 80px;
+    margin-bottom: 28px;
+  }
+  .subHeading {
+    font-size: 20px;
+    color: $gs0;
+    width: 300px;
+    font-weight: 800;
+    line-height: 0.9;
+    margin-top: 0;
+    margin-bottom: 80px;
+  }
+  .superHeroes {
+    margin-bottom: 60px;
+    .contributerCard {
+      margin-bottom: 80px;
+      .name {
+        font-size: 28px;
+        color: $c5;
+        font-weight: 800;
+        margin-bottom: 4px;
+      }
+      .designation {
+        font-size: 18px;
+        color: $gs0;
+        font-weight: 300;
+        margin-top: 0px;
+      }
+      .contributer-portfolio {
+        padding: 0;
+        display: flex;
+        li {
+          margin-right: 5px;
+          list-style-type: none;
+        }
+      }
+    }
+  }
+}
