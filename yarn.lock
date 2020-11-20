@@ -949,10 +949,10 @@
     core-js-pure "^3.0.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
-  version "7.10.3"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.10.3.tgz#670d002655a7c366540c67f6fd3342cd09500364"
-  integrity sha512-RzGO0RLSdokm9Ipe/YD+7ww8X2Ro79qiXZF3HU9ljrM+qnJmH1Vqth+hbiQZy761LnMJTMitHDuKVYTk3k4dLw==
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.3", "@babel/runtime@^7.12.5", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.5", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
+  version "7.12.5"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.5.tgz#410e7e487441e1b360c29be715d870d9b985882e"
+  integrity sha512-plcc+hbExy3McchJCEQG3knOsuh3HH+Prx1P6cLIkET/0dLuQDEnrT+s27Axgc9bqfsmNUNHfscgMUdBpC9xfg==
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -6636,13 +6636,20 @@ gatsby-page-utils@^0.2.12:
     lodash "^4.17.15"
     micromatch "^3.1.10"
 
-gatsby-plugin-google-analytics@^2.3.3:
-  version "2.3.6"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.3.6.tgz#3867732a1ae65a3a00d23217cd131025f33942b4"
-  integrity sha512-hm+PXjl46mtpQ+EBXVcS4YvrewvdPi5KoPkOKrd4ivK0uAUT0rjY5vcYr1NdvF7uAFDoInL/lj1X5gMMlEXp/g==
+gatsby-plugin-google-analytics@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.6.0.tgz#6fd6a8bdb4eb2adc2cc88687f9fb3b334787cbe9"
+  integrity sha512-2pxd2iaJUWVIIGkP4T2PTDlmMEjnRLrP+ZXV65SpOy2Q2Od2tpiStol6B5T6iGjtKGs6ZOdk3D1gyTCvH+gpsg==
   dependencies:
-    "@babel/runtime" "^7.10.3"
+    "@babel/runtime" "^7.12.5"
     minimatch "3.0.4"
+
+gatsby-plugin-hotjar@^1.0.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-hotjar/-/gatsby-plugin-hotjar-1.1.1.tgz#b910209c80fb2a0df9e0dc1b52de7270d9831b31"
+  integrity sha512-zEuZuZPokvBZvfKg7W0MjPoydFnD8NqhgB0Rm32A7HTWu44vvH+UYt0NsvnyINYmICS9ftv+y/k3WAAzkAIUNw==
+  dependencies:
+    babel-runtime "^6.26.0"
 
 gatsby-plugin-manifest@^2.4.5:
   version "2.4.14"
