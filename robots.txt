@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://thevaccinetracker.com/sitemap.xml
+Host: https://thevaccinetracker.com
