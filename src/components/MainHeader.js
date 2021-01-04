@@ -134,6 +134,47 @@ class MainHeader extends Component {
             Copied To ClipBoard !
           </Toast.Body>
         </Toast>
+        <br />
+        <div className="discontinue">
+          <h2>We are discontinuing</h2>
+          <p>
+            We took the pledge of helping atleast 1,000 people, but we are happy
+            to announce that our platform helped more than 21,000 people. We are
+            group of people from Bangalore who has daily office, with which it
+            becomes bit difficult to continue maintaining this. Hence please
+            consider this as an official announcement that we are going to
+            discontinue updating the information from now ie. from 4th Jan 2021.
+            If you or anyone you know is interested then please contact Rohit
+            Bind the details for reaching out to him is given below.
+          </p>
+          <p>
+            Reason for discontinuing.
+            <ol>
+              <li>
+                The goal which we had set it achieved - we took pledge of
+                helping 1000 people but we helped more than 21k people with the
+                NPS score of 4.1.
+              </li>
+              <li>
+                The vaccine information is now dependent on the country level
+                which is bit difficult to manage.
+              </li>
+            </ol>
+          </p>
+          <br />
+          <p>
+            With the NPS of 4.1 out of 5 we truly understand that the platform
+            is helpful to many of the people. Hence we decided to handover this
+            project to someone who can take care of it from here.
+            <br />
+            <br />
+            If you are interested in taking over the project from here then
+            please contact Rohit Bind{' '}
+            <a href="https://www.linkedin.com/in/rohitbind/" target="_blank">
+              https://www.linkedin.com/in/rohitbind
+            </a>
+          </p>
+        </div>
       </div>
     )
   }
