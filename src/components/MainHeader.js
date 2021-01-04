@@ -170,7 +170,11 @@ class MainHeader extends Component {
             <br />
             If you are interested in taking over the project from here then
             please contact Rohit Bind{' '}
-            <a href="https://www.linkedin.com/in/rohitbind/" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/rohitbind/"
+              target="_blank"
+              rel="noreferrer"
+            >
               https://www.linkedin.com/in/rohitbind
             </a>
           </p>
